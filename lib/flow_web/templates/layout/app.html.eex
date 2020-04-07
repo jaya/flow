@@ -6,26 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title><%= assigns[:page_title] || "Flow · Phoenix Framework" %></title>
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
+  
+    <script src="https://kit.fontawesome.com/52b0b8d1a9.js" crossorigin="anonymous"></script>
     <%= csrf_meta_tag() %>
   </head>
   <body>
-    <header>
-      <section class="container">
-        <nav role="navigation">
-          <ul>
-            <li><a href="https://hexdocs.pm/phoenix/overview.html">Get Started</a></li>
-          </ul>
+    <div class="container">
+      <header>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+          <div class="navbar-brand">
+            <a class="navbar-item" id="logo" href="#"></a>
+
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+
+          <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-end">
+              <%= link "Jobs", to: Routes.job_path(@conn, :index), class: "navbar-item" %>
+              <%= link "Clients", to: Routes.client_path(@conn, :index), class: "navbar-item" %>
+              <%= link "Status", to: Routes.status_path(@conn, :index), class: "navbar-item" %>
+              <%= link "Technology", to: Routes.technology_path(@conn, :index), class: "navbar-item" %>
+              <%= link "User", to: Routes.user_path(@conn, :index), class: "navbar-item" %>
+              <%= link "Candidates", to: Routes.candidate_path(@conn, :index), class: "navbar-item" %>
+            </div>
+          </div>
         </nav>
-        <a href="https://phoenixframework.org/" class="phx-logo">
-          <img src="<%= Routes.static_path(@conn, "/images/phoenix.png") %>" alt="Phoenix Framework Logo"/>
-        </a>
-      </section>
-    </header>
-    <main role="main" class="container">
-      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
-      <%= render @view_module, @view_template, assigns %>
-    </main>
+      </header>
+      <main role="main" class="container">
+        <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
+        <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+        <%= render @view_module, @view_template, assigns %>
+      </main>
+    </div>
     <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
   </body>
 </html>
+

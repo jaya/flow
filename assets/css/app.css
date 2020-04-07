@@ -1,3 +1,18 @@
 /* This file is for your main application css. */
 
-@import "./phoenix.css";
+@import "./bulma.min.css";
+
+#logo {
+    background: url("/images/logo-blue.svg") no-repeat center center;
+    background-size: cover;
+    width: 150px;
+  }
+  
+  .title {
+    text-align: center;
+  }
+  
+  header {
+    border-bottom: 1px solid #224277;
+    margin-bottom: 3em;
+  }
