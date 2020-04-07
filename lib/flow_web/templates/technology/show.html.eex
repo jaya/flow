@@ -1,18 +1,28 @@
-<h1>Show Technology</h1>
+<a href="<%= Routes.technology_path(@conn, :index) %>">
+  <span class="icon">
+    <i class="fas fa-undo-alt"></i>
+  </span>
+  <span>Back</span>    
+</a>
 
-<ul>
+<h1 class="title">Show Technology</h1>
 
-  <li>
-    <strong>Name:</strong>
-    <%= @technology.name %>
-  </li>
+<article class="message show is-warning">
+  <div class="message-header">
+    <p><%= @technology.name %></p>
+  </div>
+  <div class="message-body">
+    <br>
+    <h2 class="subtitle">Description</h2>
+    <p>
+      <%= @technology.description %>
+    </p>
+  </div>
+</article>
 
-  <li>
-    <strong>Description:</strong>
-    <%= @technology.description %>
-  </li>
-
-</ul>
-
-<span><%= link "Edit", to: Routes.technology_path(@conn, :edit, @technology) %></span>
-<span><%= link "Back", to: Routes.technology_path(@conn, :index) %></span>
+<a href="<%= Routes.technology_path(@conn, :edit, @technology) %>">
+  <span class="icon">
+    <i class="far fa-edit"></i>
+  </span>
+  <span>Edit</span>    
+</a>

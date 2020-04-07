@@ -1,28 +1,39 @@
-<h1>Listing Technologies</h1>
+<h1 class="title">Technologies</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
+<div class="columns is-multiline is-desktop">
+  <%= for technology <- @technologies do %>
+    <div class="column is-one-quarter">
+      <article class="message is-warning">
+        <div class="message-header">
+          <p><%= technology.name %></p>
+        </div>
+        <div class="message-body">
+          <p class="message-description"><%= technology.description %></p>
+        </div>
+        <div class="message-footer">
+          <a class="button is-warning" href="<%= Routes.technology_path(@conn, :show, technology) %>">
+            <span class="icon">
+              <i class="fas fa-eye"></i>
+            </span>
+            <span>Show</span>    
+          </a>
+          <a class="button is-warning" href="<%= Routes.technology_path(@conn, :edit, technology) %>">
+            <span class="icon">
+              <i class="fas fa-edit"></i>
+            </span>
+            <span>Edit</span>    
+          </a>
+          
+          <%= link "X Delete", to: Routes.technology_path(@conn, :delete, technology), class: "button is-warning", method: :delete, data: [confirm: "Are you sure?"] %>
+        </div>
+      </article>
+    </div>
+  <% end %>
+</div>
 
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-<%= for technology <- @technologies do %>
-    <tr>
-      <td><%= technology.name %></td>
-      <td><%= technology.description %></td>
-
-      <td>
-        <span><%= link "Show", to: Routes.technology_path(@conn, :show, technology) %></span>
-        <span><%= link "Edit", to: Routes.technology_path(@conn, :edit, technology) %></span>
-        <span><%= link "Delete", to: Routes.technology_path(@conn, :delete, technology), method: :delete, data: [confirm: "Are you sure?"] %></span>
-      </td>
-    </tr>
-<% end %>
-  </tbody>
-</table>
-
-<span><%= link "New Technology", to: Routes.technology_path(@conn, :new) %></span>
+<a class="button" href="<%= Routes.technology_path(@conn, :new) %>">
+  <span class="icon">
+    <i class="fas fa-microchip"></i>
+  </span>
+  <span>New</span>    
+</a>

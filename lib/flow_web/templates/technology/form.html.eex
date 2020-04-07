@@ -5,15 +5,19 @@
     </div>
   <% end %>
 
-  <%= label f, :name %>
-  <%= text_input f, :name %>
-  <%= error_tag f, :name %>
+  <div class="field">  
+    <%= label f, :name, class: "label" %>
+    <%= text_input f, :name, class: "input" %>
+    <%= error_tag f, :name %>
+  </div>
 
-  <%= label f, :description %>
-  <%= text_input f, :description %>
-  <%= error_tag f, :description %>
+  <div class="field"> 
+    <%= label f, :description, class: "label" %>
+    <%= text_input f, :description, class: "input" %>
+    <%= error_tag f, :description %>
+  </div>
 
   <div>
-    <%= submit "Save" %>
+    <%= submit "Save", class: "button is-primary is-fullwidth" %>
   </div>
 <% end %>

@@ -1,4 +1,4 @@
-<h1 class="title">Listing Status</h1>
+<h1 class="title">Status</h1>
 
 <div class="columns is-multiline is-desktop">
   <%= for status <- @status do %>
@@ -31,7 +31,7 @@
   <% end %>
 </div>
 
-<a href="<%= Routes.status_path(@conn, :new) %>">
+<a class="button" href="<%= Routes.status_path(@conn, :new) %>">
   <span class="icon">
     <i class="fas fa-plus-circle"></i>
   </span>
