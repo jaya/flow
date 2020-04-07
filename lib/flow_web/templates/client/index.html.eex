@@ -1,30 +1,36 @@
-<h1>Listing Clients</h1>
+<h1 class="title">Clients</h1>
+<div class="columns">
+  <%= for client <- @clients do %>
+    <div class="column is-one-fifth">
+      <div class="card">
+        <header class="card-header">
+          <p class="card-header-title">
+            <%= client.name %>
+          </p>
+          <a href="#" class="card-header-icon" aria-label="more options">
+            <span class="icon">
+              <img src="<%= client.logo %>" />
+            </span>
+          </a>
+        </header>
+        <div class="card-content">
+          <div class="content">
+            <%= client.description %>
+          </div>
+        </div>
+        <footer class="card-footer">
+          <%= link "Show", to: Routes.client_path(@conn, :show, client), class: "card-footer-item" %>
+          <%= link "Edit", to: Routes.client_path(@conn, :edit, client), class: "card-footer-item" %>
+          <%= link "Delete", to: Routes.client_path(@conn, :delete, client), class: "card-footer-item", method: :delete, data: [confirm: "Are you sure?"] %>
+        </footer>
+      </div>
+    </div>
+  <% end %>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Logo</th>
-
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-<%= for client <- @clients do %>
-    <tr>
-      <td><%= client.name %></td>
-      <td><%= client.description %></td>
-      <td><%= client.logo %></td>
-
-      <td>
-        <span><%= link "Show", to: Routes.client_path(@conn, :show, client) %></span>
-        <span><%= link "Edit", to: Routes.client_path(@conn, :edit, client) %></span>
-        <span><%= link "Delete", to: Routes.client_path(@conn, :delete, client), method: :delete, data: [confirm: "Are you sure?"] %></span>
-      </td>
-    </tr>
-<% end %>
-  </tbody>
-</table>
-
-<span><%= link "New Client", to: Routes.client_path(@conn, :new) %></span>
+<a class="button" href="<%= Routes.client_path(@conn, :new) %>">
+  <span class="icon">
+    <i class="fas fa-city"></i>
+  </span>
+  <span>New Client</span>
+</a>

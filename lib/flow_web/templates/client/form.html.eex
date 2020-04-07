@@ -4,20 +4,26 @@
       <p>Oops, something went wrong! Please check the errors below.</p>
     </div>
   <% end %>
+  
+  <div class="field">  
+    <%= label f, :name, class: "label" %>
+    <%= text_input f, :name, class: "input" %>
+    <%= error_tag f, :name %>
+  </div>
 
-  <%= label f, :name %>
-  <%= text_input f, :name %>
-  <%= error_tag f, :name %>
+  <div class="field">  
+    <%= label f, :description, class: "label" %>
+    <%= text_input f, :description, class: "input" %>
+    <%= error_tag f, :description %>
+  </div>
 
-  <%= label f, :description %>
-  <%= text_input f, :description %>
-  <%= error_tag f, :description %>
-
-  <%= label f, :logo %>
-  <%= text_input f, :logo %>
-  <%= error_tag f, :logo %>
+    <div class="field">  
+    <%= label f, :logo, class: "label" %>
+    <%= text_input f, :logo, class: "input" %>
+    <%= error_tag f, :logo %>
+  </div>
 
   <div>
-    <%= submit "Save" %>
+    <%= submit "Save", class: "button is-primary is-fullwidth" %>
   </div>
 <% end %>

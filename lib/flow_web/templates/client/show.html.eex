@@ -1,23 +1,32 @@
-<h1>Show Client</h1>
+<a href="<%= Routes.client_path(@conn, :index) %>">
+  <span class="icon">
+    <i class="fas fa-undo-alt"></i>
+  </span>
+  <span>Back</span>    
+</a>
 
-<ul>
+<h1 class="title">Show Client</h1>
 
-  <li>
-    <strong>Name:</strong>
-    <%= @client.name %>
-  </li>
+<article class="message show is-dark">
+  <div class="message-header">
+    <p><%= @client.name %></p>
+  </div>
+  <div class="message-body">
+    <img class="image is-circle is-128x128 client-logo" src="<%= @client.logo %>">
+    <br>
+    <h2 class="title">Description</h2>
+    <p>
+      <%= @client.description %>
+    </p>
+  </div>
+</article>
 
-  <li>
-    <strong>Description:</strong>
-    <%= @client.description %>
-  </li>
+<a href="<%= Routes.client_path(@conn, :edit, @client) %>">
+  <span class="icon">
+    <i class="far fa-edit"></i>
+  </span>
+  <span>Edit</span>    
+</a>
 
-  <li>
-    <strong>Logo:</strong>
-    <%= @client.logo %>
-  </li>
 
-</ul>
 
-<span><%= link "Edit", to: Routes.client_path(@conn, :edit, @client) %></span>
-<span><%= link "Back", to: Routes.client_path(@conn, :index) %></span>
