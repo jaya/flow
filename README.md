@@ -1,10 +1,30 @@
-# Flow
+![alt flow](flow.png)
+
+## Tech
+
+* Phoenix 
+* Elixir
+* Erlang
+* Postgres
+
+## Dependencies
+
+* Test 
+
+```bash
+docker run --name=flow_test -d -p 9000:5432  -e POSTGRES_PASSWORD=sa -e POSTGRES_USER=sa -e POSTGRES_DB=flow_test postgres
+```
+
+* Dev 
+
+```bash
+docker run --name=flow_dev -d -p 5432:5432  -e POSTGRES_PASSWORD=sa -e POSTGRES_USER=sa -e POSTGRES_DB=flow_dev postgres
+```
 
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
   * Create and migrate your database with `mix ecto.setup`
-  * Install Node.js dependencies with `cd assets && npm install`
   * Start Phoenix endpoint with `mix phx.server`
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
