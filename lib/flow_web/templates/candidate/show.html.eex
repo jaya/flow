@@ -1,0 +1,33 @@
+<h1>Show Candidate</h1>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @candidate.name %>
+  </li>
+
+  <li>
+    <strong>Email:</strong>
+    <%= @candidate.email %>
+  </li>
+
+  <li>
+    <strong>Phone:</strong>
+    <%= @candidate.phone %>
+  </li>
+
+  <li>
+    <strong>Linkedin:</strong>
+    <%= @candidate.linkedin %>
+  </li>
+
+  <li>
+    <strong>Github:</strong>
+    <%= @candidate.github %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.candidate_path(@conn, :edit, @candidate) %></span>
+<span><%= link "Back", to: Routes.candidate_path(@conn, :index) %></span>

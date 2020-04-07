@@ -1,0 +1,18 @@
+<h1>Show Technology</h1>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @technology.name %>
+  </li>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @technology.description %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.technology_path(@conn, :edit, @technology) %></span>
+<span><%= link "Back", to: Routes.technology_path(@conn, :index) %></span>

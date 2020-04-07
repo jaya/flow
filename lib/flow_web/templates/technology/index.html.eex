@@ -1,0 +1,28 @@
+<h1>Listing Technologies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for technology <- @technologies do %>
+    <tr>
+      <td><%= technology.name %></td>
+      <td><%= technology.description %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.technology_path(@conn, :show, technology) %></span>
+        <span><%= link "Edit", to: Routes.technology_path(@conn, :edit, technology) %></span>
+        <span><%= link "Delete", to: Routes.technology_path(@conn, :delete, technology), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Technology", to: Routes.technology_path(@conn, :new) %></span>

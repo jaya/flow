@@ -17,6 +17,13 @@ defmodule FlowWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+
+    resources "/jobs", JobController
+    resources "/clients", ClientController
+    resources "/status", StatusController
+    resources "/technologies", TechnologyController
+    resources "/candidates", CandidateController
+    resources "/users", UserController
   end
 
   # Other scopes may use custom stacks.
