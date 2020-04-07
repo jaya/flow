@@ -19,7 +19,7 @@ header {
 
 .is-circle {
   border-radius: 70px;
-  border: 1px solid #224277;
+  border: 1px dashed #224277;
 }
 
 .show {

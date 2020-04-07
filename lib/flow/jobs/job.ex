@@ -8,7 +8,7 @@ defmodule Flow.Jobs.Job do
     field :description, :string
     field :name, :string
     field :positions, :integer
-    field :client_id, :binary_id
+    belongs_to :client, Flow.Jobs.Client
 
     timestamps()
   end
@@ -16,7 +16,7 @@ defmodule Flow.Jobs.Job do
   @doc false
   def changeset(job, attrs) do
     job
-    |> cast(attrs, [:name, :description, :positions])
+    |> cast(attrs, [:name, :description, :positions, :client_id])
     |> validate_required([:name, :description, :positions])
   end
 end

@@ -115,6 +115,7 @@ defmodule Flow.Jobs do
   """
   def list_jobs do
     Repo.all(Job)
+    |> Repo.preload(:client)
   end
 
   @doc """
@@ -131,7 +132,7 @@ defmodule Flow.Jobs do
       ** (Ecto.NoResultsError)
 
   """
-  def get_job!(id), do: Repo.get!(Job, id)
+  def get_job!(id), do: Repo.get!(Job, id) |> Repo.preload(:client)
 
   @doc """
   Creates a job.

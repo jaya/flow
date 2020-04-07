@@ -5,19 +5,33 @@
     </div>
   <% end %>
 
-  <%= label f, :name %>
-  <%= text_input f, :name %>
-  <%= error_tag f, :name %>
+  <div class="field">  
+    <%= label f, :name, class: "label" %>
+    <%= text_input f, :name, class: "input" %>
+    <%= error_tag f, :name %>
+  </div>
 
-  <%= label f, :description %>
-  <%= text_input f, :description %>
-  <%= error_tag f, :description %>
+  <div class="field">  
+    <%= label f, :description, class: "label" %>
+    <%= text_input f, :description, class: "input" %>
+    <%= error_tag f, :description %>
+  </div>
 
-  <%= label f, :positions %>
-  <%= number_input f, :positions %>
-  <%= error_tag f, :positions %>
+  <div class="field">
+    <%= label f, :description, class: "label" %>
+    <div class="select">
+      <%= select f, :client_id, @clients %>
+    </div>
+    <%= error_tag f, :client %>
+  </div>
+
+  <div class="field">  
+    <%= label f, :positions, class: "label" %>
+    <%= number_input f, :positions, class: "input" %>
+    <%= error_tag f, :positions %>
+  </div>
 
   <div>
-    <%= submit "Save" %>
+    <%= submit "Save", class: "button is-primary is-fullwidth" %>
   </div>
 <% end %>

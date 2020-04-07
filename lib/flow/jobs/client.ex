@@ -8,6 +8,7 @@ defmodule Flow.Jobs.Client do
     field :description, :string
     field :logo, :string
     field :name, :string
+    has_many :jobs, Flow.Jobs.Job
 
     timestamps()
   end

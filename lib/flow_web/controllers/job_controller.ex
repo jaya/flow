@@ -6,12 +6,14 @@ defmodule FlowWeb.JobController do
 
   def index(conn, _params) do
     jobs = Jobs.list_jobs()
+    IO.inspect jobs
     render(conn, "index.html", jobs: jobs)
   end
 
   def new(conn, _params) do
     changeset = Jobs.change_job(%Job{})
-    render(conn, "new.html", changeset: changeset)
+    clients = Jobs.list_clients() |> Enum.map(&{&1.name,&1.id})
+    render(conn, "new.html", changeset: changeset, clients: clients)
   end
 
   def create(conn, %{"job" => job_params}) do
@@ -34,7 +36,8 @@ defmodule FlowWeb.JobController do
   def edit(conn, %{"id" => id}) do
     job = Jobs.get_job!(id)
     changeset = Jobs.change_job(job)
-    render(conn, "edit.html", job: job, changeset: changeset)
+    clients = Jobs.list_clients() |> Enum.map(&{&1.name,&1.id})
+    render(conn, "edit.html", job: job, changeset: changeset, clients: clients)
   end
 
   def update(conn, %{"id" => id, "job" => job_params}) do
