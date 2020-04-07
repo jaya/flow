@@ -13,7 +13,6 @@
 }
 
 header {
-  border-bottom: 1px solid #224277;
   margin-bottom: 3em;
 }
 
@@ -28,4 +27,22 @@ header {
 
 .client-logo {
   margin: 0 auto;
+}
+
+.card-description, .message-description {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding: 10px;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.message-status {
+  width: 300px;
+  float: left;
+}
+
+.message-footer {
+  text-align: center;
+  padding: 10px;
 }

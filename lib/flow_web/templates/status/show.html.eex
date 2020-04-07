@@ -1,28 +1,37 @@
-<h1>Show Status</h1>
+<a href="<%= Routes.status_path(@conn, :index) %>">
+  <span class="icon">
+    <i class="fas fa-undo-alt"></i>
+  </span>
+  <span>Back</span>    
+</a>
 
-<ul>
+<h1 class="title">Show Status</h1>
 
-  <li>
-    <strong>Name:</strong>
-    <%= @status.name %>
-  </li>
+<article class="message show is-dark">
+  <div class="message-header">
+    <p><%= @status.name %></p>
+  </div>
+  <div class="message-body">
+    <h2 class="title">Description</h2>
+    <p>
+      <%= @status.description %>
+    </p>
+    <hr>
+    <h2 class="subtitle">Enable</h2>
+    <p>
+      <%= @status.enable %>
+    </p>
+    <hr>
+    <h2 class="subtitle">Order</h2>
+    <p>
+      <%= @status.order %>
+    </p>
+  </div>
+</article>
 
-  <li>
-    <strong>Description:</strong>
-    <%= @status.description %>
-  </li>
-
-  <li>
-    <strong>Order:</strong>
-    <%= @status.order %>
-  </li>
-
-  <li>
-    <strong>Enable:</strong>
-    <%= @status.enable %>
-  </li>
-
-</ul>
-
-<span><%= link "Edit", to: Routes.status_path(@conn, :edit, @status) %></span>
-<span><%= link "Back", to: Routes.status_path(@conn, :index) %></span>
+<a href="<%= Routes.status_path(@conn, :edit, @status) %>">
+  <span class="icon">
+    <i class="far fa-edit"></i>
+  </span>
+  <span>Edit</span>    
+</a>

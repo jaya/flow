@@ -1,32 +1,39 @@
-<h1>Listing Status</h1>
+<h1 class="title">Listing Status</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Order</th>
-      <th>Enable</th>
+<div class="columns is-multiline is-desktop">
+  <%= for status <- @status do %>
+    <div class="column is-one-quarter">
+      <article class="message is-info">
+        <div class="message-header">
+          <p><%= status.name %></p>
+        </div>
+        <div class="message-body">
+          <p class="message-description"><%= status.description %></p>
+        </div>
+        <div class="message-footer">
+          <a class="button is-info" href="<%= Routes.status_path(@conn, :show, status) %>">
+            <span class="icon">
+              <i class="fas fa-eye"></i>
+            </span>
+            <span>Show</span>    
+          </a>
+          <a class="button is-info" href="<%= Routes.status_path(@conn, :edit, status) %>">
+            <span class="icon">
+              <i class="fas fa-edit"></i>
+            </span>
+            <span>Edit</span>    
+          </a>
+          
+          <%= link "X Delete", to: Routes.status_path(@conn, :delete, status), class: "button is-info", method: :delete, data: [confirm: "Are you sure?"] %>
+        </div>
+      </article>
+    </div>
+  <% end %>
+</div>
 
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-<%= for status <- @status do %>
-    <tr>
-      <td><%= status.name %></td>
-      <td><%= status.description %></td>
-      <td><%= status.order %></td>
-      <td><%= status.enable %></td>
-
-      <td>
-        <span><%= link "Show", to: Routes.status_path(@conn, :show, status) %></span>
-        <span><%= link "Edit", to: Routes.status_path(@conn, :edit, status) %></span>
-        <span><%= link "Delete", to: Routes.status_path(@conn, :delete, status), method: :delete, data: [confirm: "Are you sure?"] %></span>
-      </td>
-    </tr>
-<% end %>
-  </tbody>
-</table>
-
-<span><%= link "New Status", to: Routes.status_path(@conn, :new) %></span>
+<a href="<%= Routes.status_path(@conn, :new) %>">
+  <span class="icon">
+    <i class="fas fa-plus-circle"></i>
+  </span>
+  <span>New</span>    
+</a>

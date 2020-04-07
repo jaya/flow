@@ -1,5 +1,5 @@
-<h1 class="title">Listing Jobs</h1>
-<div class="columns">
+<h1 class="title">Jobs</h1>
+<div class="columns is-multiline is-desktop">
   <%= for job <- @jobs do %>
     <div class="column is-one-fifth">
       <div class="card">
@@ -16,7 +16,7 @@
         <div class="card-content">
           <div class="content">
             <p><strong>Name:</strong> <%= job.name %></p>
-            <p><strong>Description:</strong> <%= job.description %></p>
+            <p class="card-description"><strong>Description:</strong> <%= job.description %></p>
             <p><strong>Positions:</strong> <%= job.positions %></p>
           </div>
         </div>
