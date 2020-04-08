@@ -5,13 +5,17 @@ defmodule FlowWeb.CandidateController do
   alias Flow.Jobs.Candidate
 
   def index(conn, _params) do
+    status = Jobs.list_status()
     candidates = Jobs.list_candidates()
-    render(conn, "index.html", candidates: candidates)
+    render(conn, "index.html", candidates: candidates, status: status)
   end
 
   def new(conn, _params) do
+    jobs = Jobs.list_jobs() |> Enum.map(&{&1.name, &1.id})
+    status = Jobs.list_status() |> Enum.map(&{&1.name, &1.id})
+
     changeset = Jobs.change_candidate(%Candidate{})
-    render(conn, "new.html", changeset: changeset)
+    render(conn, "new.html", changeset: changeset, jobs: jobs, status: status)
   end
 
   def create(conn, %{"candidate" => candidate_params}) do
@@ -34,7 +38,11 @@ defmodule FlowWeb.CandidateController do
   def edit(conn, %{"id" => id}) do
     candidate = Jobs.get_candidate!(id)
     changeset = Jobs.change_candidate(candidate)
-    render(conn, "edit.html", candidate: candidate, changeset: changeset)
+
+    jobs = Jobs.list_jobs() |> Enum.map(&{&1.name, &1.id})
+    status = Jobs.list_status() |> Enum.map(&{&1.name, &1.id})
+
+    render(conn, "edit.html", candidate: candidate, changeset: changeset, jobs: jobs, status: status)
   end
 
   def update(conn, %{"id" => id, "candidate" => candidate_params}) do

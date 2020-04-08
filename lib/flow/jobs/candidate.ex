@@ -10,8 +10,8 @@ defmodule Flow.Jobs.Candidate do
     field :linkedin, :string
     field :name, :string
     field :phone, :string
-    field :status_id, :binary_id
-    field :job_id, :binary_id
+    belongs_to :status, Flow.Jobs.Status
+    belongs_to :job, Flow.Jobs.Job
 
     timestamps()
   end
@@ -19,7 +19,7 @@ defmodule Flow.Jobs.Candidate do
   @doc false
   def changeset(candidate, attrs) do
     candidate
-    |> cast(attrs, [:name, :email, :phone, :linkedin, :github])
+    |> cast(attrs, [:name, :email, :phone, :linkedin, :github, :status_id, :job_id])
     |> validate_required([:name, :email, :phone, :linkedin, :github])
     |> unique_constraint(:email)
   end

@@ -18,8 +18,8 @@
   </div>
 
   <div class="field">
-    <%= label f, :description, class: "label" %>
-    <div class="select">
+    <%= label f, :client, class: "label" %>
+    <div class="select is-fullwidth">
       <%= select f, :client_id, @clients %>
     </div>
     <%= error_tag f, :client %>

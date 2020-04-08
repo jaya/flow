@@ -5,27 +5,53 @@
     </div>
   <% end %>
 
-  <%= label f, :name %>
-  <%= text_input f, :name %>
-  <%= error_tag f, :name %>
+  <div class="field">
+    <%= label f, :name, class: "label"%>
+    <%= text_input f, :name, class: "input" %>
+    <%= error_tag f, :name %>
+  </div>
 
-  <%= label f, :email %>
-  <%= text_input f, :email %>
-  <%= error_tag f, :email %>
+  <div class="field">
+    <%= label f, :email, class: "label" %>
+    <%= email_input f, :email, class: "input" %>
+    <%= error_tag f, :email %>
+  </div>
 
-  <%= label f, :phone %>
-  <%= text_input f, :phone %>
-  <%= error_tag f, :phone %>
+  <div class="field">
+    <%= label f, :phone, class: "label" %>
+    <%= text_input f, :phone, class: "input" %>
+    <%= error_tag f, :phone %>
+  </div>
 
-  <%= label f, :linkedin %>
-  <%= text_input f, :linkedin %>
-  <%= error_tag f, :linkedin %>
+  <div class="field">
+    <%= label f, :linkedin, class: "label" %>
+    <%= url_input f, :linkedin, class: "input" %>
+    <%= error_tag f, :linkedin %>
+  </div>
 
-  <%= label f, :github %>
-  <%= text_input f, :github %>
-  <%= error_tag f, :github %>
+  <div class="field">
+    <%= label f, :github, class: "label" %>
+    <%= url_input f, :github, class: "input" %>
+    <%= error_tag f, :github %>
+  </div>
 
-  <div>
-    <%= submit "Save" %>
+  <div class="field">
+    <%= label f, :job, class: "label" %>
+    <div class="select is-fullwidth">
+      <%= select f, :job_id, @jobs %>
+    </div>
+    <%= error_tag f, :job %>
+  </div>
+
+  <div class="field">
+    <%= label f, :status, class: "label" %>
+    <div class="select is-fullwidth">
+      <%= select f, :status_id, @status %>
+    </div>
+    <%= error_tag f, :status %>
+  </div>
+
+  <div style="padding: 10px 0">
+    <%= submit "Save", class: "button is-primary is-fullwidth" %>
   </div>
 <% end %>

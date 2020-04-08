@@ -212,6 +212,7 @@ defmodule Flow.Jobs do
   """
   def list_status do
     Repo.all(Status)
+    |> Enum.sort_by(&(&1.order))
   end
 
   @doc """
@@ -403,7 +404,7 @@ defmodule Flow.Jobs do
 
   """
   def list_candidates do
-    Repo.all(Candidate)
+    Repo.all(Candidate) |> Repo.preload([:status, :job])
   end
 
   @doc """

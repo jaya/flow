@@ -2,14 +2,27 @@
 
 @import "./bulma.min.css";
 
-#logo {
-    background: url("/images/logo-blue.svg") no-repeat center center;
-    background-size: cover;
-    width: 150px;
+body {
+  background-color: #CEECF2;
+  min-height: 100vh;
 }
-  
-.title {
+
+body > .container {
+  padding-top: 2em;
+  color: #224277;
+}
+
+
+#logo {
+  background: url("/images/logo-blue.svg") no-repeat center center;
+  background-size: cover;
+  width: 150px;
+}
+
+.title, .subtitle {
   text-align: center;
+  color: #224277;
+  text-shadow: 1px 1px 1px #2685BF;
 }
 
 header {
@@ -29,7 +42,8 @@ header {
   margin: 0 auto;
 }
 
-.card-description, .message-description {
+.card-description,
+.message-description {
   text-overflow: ellipsis;
   overflow: hidden;
   padding: 10px;
@@ -45,4 +59,45 @@ header {
 .message-footer {
   text-align: center;
   padding: 10px;
+}
+
+.board-column {
+  background-color: #3B8FD9;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+
+.board-column-header {
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#board {
+  overflow-x: scroll;
+  width: 100%;
+}
+
+.card-board {
+  margin: 10px;
+}
+
+.card-board-social-media {
+  font-size: 2em;
+  text-align: center;
+}
+
+.card-content > .content  {
+  text-align: center;
+}
+
+#new-candidate {
+  padding: 1em;
+  position: fixed;
+  font-size: 2em;
+  color: white;
+  border-radius: 2em;
+  right: 2em;
+  bottom: 2em;
+  text-shadow: 1px 1px 1px #224277;
 }

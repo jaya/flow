@@ -9,7 +9,7 @@ defmodule Flow.Jobs.Job do
     field :name, :string
     field :positions, :integer
     belongs_to :client, Flow.Jobs.Client
-
+    has_many :cadidates, Flow.Jobs.Candidate
     timestamps()
   end
 

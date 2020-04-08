@@ -9,7 +9,7 @@ defmodule Flow.Jobs.Status do
     field :enable, :boolean, default: false
     field :name, :string
     field :order, :integer
-
+    has_many :candidates, Flow.Jobs.Candidate
     timestamps()
   end
 

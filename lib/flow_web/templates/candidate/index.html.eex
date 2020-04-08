@@ -1,34 +1,57 @@
-<h1>Listing Candidates</h1>
+<h1 class="title">Candidates Board</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Phone</th>
-      <th>Linkedin</th>
-      <th>Github</th>
+<div class="columns is-inline-flex" id="board">
+  <%= for s <- @status do %>
+    <div class="column is-one-third board-column">
+      <div class="board-column-header">
+        <h1 class="subtitle"><%= s.name %></h1>
+      </div>
+      <div class="board-column-body">
+        <%= for candidate <- Enum.filter(@candidates, fn c -> c.status.id == s.id end) do %>
+          <div class="card card-board">
+            <header class="card-header">
+              <p class="card-header-title">
+                <%= candidate.job.name %>
+              </p>
+              <a href="#" class="card-header-icon" aria-label="more options">
+                <span class="icon">
+                  <i class="fas fa-address-card"></i>
+                </span>
+              </a>
+            </header>
+            <div class="card-content">
+              <div class="content">
+                <h3><%= candidate.name %></h2>
+                <p>
+                  <i class="fas fa-envelope"></i> : <%= candidate.email %>
+                </p>
+                <p>
+                    <i class="fas fa-phone"></i> : <%= candidate.phone %>
+                </p>
+                <p class="card-board-social-media">
+                  <a href="<%= candidate.github %>">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="<%= candidate.linkedin %>">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+            <footer class="card-footer">
+              <%= link "Show", to: Routes.candidate_path(@conn, :show, candidate), class: "card-footer-item" %>
+              <%= link "Edit", to: Routes.candidate_path(@conn, :edit, candidate), class: "card-footer-item" %>
+              <%= link "Delete", to: Routes.candidate_path(@conn, :delete, candidate), class: "card-footer-item", method: :delete, data: [confirm: "Are you sure?"] %>
+            </footer>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
 
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-<%= for candidate <- @candidates do %>
-    <tr>
-      <td><%= candidate.name %></td>
-      <td><%= candidate.email %></td>
-      <td><%= candidate.phone %></td>
-      <td><%= candidate.linkedin %></td>
-      <td><%= candidate.github %></td>
-
-      <td>
-        <span><%= link "Show", to: Routes.candidate_path(@conn, :show, candidate) %></span>
-        <span><%= link "Edit", to: Routes.candidate_path(@conn, :edit, candidate) %></span>
-        <span><%= link "Delete", to: Routes.candidate_path(@conn, :delete, candidate), method: :delete, data: [confirm: "Are you sure?"] %></span>
-      </td>
-    </tr>
-<% end %>
-  </tbody>
-</table>
-
-<span><%= link "New Candidate", to: Routes.candidate_path(@conn, :new) %></span>
+  <a id="new-candidate" class="button is-rounded is-info" href="<%= Routes.candidate_path(@conn, :new) %>">
+    <span class="icon">
+      <i class="fas fa-user-plus"></i>
+    </span>
+  </a>
+</div>
