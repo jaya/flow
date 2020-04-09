@@ -49,16 +49,31 @@ defmodule Flow.Account do
       {:error, %Ecto.Changeset{}}
 
   """
-  def create_user(changeset \\ %{}) do
-    case Repo.get_by(User, email: changeset.changes.email) do
+  def create_or_update(attrs) do
+    case Repo.get_by(User, email: attrs.email) do
       nil ->
-        Repo.insert(changeset)
+        create_user(attrs)
 
       user ->
-        user
-        |> User.changeset(changeset)
-        |> Repo.update()
+        update_user(user, attrs)
     end
+  end
+
+  @doc """
+  Creates a user.
+
+  ## Examples
+
+      iex> create_user(%{field: value})
+      {:ok, %User{}}
+
+      iex> create_user(%{field: bad_value})
+      {:error, %Ecto.Changeset{}}
+
+  """
+  def create_user(attrs \\ %{}) do
+    User.changeset(%User{}, attrs)
+    |> Repo.insert()
   end
 
   @doc """

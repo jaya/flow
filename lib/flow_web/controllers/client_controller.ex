@@ -4,6 +4,9 @@ defmodule FlowWeb.ClientController do
   alias Flow.Jobs
   alias Flow.Jobs.Client
 
+  plug FlowWeb.Plugs.RequireAuth
+  plug FlowWeb.Plugs.RequireAdmin when action in [:index, :new, :create, :edit, :update, :delete]
+
   def index(conn, _params) do
     clients = Jobs.list_clients()
     render(conn, "index.html", clients: clients)

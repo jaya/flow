@@ -4,6 +4,9 @@ defmodule FlowWeb.CandidateController do
   alias Flow.Jobs
   alias Flow.Jobs.Candidate
 
+  plug FlowWeb.Plugs.RequireAuth
+  plug FlowWeb.Plugs.RequireAdmin when action in [:delete]
+
   def index(conn, _params) do
     status = Jobs.list_status()
     candidates = Jobs.list_candidates()

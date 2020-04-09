@@ -4,6 +4,9 @@ defmodule FlowWeb.TechnologyController do
   alias Flow.Jobs
   alias Flow.Jobs.Technology
 
+  plug FlowWeb.Plugs.RequireAuth
+  plug FlowWeb.Plugs.RequireAdmin when action in [:index, :new, :create, :edit, :update, :delete]
+
   def index(conn, _params) do
     technologies = Jobs.list_technologies()
     render(conn, "index.html", technologies: technologies)

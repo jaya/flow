@@ -2,7 +2,6 @@ defmodule FlowWeb.UserController do
   use FlowWeb, :controller
 
   alias Flow.Account
-  alias Flow.Account.User
 
   plug Ueberauth
 
@@ -26,15 +25,13 @@ defmodule FlowWeb.UserController do
       provider: auth.provider
     }
 
-    changeset = User.changeset(%User{}, user_params)
-
-    signin(conn, changeset)
+    signin(conn, user_params)
   end
 
   defp extract_name(email), do: String.replace(email,"@jaya.tech", "")
 
-  defp signin(conn, changeset) do
-    case Account.create_user(changeset) do
+  defp signin(conn, user_params) do
+    case Account.create_or_update(user_params) do
       {:ok, user} ->
         conn
         |> put_flash(:info, "Welcome back! #{user.email}")

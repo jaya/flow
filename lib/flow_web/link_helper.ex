@@ -8,4 +8,13 @@ defmodule FlowWeb.LinkHelper do
       nil
     end
   end
+
+  def logged?(conn) do
+    IO.inspect conn
+    conn.assigns[:user] != nil
+  end
+
+  def admin?(conn) do
+    conn.assigns[:user].admin
+  end
 end

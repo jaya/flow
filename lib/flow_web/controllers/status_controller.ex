@@ -4,6 +4,9 @@ defmodule FlowWeb.StatusController do
   alias Flow.Jobs
   alias Flow.Jobs.Status
 
+  plug FlowWeb.Plugs.RequireAuth
+  plug FlowWeb.Plugs.RequireAdmin when action in [:index, :new, :create, :edit, :update, :delete]
+
   def index(conn, _params) do
     status = Jobs.list_status()
     render(conn, "index.html", status: status)

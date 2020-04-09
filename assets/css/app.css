@@ -17,8 +17,13 @@ body>.container {
   color: #224277;
 }
 
-span[data-phx-error-for] {
+span[data-phx-error-for], .alert-danger {
   color: #f14668;
+  font-size: 12px;
+}
+
+span[data-phx-success-for], .alert-success {
+  color: lightgreen;
   font-size: 12px;
 }
 

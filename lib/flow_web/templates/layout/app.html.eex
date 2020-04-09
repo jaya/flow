@@ -24,15 +24,27 @@
             </a>
           </div>
 
-          <div id="navbarBasicExample" class="navbar-menu">
-            <div class="navbar-end">
-              <%= link "Jobs", to: Routes.job_path(@conn, :index), class: "navbar-item #{FlowWeb.LinkHelper.active(@conn, Routes.job_path(@conn, :index))}" %>
-              <%= link "Clients", to: Routes.client_path(@conn, :index), class: "navbar-item #{FlowWeb.LinkHelper.active(@conn, Routes.client_path(@conn, :index))}" %>
-              <%= link "Status", to: Routes.status_path(@conn, :index), class: "navbar-item #{FlowWeb.LinkHelper.active(@conn, Routes.status_path(@conn, :index))}" %>
-              <%= link "Technology", to: Routes.technology_path(@conn, :index), class: "navbar-item #{FlowWeb.LinkHelper.active(@conn, Routes.technology_path(@conn, :index))}" %>
-              <%= link "Candidates", to: Routes.candidate_path(@conn, :index), class: "navbar-item #{FlowWeb.LinkHelper.active(@conn, Routes.candidate_path(@conn, :index))}" %>
+          <%= if FlowWeb.LinkHelper.logged?(@conn) do %>
+            <div id="navbarBasicExample" class="navbar-menu">
+              <div class="navbar-end">
+                <%= if FlowWeb.LinkHelper.admin?(@conn) do %>
+                  <%= link "Jobs", to: Routes.job_path(@conn, :index), class: "navbar-item #{FlowWeb.LinkHelper.active(@conn, Routes.job_path(@conn, :index))}" %>
+                  <%= link "Clients", to: Routes.client_path(@conn, :index), class: "navbar-item #{FlowWeb.LinkHelper.active(@conn, Routes.client_path(@conn, :index))}" %>
+                  <%= link "Status", to: Routes.status_path(@conn, :index), class: "navbar-item #{FlowWeb.LinkHelper.active(@conn, Routes.status_path(@conn, :index))}" %>
+                  <%= link "Technology", to: Routes.technology_path(@conn, :index), class: "navbar-item #{FlowWeb.LinkHelper.active(@conn, Routes.technology_path(@conn, :index))}" %>
+                <% end %>
+                <%= link "Candidates", to: Routes.candidate_path(@conn, :index), class: "navbar-item #{FlowWeb.LinkHelper.active(@conn, Routes.candidate_path(@conn, :index))}" %>
+                <div class="navbar-item">
+                  <div class="buttons">
+                    <a href="<%= Routes.user_path(@conn, :signout) %>" class="button is-info" >
+                      <strong>Sign up</strong>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
+
+          <%= end %>
         </nav>
       </header>
       <main role="main">

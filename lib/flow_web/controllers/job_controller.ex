@@ -4,6 +4,9 @@ defmodule FlowWeb.JobController do
   alias Flow.Jobs
   alias Flow.Jobs.Job
 
+  plug FlowWeb.Plugs.RequireAuth
+  plug FlowWeb.Plugs.RequireAdmin when action in [:index, :new, :create, :edit, :update, :delete]
+
   def index(conn, _params) do
     jobs = Jobs.list_jobs()
     IO.inspect jobs
