@@ -11,7 +11,7 @@
     <%= csrf_meta_tag() %>
   </head>
   <body>
-    <div class="container is-widescreen">
+    <div class="is-fullhd content">
       <header>
         <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
           <div class="navbar-brand">
@@ -26,17 +26,16 @@
 
           <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-end">
-              <%= link "Jobs", to: Routes.job_path(@conn, :index), class: "navbar-item" %>
-              <%= link "Clients", to: Routes.client_path(@conn, :index), class: "navbar-item" %>
-              <%= link "Status", to: Routes.status_path(@conn, :index), class: "navbar-item" %>
-              <%= link "Technology", to: Routes.technology_path(@conn, :index), class: "navbar-item" %>
-              <%= link "User", to: Routes.user_path(@conn, :index), class: "navbar-item" %>
-              <%= link "Candidates", to: Routes.candidate_path(@conn, :index), class: "navbar-item" %>
+              <%= link "Jobs", to: Routes.job_path(@conn, :index), class: "navbar-item #{FlowWeb.LinkHelper.active(@conn, Routes.job_path(@conn, :index))}" %>
+              <%= link "Clients", to: Routes.client_path(@conn, :index), class: "navbar-item #{FlowWeb.LinkHelper.active(@conn, Routes.client_path(@conn, :index))}" %>
+              <%= link "Status", to: Routes.status_path(@conn, :index), class: "navbar-item #{FlowWeb.LinkHelper.active(@conn, Routes.status_path(@conn, :index))}" %>
+              <%= link "Technology", to: Routes.technology_path(@conn, :index), class: "navbar-item #{FlowWeb.LinkHelper.active(@conn, Routes.technology_path(@conn, :index))}" %>
+              <%= link "Candidates", to: Routes.candidate_path(@conn, :index), class: "navbar-item #{FlowWeb.LinkHelper.active(@conn, Routes.candidate_path(@conn, :index))}" %>
             </div>
           </div>
         </nav>
       </header>
-      <main role="main" class="container">
+      <main role="main">
         <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
         <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
         <%= render @view_module, @view_template, assigns %>

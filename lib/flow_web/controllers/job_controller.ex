@@ -17,6 +17,7 @@ defmodule FlowWeb.JobController do
   end
 
   def create(conn, %{"job" => job_params}) do
+    clients = Jobs.list_clients() |> Enum.map(&{&1.name,&1.id})
     case Jobs.create_job(job_params) do
       {:ok, job} ->
         conn
@@ -24,7 +25,7 @@ defmodule FlowWeb.JobController do
         |> redirect(to: Routes.job_path(conn, :show, job))
 
       {:error, %Ecto.Changeset{} = changeset} ->
-        render(conn, "new.html", changeset: changeset)
+        render(conn, "new.html", changeset: changeset, clients: clients)
     end
   end
 
@@ -42,7 +43,7 @@ defmodule FlowWeb.JobController do
 
   def update(conn, %{"id" => id, "job" => job_params}) do
     job = Jobs.get_job!(id)
-
+    clients = Jobs.list_clients() |> Enum.map(&{&1.name,&1.id})
     case Jobs.update_job(job, job_params) do
       {:ok, job} ->
         conn
@@ -50,7 +51,7 @@ defmodule FlowWeb.JobController do
         |> redirect(to: Routes.job_path(conn, :show, job))
 
       {:error, %Ecto.Changeset{} = changeset} ->
-        render(conn, "edit.html", job: job, changeset: changeset)
+        render(conn, "edit.html", job: job, changeset: changeset, clients: clients)
     end
   end
 

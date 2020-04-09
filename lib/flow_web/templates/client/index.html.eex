@@ -28,9 +28,8 @@
   <% end %>
 </div>
 
-<a class="button" href="<%= Routes.client_path(@conn, :new) %>">
+<a id="new-btn" class="button is-info" href="<%= Routes.client_path(@conn, :new) %>">
   <span class="icon">
-    <i class="fas fa-city"></i>
+    <i class="fas fa-plus"></i>
   </span>
-  <span>New Client</span>
 </a>

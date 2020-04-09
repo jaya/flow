@@ -49,10 +49,16 @@ defmodule Flow.Account do
       {:error, %Ecto.Changeset{}}
 
   """
-  def create_user(attrs \\ %{}) do
-    %User{}
-    |> User.changeset(attrs)
-    |> Repo.insert()
+  def create_user(changeset \\ %{}) do
+    case Repo.get_by(User, email: changeset.changes.email) do
+      nil ->
+        Repo.insert(changeset)
+
+      user ->
+        user
+        |> User.changeset(changeset)
+        |> Repo.update()
+    end
   end
 
   @doc """

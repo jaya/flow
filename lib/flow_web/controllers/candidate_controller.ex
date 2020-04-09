@@ -11,7 +11,7 @@ defmodule FlowWeb.CandidateController do
   end
 
   def new(conn, _params) do
-    jobs = Jobs.list_jobs() |> Enum.map(&{&1.name, &1.id})
+    jobs = Jobs.list_jobs() |> Enum.map(&{"[#{&1.client.name}] #{&1.name}", &1.id})
     status = Jobs.list_status() |> Enum.map(&{&1.name, &1.id})
 
     changeset = Jobs.change_candidate(%Candidate{})
@@ -19,6 +19,9 @@ defmodule FlowWeb.CandidateController do
   end
 
   def create(conn, %{"candidate" => candidate_params}) do
+    jobs = Jobs.list_jobs() |> Enum.map(&{"[#{&1.client.name}] #{&1.name}", &1.id})
+    status = Jobs.list_status() |> Enum.map(&{&1.name, &1.id})
+
     case Jobs.create_candidate(candidate_params) do
       {:ok, candidate} ->
         conn
@@ -26,7 +29,7 @@ defmodule FlowWeb.CandidateController do
         |> redirect(to: Routes.candidate_path(conn, :show, candidate))
 
       {:error, %Ecto.Changeset{} = changeset} ->
-        render(conn, "new.html", changeset: changeset)
+        render(conn, "new.html", changeset: changeset, jobs: jobs, status: status)
     end
   end
 
@@ -48,6 +51,9 @@ defmodule FlowWeb.CandidateController do
   def update(conn, %{"id" => id, "candidate" => candidate_params}) do
     candidate = Jobs.get_candidate!(id)
 
+    jobs = Jobs.list_jobs() |> Enum.map(&{&1.name, &1.id})
+    status = Jobs.list_status() |> Enum.map(&{&1.name, &1.id})
+
     case Jobs.update_candidate(candidate, candidate_params) do
       {:ok, candidate} ->
         conn
@@ -55,7 +61,7 @@ defmodule FlowWeb.CandidateController do
         |> redirect(to: Routes.candidate_path(conn, :show, candidate))
 
       {:error, %Ecto.Changeset{} = changeset} ->
-        render(conn, "edit.html", candidate: candidate, changeset: changeset)
+        render(conn, "edit.html", candidate: candidate, changeset: changeset, jobs: jobs, status: status)
     end
   end
 

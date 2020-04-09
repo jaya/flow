@@ -16,15 +16,22 @@ defmodule FlowWeb.Router do
   scope "/", FlowWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
-
+    get "/", JobController, :index
     resources "/jobs", JobController
     resources "/clients", ClientController
     resources "/status", StatusController
     resources "/technologies", TechnologyController
     resources "/candidates", CandidateController
-    resources "/users", UserController
   end
+
+  scope "/auth", FlowWeb do
+    pipe_through :browser
+
+    get "/", UserController, :login
+    get "/:provider", UserController, :request
+    get "/:provider/callback", UserController, :callback
+  end
+
 
   # Other scopes may use custom stacks.
   # scope "/api", FlowWeb do

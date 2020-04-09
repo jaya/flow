@@ -212,7 +212,7 @@ defmodule Flow.Jobs do
   """
   def list_status do
     Repo.all(Status)
-    |> Enum.sort_by(&(&1.order))
+    |> Enum.sort_by(& &1.order)
   end
 
   @doc """
@@ -404,7 +404,18 @@ defmodule Flow.Jobs do
 
   """
   def list_candidates do
-    Repo.all(Candidate) |> Repo.preload([:status, :job])
+    query =
+      from c in Candidate,
+        join: s in Status,
+        on: s.id == c.status_id,
+        join: j in Job,
+        on: j.id == c.job_id,
+        join: cl in Client,
+        on: cl.id == j.client_id,
+        preload: [:status, job: {j, client: cl}],
+        select: c
+
+    Repo.all(query)
   end
 
   @doc """

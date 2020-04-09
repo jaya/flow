@@ -5,13 +5,26 @@
 body {
   background-color: #CEECF2;
   min-height: 100vh;
+  padding-bottom: 5em;
 }
 
-body > .container {
+.content {
+  padding: 1em;
+}
+
+body>.container {
   padding-top: 2em;
   color: #224277;
 }
 
+span[data-phx-error-for] {
+  color: #f14668;
+  font-size: 12px;
+}
+
+.is-active {
+  font-weight: bold;
+}
 
 #logo {
   background: url("/images/logo-blue.svg") no-repeat center center;
@@ -19,7 +32,8 @@ body > .container {
   width: 150px;
 }
 
-.title, .subtitle {
+.title,
+.subtitle {
   text-align: center;
   color: #224277;
   text-shadow: 1px 1px 1px #2685BF;
@@ -87,11 +101,12 @@ header {
   text-align: center;
 }
 
-.card-content > .content  {
+.card-content>.content {
   text-align: center;
 }
 
-#new-candidate {
+#new-candidate,
+#new-btn {
   padding: 1em;
   position: fixed;
   font-size: 2em;
@@ -100,4 +115,5 @@ header {
   right: 2em;
   bottom: 2em;
   text-shadow: 1px 1px 1px #224277;
+  box-shadow: 1px 1px 5px #224277;
 }

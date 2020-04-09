@@ -2,9 +2,9 @@
 
 <div class="columns is-inline-flex" id="board">
   <%= for s <- @status do %>
-    <div class="column is-one-third board-column">
+    <div class="column is-one-quarter board-column">
       <div class="board-column-header">
-        <h1 class="subtitle"><%= s.name %></h1>
+        <h4 class="subtitle"><%= s.name %></h4>
       </div>
       <div class="board-column-body">
         <%= for candidate <- Enum.filter(@candidates, fn c -> c.status.id == s.id end) do %>
@@ -15,7 +15,7 @@
               </p>
               <a href="#" class="card-header-icon" aria-label="more options">
                 <span class="icon">
-                  <i class="fas fa-address-card"></i>
+                  <img src="<%= candidate.job.client.logo %>">
                 </span>
               </a>
             </header>
