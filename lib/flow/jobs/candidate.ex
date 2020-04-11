@@ -20,7 +20,7 @@ defmodule Flow.Jobs.Candidate do
   def changeset(candidate, attrs) do
     candidate
     |> cast(attrs, [:name, :email, :phone, :linkedin, :github, :status_id, :job_id])
-    |> validate_required([:name, :email, :phone, :linkedin, :github])
+    |> validate_required([:name, :email, :phone, :linkedin, :github, :status_id, :job_id])
     |> unique_constraint(:email)
   end
 end

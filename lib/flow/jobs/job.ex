@@ -17,6 +17,6 @@ defmodule Flow.Jobs.Job do
   def changeset(job, attrs) do
     job
     |> cast(attrs, [:name, :description, :positions, :client_id])
-    |> validate_required([:name, :description, :positions])
+    |> validate_required([:name, :description, :positions, :client_id])
   end
 end

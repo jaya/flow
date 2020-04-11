@@ -432,7 +432,21 @@ defmodule Flow.Jobs do
       ** (Ecto.NoResultsError)
 
   """
-  def get_candidate!(id), do: Repo.get!(Candidate, id)
+  def get_candidate!(id) do
+    query =
+      from c in Candidate,
+        join: s in Status,
+        on: s.id == c.status_id,
+        join: j in Job,
+        on: j.id == c.job_id,
+        join: cl in Client,
+        on: cl.id == j.client_id,
+        preload: [:status, job: {j, client: cl}],
+        where: c.id == ^id,
+        select: c
+
+    Repo.one!(query)
+  end
 
   @doc """
   Creates a candidate.
@@ -511,7 +525,16 @@ defmodule Flow.Jobs do
 
   """
   def list_skills do
-    Repo.all(Skill)
+    query =
+      from s in Skill,
+        join: c in Candidate,
+        on: c.id == s.candidate_id,
+        join: t in Technology,
+        on: t.id == s.technology_id,
+        preload: [technology: t, candidate: c],
+        select: s
+
+    Repo.all(query)
   end
 
   @doc """
@@ -528,7 +551,7 @@ defmodule Flow.Jobs do
       ** (Ecto.NoResultsError)
 
   """
-  def get_skill!(id), do: Repo.get!(Skill, id)
+  def get_skill!(id), do: Repo.get!(Skill, id) |> Repo.preload([:candidate, :technology])
 
   @doc """
   Creates a skill.

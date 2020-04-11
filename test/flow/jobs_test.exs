@@ -7,7 +7,11 @@ defmodule Flow.JobsTest do
     alias Flow.Jobs.Client
 
     @valid_attrs %{description: "some description", logo: "some logo", name: "some name"}
-    @update_attrs %{description: "some updated description", logo: "some updated logo", name: "some updated name"}
+    @update_attrs %{
+      description: "some updated description",
+      logo: "some updated logo",
+      name: "some updated name"
+    }
     @invalid_attrs %{description: nil, logo: nil, name: nil}
 
     def client_fixture(attrs \\ %{}) do
@@ -70,16 +74,23 @@ defmodule Flow.JobsTest do
     alias Flow.Jobs.Job
 
     @valid_attrs %{description: "some description", name: "some name", positions: 42}
-    @update_attrs %{description: "some updated description", name: "some updated name", positions: 43}
+    @update_attrs %{
+      description: "some updated description",
+      name: "some updated name",
+      positions: 43
+    }
     @invalid_attrs %{description: nil, name: nil, positions: nil}
 
     def job_fixture(attrs \\ %{}) do
+      client = Flow.JobsTest.client_fixture()
+      attrs = Map.put(attrs, :client_id, client.id)
+
       {:ok, job} =
         attrs
         |> Enum.into(@valid_attrs)
         |> Jobs.create_job()
 
-      job
+      %{job | client: client}
     end
 
     test "list_jobs/0 returns all jobs" do
@@ -93,7 +104,8 @@ defmodule Flow.JobsTest do
     end
 
     test "create_job/1 with valid data creates a job" do
-      assert {:ok, %Job{} = job} = Jobs.create_job(@valid_attrs)
+      client = Flow.JobsTest.client_fixture()
+      assert {:ok, %Job{} = job} = Jobs.create_job(Map.put(@valid_attrs, :client_id, client.id))
       assert job.description == "some description"
       assert job.name == "some name"
       assert job.positions == 42
@@ -133,7 +145,12 @@ defmodule Flow.JobsTest do
     alias Flow.Jobs.Status
 
     @valid_attrs %{description: "some description", enable: true, name: "some name", order: 42}
-    @update_attrs %{description: "some updated description", enable: false, name: "some updated name", order: 43}
+    @update_attrs %{
+      description: "some updated description",
+      enable: false,
+      name: "some updated name",
+      order: 43
+    }
     @invalid_attrs %{description: nil, enable: nil, name: nil, order: nil}
 
     def status_fixture(attrs \\ %{}) do
@@ -258,17 +275,35 @@ defmodule Flow.JobsTest do
   describe "candidates" do
     alias Flow.Jobs.Candidate
 
-    @valid_attrs %{email: "some email", github: "some github", linkedin: "some linkedin", name: "some name", phone: "some phone"}
-    @update_attrs %{email: "some updated email", github: "some updated github", linkedin: "some updated linkedin", name: "some updated name", phone: "some updated phone"}
+    @valid_attrs %{
+      email: "some email",
+      github: "some github",
+      linkedin: "some linkedin",
+      name: "some name",
+      phone: "some phone"
+    }
+    @update_attrs %{
+      email: "some updated email",
+      github: "some updated github",
+      linkedin: "some updated linkedin",
+      name: "some updated name",
+      phone: "some updated phone"
+    }
     @invalid_attrs %{email: nil, github: nil, linkedin: nil, name: nil, phone: nil}
 
     def candidate_fixture(attrs \\ %{}) do
+      job = Flow.JobsTest.job_fixture()
+      status = Flow.JobsTest.status_fixture()
+
+      attrs = Map.put(attrs, :job_id, job.id)
+      attrs = Map.put(attrs, :status_id, status.id)
+
       {:ok, candidate} =
         attrs
         |> Enum.into(@valid_attrs)
         |> Jobs.create_candidate()
 
-      candidate
+      %{candidate | job: job, status: status}
     end
 
     test "list_candidates/0 returns all candidates" do
@@ -282,7 +317,13 @@ defmodule Flow.JobsTest do
     end
 
     test "create_candidate/1 with valid data creates a candidate" do
-      assert {:ok, %Candidate{} = candidate} = Jobs.create_candidate(@valid_attrs)
+      job = Flow.JobsTest.job_fixture()
+      status = Flow.JobsTest.status_fixture()
+
+      candidate = Map.put(@valid_attrs, :job_id, job.id)
+      candidate = Map.put(candidate, :status_id, status.id)
+
+      assert {:ok, %Candidate{} = candidate} = Jobs.create_candidate(candidate)
       assert candidate.email == "some email"
       assert candidate.github == "some github"
       assert candidate.linkedin == "some linkedin"
@@ -327,29 +368,47 @@ defmodule Flow.JobsTest do
 
     @valid_attrs %{}
     @update_attrs %{}
-    @invalid_attrs %{}
+    @invalid_attrs %{candidate_id: nil, technology_id: nil}
 
     def skill_fixture(attrs \\ %{}) do
+      candidate = Flow.JobsTest.candidate_fixture()
+      technology = Flow.JobsTest.technology_fixture()
+
+      attrs = Map.put(attrs, :candidate_id, candidate.id)
+      attrs = Map.put(attrs, :technology_id, technology.id)
+
       {:ok, skill} =
         attrs
         |> Enum.into(@valid_attrs)
         |> Jobs.create_skill()
 
-      skill
+      %{skill | candidate: candidate, technology: technology}
     end
 
     test "list_skills/0 returns all skills" do
       skill = skill_fixture()
-      assert Jobs.list_skills() == [skill]
+      assert length(Jobs.list_skills()) > 0
     end
 
     test "get_skill!/1 returns the skill with given id" do
       skill = skill_fixture()
-      assert Jobs.get_skill!(skill.id) == skill
+      result =  Jobs.get_skill!(skill.id)
+
+      assert result.id == skill.id
+
+      assert result.candidate.name == skill.candidate.name
+      assert result.candidate.email == skill.candidate.email
+
+      assert result.technology.id == skill.technology.id
+      assert result.technology.name == skill.technology.name
     end
 
     test "create_skill/1 with valid data creates a skill" do
-      assert {:ok, %Skill{} = skill} = Jobs.create_skill(@valid_attrs)
+      candidate = Flow.JobsTest.candidate_fixture()
+      technology = Flow.JobsTest.technology_fixture()
+
+      assert {:ok, %Skill{} = skill} =
+               Jobs.create_skill(%{candidate_id: candidate.id, technology_id: technology.id})
     end
 
     test "create_skill/1 with invalid data returns error changeset" do
@@ -359,12 +418,6 @@ defmodule Flow.JobsTest do
     test "update_skill/2 with valid data updates the skill" do
       skill = skill_fixture()
       assert {:ok, %Skill{} = skill} = Jobs.update_skill(skill, @update_attrs)
-    end
-
-    test "update_skill/2 with invalid data returns error changeset" do
-      skill = skill_fixture()
-      assert {:error, %Ecto.Changeset{}} = Jobs.update_skill(skill, @invalid_attrs)
-      assert skill == Jobs.get_skill!(skill.id)
     end
 
     test "delete_skill/1 deletes the skill" do

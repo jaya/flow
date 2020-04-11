@@ -44,7 +44,7 @@
               </div>
             </div>
 
-          <%= end %>
+          <% end %>
         </nav>
       </header>
       <main role="main">
