@@ -1,7 +1,7 @@
 defmodule FlowWeb.TechnologyControllerTest do
   use FlowWeb.ConnCase
 
-  alias Flow.Jobs
+  alias Flow.{Jobs, Account}
 
   @create_attrs %{description: "some description", name: "some name"}
   @update_attrs %{description: "some updated description", name: "some updated name"}
@@ -12,10 +12,27 @@ defmodule FlowWeb.TechnologyControllerTest do
     technology
   end
 
+  setup %{conn: conn} do
+    {:ok, user} =
+      Account.create_user(%{
+        admin: true,
+        avatar: "some avatar",
+        email: "some email",
+        name: "some name",
+        token: "some token"
+      })
+
+    conn =
+      conn
+      |> Plug.Test.init_test_session(user_id: user.id)
+
+    {:ok, conn: conn}
+  end
+
   describe "index" do
     test "lists all technologies", %{conn: conn} do
       conn = get(conn, Routes.technology_path(conn, :index))
-      assert html_response(conn, 200) =~ "Listing Technologies"
+      assert html_response(conn, 200) =~ "Technologies"
     end
   end
 
@@ -56,7 +73,9 @@ defmodule FlowWeb.TechnologyControllerTest do
     setup [:create_technology]
 
     test "redirects when data is valid", %{conn: conn, technology: technology} do
-      conn = put(conn, Routes.technology_path(conn, :update, technology), technology: @update_attrs)
+      conn =
+        put(conn, Routes.technology_path(conn, :update, technology), technology: @update_attrs)
+
       assert redirected_to(conn) == Routes.technology_path(conn, :show, technology)
 
       conn = get(conn, Routes.technology_path(conn, :show, technology))
@@ -64,7 +83,9 @@ defmodule FlowWeb.TechnologyControllerTest do
     end
 
     test "renders errors when data is invalid", %{conn: conn, technology: technology} do
-      conn = put(conn, Routes.technology_path(conn, :update, technology), technology: @invalid_attrs)
+      conn =
+        put(conn, Routes.technology_path(conn, :update, technology), technology: @invalid_attrs)
+
       assert html_response(conn, 200) =~ "Edit Technology"
     end
   end
@@ -75,6 +96,7 @@ defmodule FlowWeb.TechnologyControllerTest do
     test "deletes chosen technology", %{conn: conn, technology: technology} do
       conn = delete(conn, Routes.technology_path(conn, :delete, technology))
       assert redirected_to(conn) == Routes.technology_path(conn, :index)
+
       assert_error_sent 404, fn ->
         get(conn, Routes.technology_path(conn, :show, technology))
       end

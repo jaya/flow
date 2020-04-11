@@ -1,7 +1,7 @@
 defmodule FlowWeb.StatusControllerTest do
   use FlowWeb.ConnCase
 
-  alias Flow.Jobs
+  alias Flow.{Jobs, Account}
 
   @create_attrs %{description: "some description", enable: true, name: "some name", order: 42}
   @update_attrs %{description: "some updated description", enable: false, name: "some updated name", order: 43}
@@ -12,10 +12,26 @@ defmodule FlowWeb.StatusControllerTest do
     status
   end
 
+  setup %{conn: conn} do
+    {:ok, user} =
+      Account.create_user(%{
+        admin: true,
+        avatar: "some avatar",
+        email: "some email",
+        name: "some name",
+        token: "some token"
+      })
+
+    conn = conn
+    |> Plug.Test.init_test_session(user_id: user.id)
+
+    {:ok, conn: conn}
+  end
+
   describe "index" do
     test "lists all status", %{conn: conn} do
       conn = get(conn, Routes.status_path(conn, :index))
-      assert html_response(conn, 200) =~ "Listing Status"
+      assert html_response(conn, 200) =~ "Status"
     end
   end
 

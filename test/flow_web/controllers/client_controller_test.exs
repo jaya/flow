@@ -1,7 +1,7 @@
 defmodule FlowWeb.ClientControllerTest do
   use FlowWeb.ConnCase
 
-  alias Flow.Jobs
+  alias Flow.{Jobs, Account}
 
   @create_attrs %{description: "some description", logo: "some logo", name: "some name"}
   @update_attrs %{description: "some updated description", logo: "some updated logo", name: "some updated name"}
@@ -12,10 +12,26 @@ defmodule FlowWeb.ClientControllerTest do
     client
   end
 
+  setup %{conn: conn} do
+    {:ok, user} =
+      Account.create_user(%{
+        admin: true,
+        avatar: "some avatar",
+        email: "some email",
+        name: "some name",
+        token: "some token"
+      })
+
+    conn = conn
+    |> Plug.Test.init_test_session(user_id: user.id)
+
+    {:ok, conn: conn}
+  end
+
   describe "index" do
     test "lists all clients", %{conn: conn} do
       conn = get(conn, Routes.client_path(conn, :index))
-      assert html_response(conn, 200) =~ "Listing Clients"
+      assert html_response(conn, 200) =~ "Clients"
     end
   end
 

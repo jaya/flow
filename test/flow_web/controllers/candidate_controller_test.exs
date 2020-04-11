@@ -1,21 +1,80 @@
 defmodule FlowWeb.CandidateControllerTest do
   use FlowWeb.ConnCase
+  alias Flow.{Jobs, Account}
 
-  alias Flow.Jobs
+  @create_attrs %{
+    email: "some email",
+    github: "some github",
+    linkedin: "some linkedin",
+    name: "some name",
+    phone: "some phone"
+  }
 
-  @create_attrs %{email: "some email", github: "some github", linkedin: "some linkedin", name: "some name", phone: "some phone"}
-  @update_attrs %{email: "some updated email", github: "some updated github", linkedin: "some updated linkedin", name: "some updated name", phone: "some updated phone"}
+  @update_attrs %{
+    email: "some updated email",
+    github: "some updated github",
+    linkedin: "some updated linkedin",
+    name: "some updated name",
+    phone: "some updated phone"
+  }
+
   @invalid_attrs %{email: nil, github: nil, linkedin: nil, name: nil, phone: nil}
 
   def fixture(:candidate) do
-    {:ok, candidate} = Jobs.create_candidate(@create_attrs)
+    {:ok, status} =
+      Jobs.create_status(%{
+        description: "some description",
+        enable: true,
+        name: "some name",
+        order: 42
+      })
+
+    {:ok, client} =
+      Jobs.create_client(%{
+        description: "some description",
+        logo: "some logo",
+        name: "some name"
+      })
+
+    {:ok, job} =
+      Jobs.create_job(%{
+        description: "some description",
+        name: "some name",
+        positions: 42,
+        client_id: client.id
+      })
+
+    {:ok, candidate} =
+      Jobs.create_candidate(
+        @create_attrs
+        |> Map.put(:status_id, status.id)
+        |> Map.put(:job_id, job.id)
+      )
+
     candidate
+  end
+
+  setup %{conn: conn} do
+    {:ok, user} =
+      Account.create_user(%{
+        admin: true,
+        avatar: "some avatar",
+        email: "some email",
+        name: "some name",
+        token: "some token"
+      })
+
+    conn =
+      conn
+      |> Plug.Test.init_test_session(user_id: user.id)
+
+    {:ok, conn: conn}
   end
 
   describe "index" do
     test "lists all candidates", %{conn: conn} do
       conn = get(conn, Routes.candidate_path(conn, :index))
-      assert html_response(conn, 200) =~ "Listing Candidates"
+      assert html_response(conn, 200) =~ "Candidates"
     end
   end
 
@@ -27,8 +86,37 @@ defmodule FlowWeb.CandidateControllerTest do
   end
 
   describe "create candidate" do
+    @tag create_candidate: "ok"
     test "redirects to show when data is valid", %{conn: conn} do
-      conn = post(conn, Routes.candidate_path(conn, :create), candidate: @create_attrs)
+      {:ok, status} =
+        Jobs.create_status(%{
+          description: "some description",
+          enable: true,
+          name: "some name",
+          order: 42
+        })
+
+      {:ok, client} =
+        Jobs.create_client(%{
+          description: "some description",
+          logo: "some logo",
+          name: "some name"
+        })
+
+      {:ok, job} =
+        Jobs.create_job(%{
+          description: "some description",
+          name: "some name",
+          positions: 42,
+          client_id: client.id
+        })
+
+      candidate =
+        @create_attrs
+        |> Map.put(:status_id, status.id)
+        |> Map.put(:job_id, job.id)
+
+      conn = post(conn, Routes.candidate_path(conn, :create), candidate: candidate)
 
       assert %{id: id} = redirected_params(conn)
       assert redirected_to(conn) == Routes.candidate_path(conn, :show, id)
@@ -75,6 +163,7 @@ defmodule FlowWeb.CandidateControllerTest do
     test "deletes chosen candidate", %{conn: conn, candidate: candidate} do
       conn = delete(conn, Routes.candidate_path(conn, :delete, candidate))
       assert redirected_to(conn) == Routes.candidate_path(conn, :index)
+
       assert_error_sent 404, fn ->
         get(conn, Routes.candidate_path(conn, :show, candidate))
       end

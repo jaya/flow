@@ -1,21 +1,50 @@
 defmodule FlowWeb.JobControllerTest do
   use FlowWeb.ConnCase
 
-  alias Flow.Jobs
+  alias Flow.{Jobs, Account}
 
   @create_attrs %{description: "some description", name: "some name", positions: 42}
-  @update_attrs %{description: "some updated description", name: "some updated name", positions: 43}
+  @update_attrs %{
+    description: "some updated description",
+    name: "some updated name",
+    positions: 43
+  }
   @invalid_attrs %{description: nil, name: nil, positions: nil}
 
   def fixture(:job) do
-    {:ok, job} = Jobs.create_job(@create_attrs)
+    {:ok, client} =
+      Jobs.create_client(%{
+        description: "some description",
+        logo: "some logo",
+        name: "some name"
+      })
+
+    {:ok, job} = Jobs.create_job(@create_attrs |> Map.put(:client_id, client.id))
+
     job
+  end
+
+  setup %{conn: conn} do
+    {:ok, user} =
+      Account.create_user(%{
+        admin: true,
+        avatar: "some avatar",
+        email: "some email",
+        name: "some name",
+        token: "some token"
+      })
+
+    conn =
+      conn
+      |> Plug.Test.init_test_session(user_id: user.id)
+
+    {:ok, conn: conn}
   end
 
   describe "index" do
     test "lists all jobs", %{conn: conn} do
       conn = get(conn, Routes.job_path(conn, :index))
-      assert html_response(conn, 200) =~ "Listing Jobs"
+      assert html_response(conn, 200) =~ "Jobs"
     end
   end
 
@@ -28,7 +57,17 @@ defmodule FlowWeb.JobControllerTest do
 
   describe "create job" do
     test "redirects to show when data is valid", %{conn: conn} do
-      conn = post(conn, Routes.job_path(conn, :create), job: @create_attrs)
+      {:ok, client} =
+        Jobs.create_client(%{
+          description: "some description",
+          logo: "some logo",
+          name: "some name"
+        })
+
+      conn =
+        post(conn, Routes.job_path(conn, :create),
+          job: @create_attrs |> Map.put(:client_id, client.id)
+        )
 
       assert %{id: id} = redirected_params(conn)
       assert redirected_to(conn) == Routes.job_path(conn, :show, id)
@@ -75,6 +114,7 @@ defmodule FlowWeb.JobControllerTest do
     test "deletes chosen job", %{conn: conn, job: job} do
       conn = delete(conn, Routes.job_path(conn, :delete, job))
       assert redirected_to(conn) == Routes.job_path(conn, :index)
+
       assert_error_sent 404, fn ->
         get(conn, Routes.job_path(conn, :show, job))
       end
