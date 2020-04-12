@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title><%= assigns[:page_title] || "Flow · Phoenix Framework" %></title>
+    <title><%= assigns[:page_title] || "Flow · Candidate Manager" %></title>
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
   
     <script>
@@ -34,8 +34,8 @@
             <div id="navbarBasicExample" class="navbar-menu">
               <div class="navbar-end">
                 <%= if FlowWeb.LinkHelper.admin?(@conn) do %>
-                  <%= link "Jobs", to: Routes.job_path(@conn, :index), class: "navbar-item #{FlowWeb.LinkHelper.active(@conn, Routes.job_path(@conn, :index))}" %>
                   <%= link "Clients", to: Routes.client_path(@conn, :index), class: "navbar-item #{FlowWeb.LinkHelper.active(@conn, Routes.client_path(@conn, :index))}" %>
+                  <%= link "Jobs", to: Routes.job_path(@conn, :index), class: "navbar-item #{FlowWeb.LinkHelper.active(@conn, Routes.job_path(@conn, :index))}" %>
                   <%= link "Status", to: Routes.status_path(@conn, :index), class: "navbar-item #{FlowWeb.LinkHelper.active(@conn, Routes.status_path(@conn, :index))}" %>
                   <%= link "Technology", to: Routes.technology_path(@conn, :index), class: "navbar-item #{FlowWeb.LinkHelper.active(@conn, Routes.technology_path(@conn, :index))}" %>
                 <% end %>
