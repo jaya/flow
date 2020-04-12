@@ -3,7 +3,7 @@
 <div class="columns is-multiline is-desktop">
   <%= for technology <- @technologies do %>
     <div class="column is-one-quarter">
-      <article class="message is-warning">
+      <article class="message is-info">
         <div class="message-header">
           <p><%= technology.name %></p>
         </div>
@@ -11,20 +11,20 @@
           <p class="message-description"><%= technology.description %></p>
         </div>
         <div class="message-footer">
-          <a class="button is-warning" href="<%= Routes.technology_path(@conn, :show, technology) %>">
+          <a class="button is-info" href="<%= Routes.technology_path(@conn, :show, technology) %>">
             <span class="icon">
               <i class="fas fa-eye"></i>
             </span>
             <span>Show</span>    
           </a>
-          <a class="button is-warning" href="<%= Routes.technology_path(@conn, :edit, technology) %>">
+          <a class="button is-info" href="<%= Routes.technology_path(@conn, :edit, technology) %>">
             <span class="icon">
               <i class="fas fa-edit"></i>
             </span>
             <span>Edit</span>    
           </a>
           
-          <%= link "X Delete", to: Routes.technology_path(@conn, :delete, technology), class: "button is-warning", method: :delete, data: [confirm: "Are you sure?"] %>
+          <%= link "X Delete", to: Routes.technology_path(@conn, :delete, technology), class: "button is-info", method: :delete, data: [confirm: "Are you sure?"] %>
         </div>
       </article>
     </div>

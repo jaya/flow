@@ -135,7 +135,7 @@ defmodule Flow.Account do
 
   """
   def list_comments do
-    Repo.all(Comment)
+    Repo.all(Comment) |> Repo.preload(:user)
   end
 
   @doc """
@@ -152,7 +152,7 @@ defmodule Flow.Account do
       ** (Ecto.NoResultsError)
 
   """
-  def get_comment!(id), do: Repo.get!(Comment, id)
+  def get_comment!(id), do: Repo.get!(Comment, id) |> Repo.preload(:user)
 
   @doc """
   Creates a comment.

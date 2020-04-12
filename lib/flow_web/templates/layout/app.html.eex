@@ -7,6 +7,12 @@
     <title><%= assigns[:page_title] || "Flow · Phoenix Framework" %></title>
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
   
+    <script>
+      <%= if @conn.assigns.user do %>
+        window.userToken = "<%= Phoenix.Token.sign(FlowWeb.Endpoint, "key", @conn.assigns.user.id) %>"
+      <% end %>
+    </script>
+
     <script src="https://kit.fontawesome.com/52b0b8d1a9.js" crossorigin="anonymous"></script>
     <%= csrf_meta_tag() %>
   </head>
@@ -48,12 +54,36 @@
         </nav>
       </header>
       <main role="main">
-        <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-        <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+        
+        <%= unless is_nil(get_flash(@conn, :info)) do %>
+          <div class="notification is-primary">
+            <button class="delete"></button>
+            <%= get_flash(@conn, :info) %>
+          </div>
+        <% end %>
+
+        <%= unless is_nil(get_flash(@conn, :error)) do %>
+          <div class="notification is-danger">
+            <button class="delete"></button>
+            <%= get_flash(@conn, :error) %>
+          </div>
+        <% end %>
+
         <%= render @view_module, @view_template, assigns %>
       </main>
     </div>
     <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
+          $notification = $delete.parentNode;
+
+          $delete.addEventListener('click', () => {
+            $notification.parentNode.removeChild($notification);
+          });
+        });
+      });
+    </script>
   </body>
 </html>
 

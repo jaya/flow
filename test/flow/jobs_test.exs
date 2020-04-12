@@ -295,7 +295,17 @@ defmodule Flow.JobsTest do
       job = Flow.JobsTest.job_fixture()
       status = Flow.JobsTest.status_fixture()
 
+      {:ok, user} =
+        Flow.Account.create_user(%{
+          admin: true,
+          avatar: "some avatar",
+          email: "some email",
+          name: "some name",
+          token: "some token"
+        })
+
       attrs = Map.put(attrs, :job_id, job.id)
+      attrs = Map.put(attrs, :user_id, user.id)
       attrs = Map.put(attrs, :status_id, status.id)
 
       {:ok, candidate} =
@@ -303,7 +313,7 @@ defmodule Flow.JobsTest do
         |> Enum.into(@valid_attrs)
         |> Jobs.create_candidate()
 
-      %{candidate | job: job, status: status}
+      %{candidate | job: job, status: status, user: user}
     end
 
     test "list_candidates/0 returns all candidates" do
@@ -320,8 +330,19 @@ defmodule Flow.JobsTest do
       job = Flow.JobsTest.job_fixture()
       status = Flow.JobsTest.status_fixture()
 
-      candidate = Map.put(@valid_attrs, :job_id, job.id)
-      candidate = Map.put(candidate, :status_id, status.id)
+      {:ok, user} =
+        Flow.Account.create_user(%{
+          admin: true,
+          avatar: "some avatar",
+          email: "some email",
+          name: "some name",
+          token: "some token"
+        })
+
+      candidate =
+        Map.put(@valid_attrs, :job_id, job.id)
+        |> Map.put(:status_id, status.id)
+        |> Map.put(:user_id, user.id)
 
       assert {:ok, %Candidate{} = candidate} = Jobs.create_candidate(candidate)
       assert candidate.email == "some email"
@@ -392,7 +413,7 @@ defmodule Flow.JobsTest do
 
     test "get_skill!/1 returns the skill with given id" do
       skill = skill_fixture()
-      result =  Jobs.get_skill!(skill.id)
+      result = Jobs.get_skill!(skill.id)
 
       assert result.id == skill.id
 

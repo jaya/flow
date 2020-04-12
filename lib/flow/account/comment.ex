@@ -2,12 +2,17 @@ defmodule Flow.Account.Comment do
   use Ecto.Schema
   import Ecto.Changeset
 
+  alias Flow.Jobs.Candidate
+  alias Flow.Account.User
+
+  @derive {Jason.Encoder, only: [:id, :text, :user, :inserted_at]}
+
   @primary_key {:id, :binary_id, autogenerate: true}
   @foreign_key_type :binary_id
   schema "comments" do
     field :text, :string
-    field :candidate_id, :binary_id
-    field :user_id, :binary_id
+    belongs_to :candidate, Candidate
+    belongs_to :user, User
 
     timestamps()
   end
@@ -15,7 +20,7 @@ defmodule Flow.Account.Comment do
   @doc false
   def changeset(comment, attrs) do
     comment
-    |> cast(attrs, [:text])
-    |> validate_required([:text])
+    |> cast(attrs, [:text, :candidate_id, :user_id])
+    |> validate_required([:text, :candidate_id, :user_id])
   end
 end

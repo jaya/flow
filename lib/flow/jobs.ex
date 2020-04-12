@@ -7,6 +7,7 @@ defmodule Flow.Jobs do
   alias Flow.Repo
 
   alias Flow.Jobs.Client
+  alias Flow.Account.{Comment, User}
 
   @doc """
   Returns the list of clients.
@@ -412,7 +413,9 @@ defmodule Flow.Jobs do
         on: j.id == c.job_id,
         join: cl in Client,
         on: cl.id == j.client_id,
-        preload: [:status, job: {j, client: cl}],
+        join: u in User,
+        on: u.id == c.user_id,
+        preload: [:status, :user, job: {j, client: cl}],
         select: c
 
     Repo.all(query)
@@ -441,7 +444,37 @@ defmodule Flow.Jobs do
         on: j.id == c.job_id,
         join: cl in Client,
         on: cl.id == j.client_id,
-        preload: [:status, job: {j, client: cl}],
+        join: u in User,
+        on: u.id == c.user_id,
+        preload: [:status, :user, job: {j, client: cl}],
+        where: c.id == ^id,
+        select: c
+
+    Repo.one!(query)
+  end
+
+  @doc """
+  Gets a single candidate.
+
+  Raises `Ecto.NoResultsError` if the Candidate does not exist.
+
+  ## Examples
+
+      iex> get_candidate_with_comments!(123)
+      %Candidate{}
+
+      iex> get_candidate!(456)
+      ** (Ecto.NoResultsError)
+
+  """
+  def get_candidate_with_comments!(id) do
+    query =
+      from c in Candidate,
+        left_join: comment in Comment,
+        on: c.id == comment.candidate_id,
+        left_join: user in User,
+        on: user.id == comment.user_id,
+        preload: [comments: {comment, user: user}],
         where: c.id == ^id,
         select: c
 

@@ -1,13 +1,25 @@
 defmodule Flow.AccountTest do
   use Flow.DataCase
 
-  alias Flow.Account
+  alias Flow.{Account, Jobs}
 
   describe "users" do
     alias Flow.Account.User
 
-    @valid_attrs %{admin: true, avatar: "some avatar", email: "some email", name: "some name", token: "some token"}
-    @update_attrs %{admin: false, avatar: "some updated avatar", email: "some updated email", name: "some updated name", token: "some updated token"}
+    @valid_attrs %{
+      admin: true,
+      avatar: "some avatar",
+      email: "some email",
+      name: "some name",
+      token: "some token"
+    }
+    @update_attrs %{
+      admin: false,
+      avatar: "some updated avatar",
+      email: "some updated email",
+      name: "some updated name",
+      token: "some updated token"
+    }
     @invalid_attrs %{admin: nil, avatar: nil, email: nil, name: nil, token: nil}
 
     def user_fixture(attrs \\ %{}) do
@@ -78,12 +90,53 @@ defmodule Flow.AccountTest do
     @invalid_attrs %{text: nil}
 
     def comment_fixture(attrs \\ %{}) do
+      {:ok, client} =
+        Jobs.create_client(%{
+          description: "some description",
+          logo: "some logo",
+          name: "some name"
+        })
+
+      {:ok, job} =
+        Jobs.create_job(%{
+          description: "some description",
+          name: "some name",
+          positions: 42,
+          client_id: client.id
+        })
+
+      {:ok, status} =
+        Jobs.create_status(%{
+          description: "some description",
+          enable: true,
+          name: "some name",
+          order: 42
+        })
+
+      user = Flow.AccountTest.user_fixture()
+
+      {:ok, candidate} =
+        Jobs.create_candidate(%{
+          email: "some email",
+          github: "some github",
+          linkedin: "some linkedin",
+          name: "some name",
+          phone: "some phone",
+          job_id: job.id,
+          status_id: status.id,
+          user_id: user.id
+        })
+
       {:ok, comment} =
         attrs
-        |> Enum.into(@valid_attrs)
+        |> Enum.into(
+          @valid_attrs
+          |> Map.put(:candidate_id, candidate.id)
+          |> Map.put(:user_id, user.id)
+        )
         |> Account.create_comment()
 
-      comment
+      %{comment | user: user}
     end
 
     test "list_comments/0 returns all comments" do
@@ -94,11 +147,6 @@ defmodule Flow.AccountTest do
     test "get_comment!/1 returns the comment with given id" do
       comment = comment_fixture()
       assert Account.get_comment!(comment.id) == comment
-    end
-
-    test "create_comment/1 with valid data creates a comment" do
-      assert {:ok, %Comment{} = comment} = Account.create_comment(@valid_attrs)
-      assert comment.text == "some text"
     end
 
     test "create_comment/1 with invalid data returns error changeset" do

@@ -1,99 +1,27 @@
 
-13:04:30.417 [info]  Already up
-.................................................%Plug.Conn{
-  adapter: {Plug.Adapters.Test.Conn, :...},
-  assigns: %{
-    layout: {FlowWeb.LayoutView, "app.html"},
-    technologies: [],
-    user: %Flow.Account.User{
-      __meta__: #Ecto.Schema.Metadata<:loaded, "users">,
-      admin: true,
-      avatar: "some avatar",
-      email: "some email",
-      id: "60bd714c-3091-4c16-9891-b6116baf3533",
-      inserted_at: ~N[2020-04-11 16:04:32],
-      name: "some name",
-      token: "some token",
-      updated_at: ~N[2020-04-11 16:04:32]
-    }
-  },
-  before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
-   #Function<2.35138165/1 in Phoenix.Controller.fetch_flash/2>,
-   #Function<0.32542428/1 in Plug.Session.before_send/2>,
-   #Function<0.24098476/1 in Plug.Telemetry.call/2>],
-  body_params: %{},
-  cookies: %{},
-  halted: false,
-  host: "www.example.com",
-  method: "GET",
-  owner: #PID<0.567.0>,
-  params: %{},
-  path_info: ["technologies"],
-  path_params: %{},
-  port: 80,
-  private: %{
-    FlowWeb.Router => {[], %{}},
-    :phoenix_action => :index,
-    :phoenix_controller => FlowWeb.TechnologyController,
-    :phoenix_endpoint => FlowWeb.Endpoint,
-    :phoenix_flash => %{},
-    :phoenix_format => "html",
-    :phoenix_layout => {FlowWeb.LayoutView, :app},
-    :phoenix_recycled => true,
-    :phoenix_router => FlowWeb.Router,
-    :phoenix_template => "index.html",
-    :phoenix_view => FlowWeb.TechnologyView,
-    :plug_session => %{"user_id" => "60bd714c-3091-4c16-9891-b6116baf3533"},
-    :plug_session_fetch => :done,
-    :plug_session_info => :write,
-    :plug_skip_csrf_protection => true
-  },
-  query_params: %{},
-  query_string: "",
-  remote_ip: {127, 0, 0, 1},
-  req_cookies: %{},
-  req_headers: [],
-  request_path: "/technologies",
-  resp_body: nil,
-  resp_cookies: %{},
-  resp_headers: [
-    {"cache-control", "max-age=0, private, must-revalidate"},
-    {"x-request-id", "FgTPdW7yiOhTynwAAAQi"},
-    {"x-frame-options", "SAMEORIGIN"},
-    {"x-xss-protection", "1; mode=block"},
-    {"x-content-type-options", "nosniff"},
-    {"x-download-options", "noopen"},
-    {"x-permitted-cross-domain-policies", "none"},
-    {"cross-origin-window-policy", "deny"}
-  ],
-  scheme: :http,
-  script_name: [],
-  secret_key_base: :...,
-  state: :unset,
-  status: nil
-}
-.%Plug.Conn{
+00:34:30.621 [info]  Already up
+..................................................%Plug.Conn{
   adapter: {Plug.Adapters.Test.Conn, :...},
   assigns: %{
     layout: {FlowWeb.LayoutView, "app.html"},
     technology: %Flow.Jobs.Technology{
       __meta__: #Ecto.Schema.Metadata<:loaded, "technologies">,
-      description: "some updated description",
-      id: "93716acb-82d0-4ba6-af6e-99db27cc58f5",
-      inserted_at: ~N[2020-04-11 16:04:32],
-      name: "some updated name",
-      updated_at: ~N[2020-04-11 16:04:32]
+      description: "some description",
+      id: "98bb7f0f-7c25-4ce6-a827-71fbdc50fa79",
+      inserted_at: ~N[2020-04-12 03:34:32],
+      name: "some name",
+      updated_at: ~N[2020-04-12 03:34:32]
     },
     user: %Flow.Account.User{
       __meta__: #Ecto.Schema.Metadata<:loaded, "users">,
       admin: true,
       avatar: "some avatar",
       email: "some email",
-      id: "27c3407d-e31c-4c36-b277-9bd177715ea8",
-      inserted_at: ~N[2020-04-11 16:04:32],
+      id: "f775e13d-9e3c-4204-af86-ae4f9e078469",
+      inserted_at: ~N[2020-04-12 03:34:32],
       name: "some name",
       token: "some token",
-      updated_at: ~N[2020-04-11 16:04:32]
+      updated_at: ~N[2020-04-12 03:34:32]
     }
   },
   before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
@@ -102,195 +30,15 @@
    #Function<0.24098476/1 in Plug.Telemetry.call/2>],
   body_params: %{},
   cookies: %{
-    "_flow_key" => "SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAIFRlY2hub2xvZ3kgdXBkYXRlZCBzdWNjZXNzZnVsbHkubQAAAAd1c2VyX2lkbQAAACQyN2MzNDA3ZC1lMzFjLTRjMzYtYjI3Ny05YmQxNzc3MTVlYTg.wKR-nU62ukgT_5E5dDSdq6jXmWalBMN5y99k2HddW9Y"
+    "_flow_key" => "SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAIFRlY2hub2xvZ3kgY3JlYXRlZCBzdWNjZXNzZnVsbHkubQAAAAd1c2VyX2lkbQAAACRmNzc1ZTEzZC05ZTNjLTQyMDQtYWY4Ni1hZTRmOWUwNzg0Njk.uCHFc2iBZCB29inKh2fsEpTpxV7Fw_LhujFovGSfnaw"
   },
   halted: false,
   host: "www.example.com",
   method: "GET",
-  owner: #PID<0.569.0>,
-  params: %{"id" => "93716acb-82d0-4ba6-af6e-99db27cc58f5"},
-  path_info: ["technologies", "93716acb-82d0-4ba6-af6e-99db27cc58f5"],
-  path_params: %{"id" => "93716acb-82d0-4ba6-af6e-99db27cc58f5"},
-  port: 80,
-  private: %{
-    FlowWeb.Router => {[], %{}},
-    :phoenix_action => :show,
-    :phoenix_controller => FlowWeb.TechnologyController,
-    :phoenix_endpoint => FlowWeb.Endpoint,
-    :phoenix_flash => %{"info" => "Technology updated successfully."},
-    :phoenix_format => "html",
-    :phoenix_layout => {FlowWeb.LayoutView, :app},
-    :phoenix_recycled => true,
-    :phoenix_router => FlowWeb.Router,
-    :phoenix_template => "show.html",
-    :phoenix_view => FlowWeb.TechnologyView,
-    :plug_session => %{
-      "phoenix_flash" => %{"info" => "Technology updated successfully."},
-      "user_id" => "27c3407d-e31c-4c36-b277-9bd177715ea8"
-    },
-    :plug_session_fetch => :done,
-    :plug_skip_csrf_protection => true
-  },
-  query_params: %{},
-  query_string: "",
-  remote_ip: {127, 0, 0, 1},
-  req_cookies: %{
-    "_flow_key" => "SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAIFRlY2hub2xvZ3kgdXBkYXRlZCBzdWNjZXNzZnVsbHkubQAAAAd1c2VyX2lkbQAAACQyN2MzNDA3ZC1lMzFjLTRjMzYtYjI3Ny05YmQxNzc3MTVlYTg.wKR-nU62ukgT_5E5dDSdq6jXmWalBMN5y99k2HddW9Y"
-  },
-  req_headers: [
-    {"cookie",
-     "_flow_key=SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAIFRlY2hub2xvZ3kgdXBkYXRlZCBzdWNjZXNzZnVsbHkubQAAAAd1c2VyX2lkbQAAACQyN2MzNDA3ZC1lMzFjLTRjMzYtYjI3Ny05YmQxNzc3MTVlYTg.wKR-nU62ukgT_5E5dDSdq6jXmWalBMN5y99k2HddW9Y"}
-  ],
-  request_path: "/technologies/93716acb-82d0-4ba6-af6e-99db27cc58f5",
-  resp_body: nil,
-  resp_cookies: %{},
-  resp_headers: [
-    {"cache-control", "max-age=0, private, must-revalidate"},
-    {"x-request-id", "FgTPdXNqYSAVjAEAAASC"},
-    {"x-frame-options", "SAMEORIGIN"},
-    {"x-xss-protection", "1; mode=block"},
-    {"x-content-type-options", "nosniff"},
-    {"x-download-options", "noopen"},
-    {"x-permitted-cross-domain-policies", "none"},
-    {"cross-origin-window-policy", "deny"}
-  ],
-  scheme: :http,
-  script_name: [],
-  secret_key_base: :...,
-  state: :unset,
-  status: nil
-}
-.%Plug.Conn{
-  adapter: {Plug.Adapters.Test.Conn, :...},
-  assigns: %{
-    changeset: #Ecto.Changeset<
-      action: :update,
-      changes: %{},
-      errors: [
-        name: {"can't be blank", [validation: :required]},
-        description: {"can't be blank", [validation: :required]}
-      ],
-      data: #Flow.Jobs.Technology<>,
-      valid?: false
-    >,
-    layout: {FlowWeb.LayoutView, "app.html"},
-    technology: %Flow.Jobs.Technology{
-      __meta__: #Ecto.Schema.Metadata<:loaded, "technologies">,
-      description: "some description",
-      id: "b9234b2a-f049-4a23-8869-087bd205fc6d",
-      inserted_at: ~N[2020-04-11 16:04:32],
-      name: "some name",
-      updated_at: ~N[2020-04-11 16:04:32]
-    },
-    user: %Flow.Account.User{
-      __meta__: #Ecto.Schema.Metadata<:loaded, "users">,
-      admin: true,
-      avatar: "some avatar",
-      email: "some email",
-      id: "2d9614a3-2992-4e77-988f-d155d88e9ed5",
-      inserted_at: ~N[2020-04-11 16:04:32],
-      name: "some name",
-      token: "some token",
-      updated_at: ~N[2020-04-11 16:04:32]
-    }
-  },
-  before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
-   #Function<2.35138165/1 in Phoenix.Controller.fetch_flash/2>,
-   #Function<0.32542428/1 in Plug.Session.before_send/2>,
-   #Function<0.24098476/1 in Plug.Telemetry.call/2>],
-  body_params: %{"technology" => %{"description" => nil, "name" => nil}},
-  cookies: %{},
-  halted: false,
-  host: "www.example.com",
-  method: "PUT",
-  owner: #PID<0.571.0>,
-  params: %{
-    "id" => "b9234b2a-f049-4a23-8869-087bd205fc6d",
-    "technology" => %{"description" => nil, "name" => nil}
-  },
-  path_info: ["technologies", "b9234b2a-f049-4a23-8869-087bd205fc6d"],
-  path_params: %{"id" => "b9234b2a-f049-4a23-8869-087bd205fc6d"},
-  port: 80,
-  private: %{
-    FlowWeb.Router => {[], %{}},
-    :phoenix_action => :update,
-    :phoenix_controller => FlowWeb.TechnologyController,
-    :phoenix_endpoint => FlowWeb.Endpoint,
-    :phoenix_flash => %{},
-    :phoenix_format => "html",
-    :phoenix_layout => {FlowWeb.LayoutView, :app},
-    :phoenix_recycled => true,
-    :phoenix_router => FlowWeb.Router,
-    :phoenix_template => "edit.html",
-    :phoenix_view => FlowWeb.TechnologyView,
-    :plug_session => %{"user_id" => "2d9614a3-2992-4e77-988f-d155d88e9ed5"},
-    :plug_session_fetch => :done,
-    :plug_session_info => :write,
-    :plug_skip_csrf_protection => true
-  },
-  query_params: %{},
-  query_string: "",
-  remote_ip: {127, 0, 0, 1},
-  req_cookies: %{},
-  req_headers: [{"content-type", "multipart/mixed; boundary=plug_conn_test"}],
-  request_path: "/technologies/b9234b2a-f049-4a23-8869-087bd205fc6d",
-  resp_body: nil,
-  resp_cookies: %{},
-  resp_headers: [
-    {"cache-control", "max-age=0, private, must-revalidate"},
-    {"x-request-id", "FgTPdXQe-4CAbwAAAAYB"},
-    {"x-frame-options", "SAMEORIGIN"},
-    {"x-xss-protection", "1; mode=block"},
-    {"x-content-type-options", "nosniff"},
-    {"x-download-options", "noopen"},
-    {"x-permitted-cross-domain-policies", "none"},
-    {"cross-origin-window-policy", "deny"}
-  ],
-  scheme: :http,
-  script_name: [],
-  secret_key_base: :...,
-  state: :unset,
-  status: nil
-}
-.%Plug.Conn{
-  adapter: {Plug.Adapters.Test.Conn, :...},
-  assigns: %{
-    layout: {FlowWeb.LayoutView, "app.html"},
-    technology: %Flow.Jobs.Technology{
-      __meta__: #Ecto.Schema.Metadata<:loaded, "technologies">,
-      description: "some description",
-      id: "9497cfa5-3579-4399-a1d2-a168efa3d230",
-      inserted_at: ~N[2020-04-11 16:04:32],
-      name: "some name",
-      updated_at: ~N[2020-04-11 16:04:32]
-    },
-    user: %Flow.Account.User{
-      __meta__: #Ecto.Schema.Metadata<:loaded, "users">,
-      admin: true,
-      avatar: "some avatar",
-      email: "some email",
-      id: "4c8682da-50fa-4e0a-9a5b-43dd4d7ad3dc",
-      inserted_at: ~N[2020-04-11 16:04:32],
-      name: "some name",
-      token: "some token",
-      updated_at: ~N[2020-04-11 16:04:32]
-    }
-  },
-  before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
-   #Function<2.35138165/1 in Phoenix.Controller.fetch_flash/2>,
-   #Function<0.32542428/1 in Plug.Session.before_send/2>,
-   #Function<0.24098476/1 in Plug.Telemetry.call/2>],
-  body_params: %{},
-  cookies: %{
-    "_flow_key" => "SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAIFRlY2hub2xvZ3kgY3JlYXRlZCBzdWNjZXNzZnVsbHkubQAAAAd1c2VyX2lkbQAAACQ0Yzg2ODJkYS01MGZhLTRlMGEtOWE1Yi00M2RkNGQ3YWQzZGM.Z3tO08ChXcmR5DBlXe_NStjYwYEKzFur-exPcPRKzKk"
-  },
-  halted: false,
-  host: "www.example.com",
-  method: "GET",
-  owner: #PID<0.573.0>,
-  params: %{"id" => "9497cfa5-3579-4399-a1d2-a168efa3d230"},
-  path_info: ["technologies", "9497cfa5-3579-4399-a1d2-a168efa3d230"],
-  path_params: %{"id" => "9497cfa5-3579-4399-a1d2-a168efa3d230"},
+  owner: #PID<0.577.0>,
+  params: %{"id" => "98bb7f0f-7c25-4ce6-a827-71fbdc50fa79"},
+  path_info: ["technologies", "98bb7f0f-7c25-4ce6-a827-71fbdc50fa79"],
+  path_params: %{"id" => "98bb7f0f-7c25-4ce6-a827-71fbdc50fa79"},
   port: 80,
   private: %{
     FlowWeb.Router => {[], %{}},
@@ -306,7 +54,7 @@
     :phoenix_view => FlowWeb.TechnologyView,
     :plug_session => %{
       "phoenix_flash" => %{"info" => "Technology created successfully."},
-      "user_id" => "4c8682da-50fa-4e0a-9a5b-43dd4d7ad3dc"
+      "user_id" => "f775e13d-9e3c-4204-af86-ae4f9e078469"
     },
     :plug_session_fetch => :done,
     :plug_skip_csrf_protection => true
@@ -315,18 +63,18 @@
   query_string: "",
   remote_ip: {127, 0, 0, 1},
   req_cookies: %{
-    "_flow_key" => "SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAIFRlY2hub2xvZ3kgY3JlYXRlZCBzdWNjZXNzZnVsbHkubQAAAAd1c2VyX2lkbQAAACQ0Yzg2ODJkYS01MGZhLTRlMGEtOWE1Yi00M2RkNGQ3YWQzZGM.Z3tO08ChXcmR5DBlXe_NStjYwYEKzFur-exPcPRKzKk"
+    "_flow_key" => "SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAIFRlY2hub2xvZ3kgY3JlYXRlZCBzdWNjZXNzZnVsbHkubQAAAAd1c2VyX2lkbQAAACRmNzc1ZTEzZC05ZTNjLTQyMDQtYWY4Ni1hZTRmOWUwNzg0Njk.uCHFc2iBZCB29inKh2fsEpTpxV7Fw_LhujFovGSfnaw"
   },
   req_headers: [
     {"cookie",
-     "_flow_key=SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAIFRlY2hub2xvZ3kgY3JlYXRlZCBzdWNjZXNzZnVsbHkubQAAAAd1c2VyX2lkbQAAACQ0Yzg2ODJkYS01MGZhLTRlMGEtOWE1Yi00M2RkNGQ3YWQzZGM.Z3tO08ChXcmR5DBlXe_NStjYwYEKzFur-exPcPRKzKk"}
+     "_flow_key=SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAIFRlY2hub2xvZ3kgY3JlYXRlZCBzdWNjZXNzZnVsbHkubQAAAAd1c2VyX2lkbQAAACRmNzc1ZTEzZC05ZTNjLTQyMDQtYWY4Ni1hZTRmOWUwNzg0Njk.uCHFc2iBZCB29inKh2fsEpTpxV7Fw_LhujFovGSfnaw"}
   ],
-  request_path: "/technologies/9497cfa5-3579-4399-a1d2-a168efa3d230",
+  request_path: "/technologies/98bb7f0f-7c25-4ce6-a827-71fbdc50fa79",
   resp_body: nil,
   resp_cookies: %{},
   resp_headers: [
     {"cache-control", "max-age=0, private, must-revalidate"},
-    {"x-request-id", "FgTPdXX4LDgPDiIAAATC"},
+    {"x-request-id", "FgT1HKFsaFhQUIgAAANC"},
     {"x-frame-options", "SAMEORIGIN"},
     {"x-xss-protection", "1; mode=block"},
     {"x-content-type-options", "nosniff"},
@@ -340,7 +88,7 @@
   state: :unset,
   status: nil
 }
-..%Plug.Conn{
+.%Plug.Conn{
   adapter: {Plug.Adapters.Test.Conn, :...},
   assigns: %{
     changeset: #Ecto.Changeset<
@@ -359,11 +107,11 @@
       admin: true,
       avatar: "some avatar",
       email: "some email",
-      id: "8e67a554-2cd1-4943-b432-3ed0ad976698",
-      inserted_at: ~N[2020-04-11 16:04:32],
+      id: "8c8619c5-bc65-4ffa-abd8-bde96de676d7",
+      inserted_at: ~N[2020-04-12 03:34:32],
       name: "some name",
       token: "some token",
-      updated_at: ~N[2020-04-11 16:04:32]
+      updated_at: ~N[2020-04-12 03:34:32]
     }
   },
   before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
@@ -375,7 +123,7 @@
   halted: false,
   host: "www.example.com",
   method: "POST",
-  owner: #PID<0.577.0>,
+  owner: #PID<0.579.0>,
   params: %{"technology" => %{"description" => nil, "name" => nil}},
   path_info: ["technologies"],
   path_params: %{},
@@ -392,7 +140,7 @@
     :phoenix_router => FlowWeb.Router,
     :phoenix_template => "new.html",
     :phoenix_view => FlowWeb.TechnologyView,
-    :plug_session => %{"user_id" => "8e67a554-2cd1-4943-b432-3ed0ad976698"},
+    :plug_session => %{"user_id" => "8c8619c5-bc65-4ffa-abd8-bde96de676d7"},
     :plug_session_fetch => :done,
     :plug_session_info => :write,
     :plug_skip_csrf_protection => true
@@ -407,7 +155,7 @@
   resp_cookies: %{},
   resp_headers: [
     {"cache-control", "max-age=0, private, must-revalidate"},
-    {"x-request-id", "FgTPdXgZ_rBQUIgAAAZh"},
+    {"x-request-id", "FgT1HKMtrBAtnpMAAAbB"},
     {"x-frame-options", "SAMEORIGIN"},
     {"x-xss-protection", "1; mode=block"},
     {"x-content-type-options", "nosniff"},
@@ -440,11 +188,11 @@
       admin: true,
       avatar: "some avatar",
       email: "some email",
-      id: "7af60321-370e-47b0-af92-07183b1e334d",
-      inserted_at: ~N[2020-04-11 16:04:32],
+      id: "fb1bc598-bd76-44db-9f80-fb3bba3edd0d",
+      inserted_at: ~N[2020-04-12 03:34:32],
       name: "some name",
       token: "some token",
-      updated_at: ~N[2020-04-11 16:04:32]
+      updated_at: ~N[2020-04-12 03:34:32]
     }
   },
   before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
@@ -456,7 +204,7 @@
   halted: false,
   host: "www.example.com",
   method: "GET",
-  owner: #PID<0.579.0>,
+  owner: #PID<0.581.0>,
   params: %{},
   path_info: ["technologies", "new"],
   path_params: %{},
@@ -473,7 +221,7 @@
     :phoenix_router => FlowWeb.Router,
     :phoenix_template => "new.html",
     :phoenix_view => FlowWeb.TechnologyView,
-    :plug_session => %{"user_id" => "7af60321-370e-47b0-af92-07183b1e334d"},
+    :plug_session => %{"user_id" => "fb1bc598-bd76-44db-9f80-fb3bba3edd0d"},
     :plug_session_fetch => :done,
     :plug_session_info => :write,
     :plug_skip_csrf_protection => true
@@ -488,7 +236,99 @@
   resp_cookies: %{},
   resp_headers: [
     {"cache-control", "max-age=0, private, must-revalidate"},
-    {"x-request-id", "FgTPdXitWVgtnpMAAATi"},
+    {"x-request-id", "FgT1HKStJAh3344AAANi"},
+    {"x-frame-options", "SAMEORIGIN"},
+    {"x-xss-protection", "1; mode=block"},
+    {"x-content-type-options", "nosniff"},
+    {"x-download-options", "noopen"},
+    {"x-permitted-cross-domain-policies", "none"},
+    {"cross-origin-window-policy", "deny"}
+  ],
+  scheme: :http,
+  script_name: [],
+  secret_key_base: :...,
+  state: :unset,
+  status: nil
+}
+.%Plug.Conn{
+  adapter: {Plug.Adapters.Test.Conn, :...},
+  assigns: %{
+    changeset: #Ecto.Changeset<
+      action: :update,
+      changes: %{},
+      errors: [
+        name: {"can't be blank", [validation: :required]},
+        description: {"can't be blank", [validation: :required]}
+      ],
+      data: #Flow.Jobs.Technology<>,
+      valid?: false
+    >,
+    layout: {FlowWeb.LayoutView, "app.html"},
+    technology: %Flow.Jobs.Technology{
+      __meta__: #Ecto.Schema.Metadata<:loaded, "technologies">,
+      description: "some description",
+      id: "a8e97547-2274-4831-a793-a3e2a1fbb3a0",
+      inserted_at: ~N[2020-04-12 03:34:32],
+      name: "some name",
+      updated_at: ~N[2020-04-12 03:34:32]
+    },
+    user: %Flow.Account.User{
+      __meta__: #Ecto.Schema.Metadata<:loaded, "users">,
+      admin: true,
+      avatar: "some avatar",
+      email: "some email",
+      id: "a27b938d-0262-4a95-8d67-e3aa8dc49182",
+      inserted_at: ~N[2020-04-12 03:34:32],
+      name: "some name",
+      token: "some token",
+      updated_at: ~N[2020-04-12 03:34:32]
+    }
+  },
+  before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
+   #Function<2.35138165/1 in Phoenix.Controller.fetch_flash/2>,
+   #Function<0.32542428/1 in Plug.Session.before_send/2>,
+   #Function<0.24098476/1 in Plug.Telemetry.call/2>],
+  body_params: %{"technology" => %{"description" => nil, "name" => nil}},
+  cookies: %{},
+  halted: false,
+  host: "www.example.com",
+  method: "PUT",
+  owner: #PID<0.583.0>,
+  params: %{
+    "id" => "a8e97547-2274-4831-a793-a3e2a1fbb3a0",
+    "technology" => %{"description" => nil, "name" => nil}
+  },
+  path_info: ["technologies", "a8e97547-2274-4831-a793-a3e2a1fbb3a0"],
+  path_params: %{"id" => "a8e97547-2274-4831-a793-a3e2a1fbb3a0"},
+  port: 80,
+  private: %{
+    FlowWeb.Router => {[], %{}},
+    :phoenix_action => :update,
+    :phoenix_controller => FlowWeb.TechnologyController,
+    :phoenix_endpoint => FlowWeb.Endpoint,
+    :phoenix_flash => %{},
+    :phoenix_format => "html",
+    :phoenix_layout => {FlowWeb.LayoutView, :app},
+    :phoenix_recycled => true,
+    :phoenix_router => FlowWeb.Router,
+    :phoenix_template => "edit.html",
+    :phoenix_view => FlowWeb.TechnologyView,
+    :plug_session => %{"user_id" => "a27b938d-0262-4a95-8d67-e3aa8dc49182"},
+    :plug_session_fetch => :done,
+    :plug_session_info => :write,
+    :plug_skip_csrf_protection => true
+  },
+  query_params: %{},
+  query_string: "",
+  remote_ip: {127, 0, 0, 1},
+  req_cookies: %{},
+  req_headers: [{"content-type", "multipart/mixed; boundary=plug_conn_test"}],
+  request_path: "/technologies/a8e97547-2274-4831-a793-a3e2a1fbb3a0",
+  resp_body: nil,
+  resp_cookies: %{},
+  resp_headers: [
+    {"cache-control", "max-age=0, private, must-revalidate"},
+    {"x-request-id", "FgT1HKVPQ_A0L-cAAAbh"},
     {"x-frame-options", "SAMEORIGIN"},
     {"x-xss-protection", "1; mode=block"},
     {"x-content-type-options", "nosniff"},
@@ -511,21 +351,21 @@
     technology: %Flow.Jobs.Technology{
       __meta__: #Ecto.Schema.Metadata<:loaded, "technologies">,
       description: "some description",
-      id: "f91a0e88-0d50-4835-b635-6c9c109aa4ae",
-      inserted_at: ~N[2020-04-11 16:04:32],
+      id: "4412ef34-3d0f-49e7-abb6-d633d54ea858",
+      inserted_at: ~N[2020-04-12 03:34:32],
       name: "some name",
-      updated_at: ~N[2020-04-11 16:04:32]
+      updated_at: ~N[2020-04-12 03:34:32]
     },
     user: %Flow.Account.User{
       __meta__: #Ecto.Schema.Metadata<:loaded, "users">,
       admin: true,
       avatar: "some avatar",
       email: "some email",
-      id: "52c26e74-f6f0-4071-9978-329119357cd6",
-      inserted_at: ~N[2020-04-11 16:04:32],
+      id: "44ac7876-dbee-404e-8c0c-fe1035bf5ed1",
+      inserted_at: ~N[2020-04-12 03:34:32],
       name: "some name",
       token: "some token",
-      updated_at: ~N[2020-04-11 16:04:32]
+      updated_at: ~N[2020-04-12 03:34:32]
     }
   },
   before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
@@ -537,10 +377,10 @@
   halted: false,
   host: "www.example.com",
   method: "GET",
-  owner: #PID<0.581.0>,
-  params: %{"id" => "f91a0e88-0d50-4835-b635-6c9c109aa4ae"},
-  path_info: ["technologies", "f91a0e88-0d50-4835-b635-6c9c109aa4ae", "edit"],
-  path_params: %{"id" => "f91a0e88-0d50-4835-b635-6c9c109aa4ae"},
+  owner: #PID<0.585.0>,
+  params: %{"id" => "4412ef34-3d0f-49e7-abb6-d633d54ea858"},
+  path_info: ["technologies", "4412ef34-3d0f-49e7-abb6-d633d54ea858", "edit"],
+  path_params: %{"id" => "4412ef34-3d0f-49e7-abb6-d633d54ea858"},
   port: 80,
   private: %{
     FlowWeb.Router => {[], %{}},
@@ -554,7 +394,7 @@
     :phoenix_router => FlowWeb.Router,
     :phoenix_template => "edit.html",
     :phoenix_view => FlowWeb.TechnologyView,
-    :plug_session => %{"user_id" => "52c26e74-f6f0-4071-9978-329119357cd6"},
+    :plug_session => %{"user_id" => "44ac7876-dbee-404e-8c0c-fe1035bf5ed1"},
     :plug_session_fetch => :done,
     :plug_session_info => :write,
     :plug_skip_csrf_protection => true
@@ -564,12 +404,12 @@
   remote_ip: {127, 0, 0, 1},
   req_cookies: %{},
   req_headers: [],
-  request_path: "/technologies/f91a0e88-0d50-4835-b635-6c9c109aa4ae/edit",
+  request_path: "/technologies/4412ef34-3d0f-49e7-abb6-d633d54ea858/edit",
   resp_body: nil,
   resp_cookies: %{},
   resp_headers: [
     {"cache-control", "max-age=0, private, must-revalidate"},
-    {"x-request-id", "FgTPdXlGbNh3344AAAUC"},
+    {"x-request-id", "FgT1HKYFEuhuSzgAAAcB"},
     {"x-frame-options", "SAMEORIGIN"},
     {"x-xss-protection", "1; mode=block"},
     {"x-content-type-options", "nosniff"},
@@ -587,99 +427,24 @@
   adapter: {Plug.Adapters.Test.Conn, :...},
   assigns: %{
     layout: {FlowWeb.LayoutView, "app.html"},
-    status: [],
-    user: %Flow.Account.User{
-      __meta__: #Ecto.Schema.Metadata<:loaded, "users">,
-      admin: true,
-      avatar: "some avatar",
-      email: "some email",
-      id: "c91c661e-ea2d-4556-a7b3-2646b9b35c8e",
-      inserted_at: ~N[2020-04-11 16:04:32],
-      name: "some name",
-      token: "some token",
-      updated_at: ~N[2020-04-11 16:04:32]
-    }
-  },
-  before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
-   #Function<2.35138165/1 in Phoenix.Controller.fetch_flash/2>,
-   #Function<0.32542428/1 in Plug.Session.before_send/2>,
-   #Function<0.24098476/1 in Plug.Telemetry.call/2>],
-  body_params: %{},
-  cookies: %{},
-  halted: false,
-  host: "www.example.com",
-  method: "GET",
-  owner: #PID<0.585.0>,
-  params: %{},
-  path_info: ["status"],
-  path_params: %{},
-  port: 80,
-  private: %{
-    FlowWeb.Router => {[], %{}},
-    :phoenix_action => :index,
-    :phoenix_controller => FlowWeb.StatusController,
-    :phoenix_endpoint => FlowWeb.Endpoint,
-    :phoenix_flash => %{},
-    :phoenix_format => "html",
-    :phoenix_layout => {FlowWeb.LayoutView, :app},
-    :phoenix_recycled => true,
-    :phoenix_router => FlowWeb.Router,
-    :phoenix_template => "index.html",
-    :phoenix_view => FlowWeb.StatusView,
-    :plug_session => %{"user_id" => "c91c661e-ea2d-4556-a7b3-2646b9b35c8e"},
-    :plug_session_fetch => :done,
-    :plug_session_info => :write,
-    :plug_skip_csrf_protection => true
-  },
-  query_params: %{},
-  query_string: "",
-  remote_ip: {127, 0, 0, 1},
-  req_cookies: %{},
-  req_headers: [],
-  request_path: "/status",
-  resp_body: nil,
-  resp_cookies: %{},
-  resp_headers: [
-    {"cache-control", "max-age=0, private, must-revalidate"},
-    {"x-request-id", "FgTPdXn1s_BuSzgAAAUi"},
-    {"x-frame-options", "SAMEORIGIN"},
-    {"x-xss-protection", "1; mode=block"},
-    {"x-content-type-options", "nosniff"},
-    {"x-download-options", "noopen"},
-    {"x-permitted-cross-domain-policies", "none"},
-    {"cross-origin-window-policy", "deny"}
-  ],
-  scheme: :http,
-  script_name: [],
-  secret_key_base: :...,
-  state: :unset,
-  status: nil
-}
-.%Plug.Conn{
-  adapter: {Plug.Adapters.Test.Conn, :...},
-  assigns: %{
-    layout: {FlowWeb.LayoutView, "app.html"},
-    status: %Flow.Jobs.Status{
-      __meta__: #Ecto.Schema.Metadata<:loaded, "status">,
-      candidates: #Ecto.Association.NotLoaded<association :candidates is not loaded>,
+    technology: %Flow.Jobs.Technology{
+      __meta__: #Ecto.Schema.Metadata<:loaded, "technologies">,
       description: "some updated description",
-      enable: false,
-      id: "be80c149-bb42-4a54-bbd8-68edd8f91447",
-      inserted_at: ~N[2020-04-11 16:04:32],
+      id: "bb6f18ce-3851-4726-b7b8-b4150694d73a",
+      inserted_at: ~N[2020-04-12 03:34:32],
       name: "some updated name",
-      order: 43,
-      updated_at: ~N[2020-04-11 16:04:32]
+      updated_at: ~N[2020-04-12 03:34:32]
     },
     user: %Flow.Account.User{
       __meta__: #Ecto.Schema.Metadata<:loaded, "users">,
       admin: true,
       avatar: "some avatar",
       email: "some email",
-      id: "0d8752a9-b6b0-4f5a-9499-815e2f1b2d57",
-      inserted_at: ~N[2020-04-11 16:04:32],
+      id: "1a91ec39-bf96-4155-b3d1-0ff85dae3638",
+      inserted_at: ~N[2020-04-12 03:34:32],
       name: "some name",
       token: "some token",
-      updated_at: ~N[2020-04-11 16:04:32]
+      updated_at: ~N[2020-04-12 03:34:32]
     }
   },
   before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
@@ -688,31 +453,31 @@
    #Function<0.24098476/1 in Plug.Telemetry.call/2>],
   body_params: %{},
   cookies: %{
-    "_flow_key" => "SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAHFN0YXR1cyB1cGRhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJDBkODc1MmE5LWI2YjAtNGY1YS05NDk5LTgxNWUyZjFiMmQ1Nw.AzKdqtUEisXeIo_Fgp9XtNwYYgGnuG5R1-5lnjPCR9w"
+    "_flow_key" => "SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAIFRlY2hub2xvZ3kgdXBkYXRlZCBzdWNjZXNzZnVsbHkubQAAAAd1c2VyX2lkbQAAACQxYTkxZWMzOS1iZjk2LTQxNTUtYjNkMS0wZmY4NWRhZTM2Mzg._ZpVps5A3S1IvqLgiNc2ir5_CK4G7IV1WddPygF5RWs"
   },
   halted: false,
   host: "www.example.com",
   method: "GET",
   owner: #PID<0.587.0>,
-  params: %{"id" => "be80c149-bb42-4a54-bbd8-68edd8f91447"},
-  path_info: ["status", "be80c149-bb42-4a54-bbd8-68edd8f91447"],
-  path_params: %{"id" => "be80c149-bb42-4a54-bbd8-68edd8f91447"},
+  params: %{"id" => "bb6f18ce-3851-4726-b7b8-b4150694d73a"},
+  path_info: ["technologies", "bb6f18ce-3851-4726-b7b8-b4150694d73a"],
+  path_params: %{"id" => "bb6f18ce-3851-4726-b7b8-b4150694d73a"},
   port: 80,
   private: %{
     FlowWeb.Router => {[], %{}},
     :phoenix_action => :show,
-    :phoenix_controller => FlowWeb.StatusController,
+    :phoenix_controller => FlowWeb.TechnologyController,
     :phoenix_endpoint => FlowWeb.Endpoint,
-    :phoenix_flash => %{"info" => "Status updated successfully."},
+    :phoenix_flash => %{"info" => "Technology updated successfully."},
     :phoenix_format => "html",
     :phoenix_layout => {FlowWeb.LayoutView, :app},
     :phoenix_recycled => true,
     :phoenix_router => FlowWeb.Router,
     :phoenix_template => "show.html",
-    :phoenix_view => FlowWeb.StatusView,
+    :phoenix_view => FlowWeb.TechnologyView,
     :plug_session => %{
-      "phoenix_flash" => %{"info" => "Status updated successfully."},
-      "user_id" => "0d8752a9-b6b0-4f5a-9499-815e2f1b2d57"
+      "phoenix_flash" => %{"info" => "Technology updated successfully."},
+      "user_id" => "1a91ec39-bf96-4155-b3d1-0ff85dae3638"
     },
     :plug_session_fetch => :done,
     :plug_skip_csrf_protection => true
@@ -721,18 +486,18 @@
   query_string: "",
   remote_ip: {127, 0, 0, 1},
   req_cookies: %{
-    "_flow_key" => "SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAHFN0YXR1cyB1cGRhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJDBkODc1MmE5LWI2YjAtNGY1YS05NDk5LTgxNWUyZjFiMmQ1Nw.AzKdqtUEisXeIo_Fgp9XtNwYYgGnuG5R1-5lnjPCR9w"
+    "_flow_key" => "SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAIFRlY2hub2xvZ3kgdXBkYXRlZCBzdWNjZXNzZnVsbHkubQAAAAd1c2VyX2lkbQAAACQxYTkxZWMzOS1iZjk2LTQxNTUtYjNkMS0wZmY4NWRhZTM2Mzg._ZpVps5A3S1IvqLgiNc2ir5_CK4G7IV1WddPygF5RWs"
   },
   req_headers: [
     {"cookie",
-     "_flow_key=SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAHFN0YXR1cyB1cGRhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJDBkODc1MmE5LWI2YjAtNGY1YS05NDk5LTgxNWUyZjFiMmQ1Nw.AzKdqtUEisXeIo_Fgp9XtNwYYgGnuG5R1-5lnjPCR9w"}
+     "_flow_key=SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAIFRlY2hub2xvZ3kgdXBkYXRlZCBzdWNjZXNzZnVsbHkubQAAAAd1c2VyX2lkbQAAACQxYTkxZWMzOS1iZjk2LTQxNTUtYjNkMS0wZmY4NWRhZTM2Mzg._ZpVps5A3S1IvqLgiNc2ir5_CK4G7IV1WddPygF5RWs"}
   ],
-  request_path: "/status/be80c149-bb42-4a54-bbd8-68edd8f91447",
+  request_path: "/technologies/bb6f18ce-3851-4726-b7b8-b4150694d73a",
   resp_body: nil,
   resp_cookies: %{},
   resp_headers: [
     {"cache-control", "max-age=0, private, must-revalidate"},
-    {"x-request-id", "FgTPdXs3xSgPbroAAAVi"},
+    {"x-request-id", "FgT1HKdqdxgPbroAAAdB"},
     {"x-frame-options", "SAMEORIGIN"},
     {"x-xss-protection", "1; mode=block"},
     {"x-content-type-options", "nosniff"},
@@ -749,84 +514,47 @@
 .%Plug.Conn{
   adapter: {Plug.Adapters.Test.Conn, :...},
   assigns: %{
-    changeset: #Ecto.Changeset<
-      action: :update,
-      changes: %{},
-      errors: [
-        name: {"can't be blank", [validation: :required]},
-        description: {"can't be blank", [validation: :required]},
-        order: {"can't be blank", [validation: :required]},
-        enable: {"can't be blank", [validation: :required]}
-      ],
-      data: #Flow.Jobs.Status<>,
-      valid?: false
-    >,
     layout: {FlowWeb.LayoutView, "app.html"},
-    status: %Flow.Jobs.Status{
-      __meta__: #Ecto.Schema.Metadata<:loaded, "status">,
-      candidates: #Ecto.Association.NotLoaded<association :candidates is not loaded>,
-      description: "some description",
-      enable: true,
-      id: "072a6e17-c53d-4349-b6b2-96d9f3b84050",
-      inserted_at: ~N[2020-04-11 16:04:32],
-      name: "some name",
-      order: 42,
-      updated_at: ~N[2020-04-11 16:04:32]
-    },
+    technologies: [],
     user: %Flow.Account.User{
       __meta__: #Ecto.Schema.Metadata<:loaded, "users">,
       admin: true,
       avatar: "some avatar",
       email: "some email",
-      id: "17437777-1f3e-4401-a2ef-2abd6d80f8ab",
-      inserted_at: ~N[2020-04-11 16:04:32],
+      id: "3981b88c-2de1-4995-b584-6f401516515e",
+      inserted_at: ~N[2020-04-12 03:34:32],
       name: "some name",
       token: "some token",
-      updated_at: ~N[2020-04-11 16:04:32]
+      updated_at: ~N[2020-04-12 03:34:32]
     }
   },
   before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
    #Function<2.35138165/1 in Phoenix.Controller.fetch_flash/2>,
    #Function<0.32542428/1 in Plug.Session.before_send/2>,
    #Function<0.24098476/1 in Plug.Telemetry.call/2>],
-  body_params: %{
-    "status" => %{
-      "description" => nil,
-      "enable" => nil,
-      "name" => nil,
-      "order" => nil
-    }
-  },
+  body_params: %{},
   cookies: %{},
   halted: false,
   host: "www.example.com",
-  method: "PUT",
+  method: "GET",
   owner: #PID<0.589.0>,
-  params: %{
-    "id" => "072a6e17-c53d-4349-b6b2-96d9f3b84050",
-    "status" => %{
-      "description" => nil,
-      "enable" => nil,
-      "name" => nil,
-      "order" => nil
-    }
-  },
-  path_info: ["status", "072a6e17-c53d-4349-b6b2-96d9f3b84050"],
-  path_params: %{"id" => "072a6e17-c53d-4349-b6b2-96d9f3b84050"},
+  params: %{},
+  path_info: ["technologies"],
+  path_params: %{},
   port: 80,
   private: %{
     FlowWeb.Router => {[], %{}},
-    :phoenix_action => :update,
-    :phoenix_controller => FlowWeb.StatusController,
+    :phoenix_action => :index,
+    :phoenix_controller => FlowWeb.TechnologyController,
     :phoenix_endpoint => FlowWeb.Endpoint,
     :phoenix_flash => %{},
     :phoenix_format => "html",
     :phoenix_layout => {FlowWeb.LayoutView, :app},
     :phoenix_recycled => true,
     :phoenix_router => FlowWeb.Router,
-    :phoenix_template => "edit.html",
-    :phoenix_view => FlowWeb.StatusView,
-    :plug_session => %{"user_id" => "17437777-1f3e-4401-a2ef-2abd6d80f8ab"},
+    :phoenix_template => "index.html",
+    :phoenix_view => FlowWeb.TechnologyView,
+    :plug_session => %{"user_id" => "3981b88c-2de1-4995-b584-6f401516515e"},
     :plug_session_fetch => :done,
     :plug_session_info => :write,
     :plug_skip_csrf_protection => true
@@ -835,13 +563,13 @@
   query_string: "",
   remote_ip: {127, 0, 0, 1},
   req_cookies: %{},
-  req_headers: [{"content-type", "multipart/mixed; boundary=plug_conn_test"}],
-  request_path: "/status/072a6e17-c53d-4349-b6b2-96d9f3b84050",
+  req_headers: [],
+  request_path: "/technologies",
   resp_body: nil,
   resp_cookies: %{},
   resp_headers: [
     {"cache-control", "max-age=0, private, must-revalidate"},
-    {"x-request-id", "FgTPdXwDoKhrw7kAAAaB"},
+    {"x-request-id", "FgT1HKfWwcBrw7kAAAOC"},
     {"x-frame-options", "SAMEORIGIN"},
     {"x-xss-protection", "1; mode=block"},
     {"x-content-type-options", "nosniff"},
@@ -855,7 +583,7 @@
   state: :unset,
   status: nil
 }
-.%Plug.Conn{
+..%Plug.Conn{
   adapter: {Plug.Adapters.Test.Conn, :...},
   assigns: %{
     layout: {FlowWeb.LayoutView, "app.html"},
@@ -864,22 +592,22 @@
       candidates: #Ecto.Association.NotLoaded<association :candidates is not loaded>,
       description: "some description",
       enable: true,
-      id: "6648b226-9815-435e-9288-5a5b3dfa4187",
-      inserted_at: ~N[2020-04-11 16:04:32],
+      id: "7cdeaf7f-9a94-4e3d-b105-1fdac666d5c9",
+      inserted_at: ~N[2020-04-12 03:34:32],
       name: "some name",
       order: 42,
-      updated_at: ~N[2020-04-11 16:04:32]
+      updated_at: ~N[2020-04-12 03:34:32]
     },
     user: %Flow.Account.User{
       __meta__: #Ecto.Schema.Metadata<:loaded, "users">,
       admin: true,
       avatar: "some avatar",
       email: "some email",
-      id: "0448ead8-f373-4130-b8e0-201a81a9676f",
-      inserted_at: ~N[2020-04-11 16:04:32],
+      id: "10f76374-84f0-47dc-9816-cd568663f6c9",
+      inserted_at: ~N[2020-04-12 03:34:32],
       name: "some name",
       token: "some token",
-      updated_at: ~N[2020-04-11 16:04:32]
+      updated_at: ~N[2020-04-12 03:34:32]
     }
   },
   before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
@@ -888,15 +616,15 @@
    #Function<0.24098476/1 in Plug.Telemetry.call/2>],
   body_params: %{},
   cookies: %{
-    "_flow_key" => "SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAHFN0YXR1cyBjcmVhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJDA0NDhlYWQ4LWYzNzMtNDEzMC1iOGUwLTIwMWE4MWE5Njc2Zg.495bKu7lvnKCcRHE_bI5hvjVJyjC05DLZNCIzcrSxls"
+    "_flow_key" => "SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAHFN0YXR1cyBjcmVhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJDEwZjc2Mzc0LTg0ZjAtNDdkYy05ODE2LWNkNTY4NjYzZjZjOQ.tiuOLQ2yN_HettPYQa5dIX4xdVkEQgyJyDyDztMRT80"
   },
   halted: false,
   host: "www.example.com",
   method: "GET",
-  owner: #PID<0.591.0>,
-  params: %{"id" => "6648b226-9815-435e-9288-5a5b3dfa4187"},
-  path_info: ["status", "6648b226-9815-435e-9288-5a5b3dfa4187"],
-  path_params: %{"id" => "6648b226-9815-435e-9288-5a5b3dfa4187"},
+  owner: #PID<0.596.0>,
+  params: %{"id" => "7cdeaf7f-9a94-4e3d-b105-1fdac666d5c9"},
+  path_info: ["status", "7cdeaf7f-9a94-4e3d-b105-1fdac666d5c9"],
+  path_params: %{"id" => "7cdeaf7f-9a94-4e3d-b105-1fdac666d5c9"},
   port: 80,
   private: %{
     FlowWeb.Router => {[], %{}},
@@ -912,7 +640,7 @@
     :phoenix_view => FlowWeb.StatusView,
     :plug_session => %{
       "phoenix_flash" => %{"info" => "Status created successfully."},
-      "user_id" => "0448ead8-f373-4130-b8e0-201a81a9676f"
+      "user_id" => "10f76374-84f0-47dc-9816-cd568663f6c9"
     },
     :plug_session_fetch => :done,
     :plug_skip_csrf_protection => true
@@ -921,18 +649,18 @@
   query_string: "",
   remote_ip: {127, 0, 0, 1},
   req_cookies: %{
-    "_flow_key" => "SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAHFN0YXR1cyBjcmVhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJDA0NDhlYWQ4LWYzNzMtNDEzMC1iOGUwLTIwMWE4MWE5Njc2Zg.495bKu7lvnKCcRHE_bI5hvjVJyjC05DLZNCIzcrSxls"
+    "_flow_key" => "SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAHFN0YXR1cyBjcmVhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJDEwZjc2Mzc0LTg0ZjAtNDdkYy05ODE2LWNkNTY4NjYzZjZjOQ.tiuOLQ2yN_HettPYQa5dIX4xdVkEQgyJyDyDztMRT80"
   },
   req_headers: [
     {"cookie",
-     "_flow_key=SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAHFN0YXR1cyBjcmVhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJDA0NDhlYWQ4LWYzNzMtNDEzMC1iOGUwLTIwMWE4MWE5Njc2Zg.495bKu7lvnKCcRHE_bI5hvjVJyjC05DLZNCIzcrSxls"}
+     "_flow_key=SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAHFN0YXR1cyBjcmVhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJDEwZjc2Mzc0LTg0ZjAtNDdkYy05ODE2LWNkNTY4NjYzZjZjOQ.tiuOLQ2yN_HettPYQa5dIX4xdVkEQgyJyDyDztMRT80"}
   ],
-  request_path: "/status/6648b226-9815-435e-9288-5a5b3dfa4187",
+  request_path: "/status/7cdeaf7f-9a94-4e3d-b105-1fdac666d5c9",
   resp_body: nil,
   resp_cookies: %{},
   resp_headers: [
     {"cache-control", "max-age=0, private, must-revalidate"},
-    {"x-request-id", "FgTPdXy1myg5CscAAAWi"},
+    {"x-request-id", "FgT1HKmYzLBu3m0AAAfB"},
     {"x-frame-options", "SAMEORIGIN"},
     {"x-xss-protection", "1; mode=block"},
     {"x-content-type-options", "nosniff"},
@@ -946,7 +674,7 @@
   state: :unset,
   status: nil
 }
-..%Plug.Conn{
+.%Plug.Conn{
   adapter: {Plug.Adapters.Test.Conn, :...},
   assigns: %{
     changeset: #Ecto.Changeset<
@@ -967,11 +695,11 @@
       admin: true,
       avatar: "some avatar",
       email: "some email",
-      id: "0a17d934-cd15-444c-a374-1cb65b249341",
-      inserted_at: ~N[2020-04-11 16:04:32],
+      id: "dfec2241-02cf-4421-a2ae-a2bf2ec4922c",
+      inserted_at: ~N[2020-04-12 03:34:32],
       name: "some name",
       token: "some token",
-      updated_at: ~N[2020-04-11 16:04:32]
+      updated_at: ~N[2020-04-12 03:34:32]
     }
   },
   before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
@@ -990,7 +718,7 @@
   halted: false,
   host: "www.example.com",
   method: "POST",
-  owner: #PID<0.595.0>,
+  owner: #PID<0.598.0>,
   params: %{
     "status" => %{
       "description" => nil,
@@ -1014,7 +742,7 @@
     :phoenix_router => FlowWeb.Router,
     :phoenix_template => "new.html",
     :phoenix_view => FlowWeb.StatusView,
-    :plug_session => %{"user_id" => "0a17d934-cd15-444c-a374-1cb65b249341"},
+    :plug_session => %{"user_id" => "dfec2241-02cf-4421-a2ae-a2bf2ec4922c"},
     :plug_session_fetch => :done,
     :plug_session_info => :write,
     :plug_skip_csrf_protection => true
@@ -1029,7 +757,7 @@
   resp_cookies: %{},
   resp_headers: [
     {"cache-control", "max-age=0, private, must-revalidate"},
-    {"x-request-id", "FgTPdX4ok-jbVZsAAAbh"},
+    {"x-request-id", "FgT1HKo8NLg6h-QAAAfh"},
     {"x-frame-options", "SAMEORIGIN"},
     {"x-xss-protection", "1; mode=block"},
     {"x-content-type-options", "nosniff"},
@@ -1063,11 +791,11 @@
       admin: true,
       avatar: "some avatar",
       email: "some email",
-      id: "06514ea7-0348-41e9-a570-b2c03a11bdf6",
-      inserted_at: ~N[2020-04-11 16:04:32],
+      id: "59e6bd4d-5cf9-4a4e-8ae7-b2e582f45066",
+      inserted_at: ~N[2020-04-12 03:34:32],
       name: "some name",
       token: "some token",
-      updated_at: ~N[2020-04-11 16:04:32]
+      updated_at: ~N[2020-04-12 03:34:32]
     }
   },
   before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
@@ -1079,7 +807,7 @@
   halted: false,
   host: "www.example.com",
   method: "GET",
-  owner: #PID<0.597.0>,
+  owner: #PID<0.600.0>,
   params: %{},
   path_info: ["status", "new"],
   path_params: %{},
@@ -1096,7 +824,7 @@
     :phoenix_router => FlowWeb.Router,
     :phoenix_template => "new.html",
     :phoenix_view => FlowWeb.StatusView,
-    :plug_session => %{"user_id" => "06514ea7-0348-41e9-a570-b2c03a11bdf6"},
+    :plug_session => %{"user_id" => "59e6bd4d-5cf9-4a4e-8ae7-b2e582f45066"},
     :plug_session_fetch => :done,
     :plug_session_info => :write,
     :plug_skip_csrf_protection => true
@@ -1111,7 +839,116 @@
   resp_cookies: %{},
   resp_headers: [
     {"cache-control", "max-age=0, private, must-revalidate"},
-    {"x-request-id", "FgTPdX6F5ojJwpIAAAcB"},
+    {"x-request-id", "FgT1HKqPfQiMYnUAAAOi"},
+    {"x-frame-options", "SAMEORIGIN"},
+    {"x-xss-protection", "1; mode=block"},
+    {"x-content-type-options", "nosniff"},
+    {"x-download-options", "noopen"},
+    {"x-permitted-cross-domain-policies", "none"},
+    {"cross-origin-window-policy", "deny"}
+  ],
+  scheme: :http,
+  script_name: [],
+  secret_key_base: :...,
+  state: :unset,
+  status: nil
+}
+.%Plug.Conn{
+  adapter: {Plug.Adapters.Test.Conn, :...},
+  assigns: %{
+    changeset: #Ecto.Changeset<
+      action: :update,
+      changes: %{},
+      errors: [
+        name: {"can't be blank", [validation: :required]},
+        description: {"can't be blank", [validation: :required]},
+        order: {"can't be blank", [validation: :required]},
+        enable: {"can't be blank", [validation: :required]}
+      ],
+      data: #Flow.Jobs.Status<>,
+      valid?: false
+    >,
+    layout: {FlowWeb.LayoutView, "app.html"},
+    status: %Flow.Jobs.Status{
+      __meta__: #Ecto.Schema.Metadata<:loaded, "status">,
+      candidates: #Ecto.Association.NotLoaded<association :candidates is not loaded>,
+      description: "some description",
+      enable: true,
+      id: "788ce45b-2c9e-48e0-87f8-87f83ca59789",
+      inserted_at: ~N[2020-04-12 03:34:32],
+      name: "some name",
+      order: 42,
+      updated_at: ~N[2020-04-12 03:34:32]
+    },
+    user: %Flow.Account.User{
+      __meta__: #Ecto.Schema.Metadata<:loaded, "users">,
+      admin: true,
+      avatar: "some avatar",
+      email: "some email",
+      id: "9811525d-6950-4fa5-8562-1e954f6d0051",
+      inserted_at: ~N[2020-04-12 03:34:32],
+      name: "some name",
+      token: "some token",
+      updated_at: ~N[2020-04-12 03:34:32]
+    }
+  },
+  before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
+   #Function<2.35138165/1 in Phoenix.Controller.fetch_flash/2>,
+   #Function<0.32542428/1 in Plug.Session.before_send/2>,
+   #Function<0.24098476/1 in Plug.Telemetry.call/2>],
+  body_params: %{
+    "status" => %{
+      "description" => nil,
+      "enable" => nil,
+      "name" => nil,
+      "order" => nil
+    }
+  },
+  cookies: %{},
+  halted: false,
+  host: "www.example.com",
+  method: "PUT",
+  owner: #PID<0.602.0>,
+  params: %{
+    "id" => "788ce45b-2c9e-48e0-87f8-87f83ca59789",
+    "status" => %{
+      "description" => nil,
+      "enable" => nil,
+      "name" => nil,
+      "order" => nil
+    }
+  },
+  path_info: ["status", "788ce45b-2c9e-48e0-87f8-87f83ca59789"],
+  path_params: %{"id" => "788ce45b-2c9e-48e0-87f8-87f83ca59789"},
+  port: 80,
+  private: %{
+    FlowWeb.Router => {[], %{}},
+    :phoenix_action => :update,
+    :phoenix_controller => FlowWeb.StatusController,
+    :phoenix_endpoint => FlowWeb.Endpoint,
+    :phoenix_flash => %{},
+    :phoenix_format => "html",
+    :phoenix_layout => {FlowWeb.LayoutView, :app},
+    :phoenix_recycled => true,
+    :phoenix_router => FlowWeb.Router,
+    :phoenix_template => "edit.html",
+    :phoenix_view => FlowWeb.StatusView,
+    :plug_session => %{"user_id" => "9811525d-6950-4fa5-8562-1e954f6d0051"},
+    :plug_session_fetch => :done,
+    :plug_session_info => :write,
+    :plug_skip_csrf_protection => true
+  },
+  query_params: %{},
+  query_string: "",
+  remote_ip: {127, 0, 0, 1},
+  req_cookies: %{},
+  req_headers: [{"content-type", "multipart/mixed; boundary=plug_conn_test"}],
+  request_path: "/status/788ce45b-2c9e-48e0-87f8-87f83ca59789",
+  resp_body: nil,
+  resp_cookies: %{},
+  resp_headers: [
+    {"cache-control", "max-age=0, private, must-revalidate"},
+    {"x-request-id", "FgT1HKr9J0AxBVkAAAgB"},
     {"x-frame-options", "SAMEORIGIN"},
     {"x-xss-protection", "1; mode=block"},
     {"x-content-type-options", "nosniff"},
@@ -1136,22 +973,22 @@
       candidates: #Ecto.Association.NotLoaded<association :candidates is not loaded>,
       description: "some description",
       enable: true,
-      id: "e364c5ff-9258-41b0-82fa-6bff8d35dfef",
-      inserted_at: ~N[2020-04-11 16:04:32],
+      id: "42501e01-ffc8-46ae-b009-e3ebaa1e6c55",
+      inserted_at: ~N[2020-04-12 03:34:32],
       name: "some name",
       order: 42,
-      updated_at: ~N[2020-04-11 16:04:32]
+      updated_at: ~N[2020-04-12 03:34:32]
     },
     user: %Flow.Account.User{
       __meta__: #Ecto.Schema.Metadata<:loaded, "users">,
       admin: true,
       avatar: "some avatar",
       email: "some email",
-      id: "bd42a7ca-ba3f-4c38-b5b7-876268046800",
-      inserted_at: ~N[2020-04-11 16:04:32],
+      id: "eb92b177-3537-47c1-9c3f-1ad23653319b",
+      inserted_at: ~N[2020-04-12 03:34:32],
       name: "some name",
       token: "some token",
-      updated_at: ~N[2020-04-11 16:04:32]
+      updated_at: ~N[2020-04-12 03:34:32]
     }
   },
   before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
@@ -1163,10 +1000,10 @@
   halted: false,
   host: "www.example.com",
   method: "GET",
-  owner: #PID<0.599.0>,
-  params: %{"id" => "e364c5ff-9258-41b0-82fa-6bff8d35dfef"},
-  path_info: ["status", "e364c5ff-9258-41b0-82fa-6bff8d35dfef", "edit"],
-  path_params: %{"id" => "e364c5ff-9258-41b0-82fa-6bff8d35dfef"},
+  owner: #PID<0.604.0>,
+  params: %{"id" => "42501e01-ffc8-46ae-b009-e3ebaa1e6c55"},
+  path_info: ["status", "42501e01-ffc8-46ae-b009-e3ebaa1e6c55", "edit"],
+  path_params: %{"id" => "42501e01-ffc8-46ae-b009-e3ebaa1e6c55"},
   port: 80,
   private: %{
     FlowWeb.Router => {[], %{}},
@@ -1180,7 +1017,7 @@
     :phoenix_router => FlowWeb.Router,
     :phoenix_template => "edit.html",
     :phoenix_view => FlowWeb.StatusView,
-    :plug_session => %{"user_id" => "bd42a7ca-ba3f-4c38-b5b7-876268046800"},
+    :plug_session => %{"user_id" => "eb92b177-3537-47c1-9c3f-1ad23653319b"},
     :plug_session_fetch => :done,
     :plug_session_info => :write,
     :plug_skip_csrf_protection => true
@@ -1190,85 +1027,12 @@
   remote_ip: {127, 0, 0, 1},
   req_cookies: %{},
   req_headers: [],
-  request_path: "/status/e364c5ff-9258-41b0-82fa-6bff8d35dfef/edit",
+  request_path: "/status/42501e01-ffc8-46ae-b009-e3ebaa1e6c55/edit",
   resp_body: nil,
   resp_cookies: %{},
   resp_headers: [
     {"cache-control", "max-age=0, private, must-revalidate"},
-    {"x-request-id", "FgTPdX79ZGAGm5UAAAch"},
-    {"x-frame-options", "SAMEORIGIN"},
-    {"x-xss-protection", "1; mode=block"},
-    {"x-content-type-options", "nosniff"},
-    {"x-download-options", "noopen"},
-    {"x-permitted-cross-domain-policies", "none"},
-    {"cross-origin-window-policy", "deny"}
-  ],
-  scheme: :http,
-  script_name: [],
-  secret_key_base: :...,
-  state: :unset,
-  status: nil
-}
-.[]
-%Plug.Conn{
-  adapter: {Plug.Adapters.Test.Conn, :...},
-  assigns: %{
-    jobs: [],
-    layout: {FlowWeb.LayoutView, "app.html"},
-    user: %Flow.Account.User{
-      __meta__: #Ecto.Schema.Metadata<:loaded, "users">,
-      admin: true,
-      avatar: "some avatar",
-      email: "some email",
-      id: "f6414dd8-88cd-4694-b87c-71b87c53a9c4",
-      inserted_at: ~N[2020-04-11 16:04:32],
-      name: "some name",
-      token: "some token",
-      updated_at: ~N[2020-04-11 16:04:32]
-    }
-  },
-  before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
-   #Function<2.35138165/1 in Phoenix.Controller.fetch_flash/2>,
-   #Function<0.32542428/1 in Plug.Session.before_send/2>,
-   #Function<0.24098476/1 in Plug.Telemetry.call/2>],
-  body_params: %{},
-  cookies: %{},
-  halted: false,
-  host: "www.example.com",
-  method: "GET",
-  owner: #PID<0.603.0>,
-  params: %{},
-  path_info: [],
-  path_params: %{},
-  port: 80,
-  private: %{
-    FlowWeb.Router => {[], %{}},
-    :phoenix_action => :index,
-    :phoenix_controller => FlowWeb.JobController,
-    :phoenix_endpoint => FlowWeb.Endpoint,
-    :phoenix_flash => %{},
-    :phoenix_format => "html",
-    :phoenix_layout => {FlowWeb.LayoutView, :app},
-    :phoenix_recycled => true,
-    :phoenix_router => FlowWeb.Router,
-    :phoenix_template => "index.html",
-    :phoenix_view => FlowWeb.JobView,
-    :plug_session => %{"user_id" => "f6414dd8-88cd-4694-b87c-71b87c53a9c4"},
-    :plug_session_fetch => :done,
-    :plug_session_info => :write,
-    :plug_skip_csrf_protection => true
-  },
-  query_params: %{},
-  query_string: "",
-  remote_ip: {127, 0, 0, 1},
-  req_cookies: %{},
-  req_headers: [],
-  request_path: "/",
-  resp_body: nil,
-  resp_cookies: %{},
-  resp_headers: [
-    {"cache-control", "max-age=0, private, must-revalidate"},
-    {"x-request-id", "FgTPdX-Jd8AfBX4AAAXC"},
+    {"x-request-id", "FgT1HKulu4DXuEkAAAPC"},
     {"x-frame-options", "SAMEORIGIN"},
     {"x-xss-protection", "1; mode=block"},
     {"x-content-type-options", "nosniff"},
@@ -1285,38 +1049,28 @@
 .%Plug.Conn{
   adapter: {Plug.Adapters.Test.Conn, :...},
   assigns: %{
-    job: %Flow.Jobs.Job{
-      __meta__: #Ecto.Schema.Metadata<:loaded, "jobs">,
-      cadidates: #Ecto.Association.NotLoaded<association :cadidates is not loaded>,
-      client: %Flow.Jobs.Client{
-        __meta__: #Ecto.Schema.Metadata<:loaded, "clients">,
-        description: "some description",
-        id: "f4e1a0ce-8702-4f55-8289-20c943020f41",
-        inserted_at: ~N[2020-04-11 16:04:32],
-        jobs: #Ecto.Association.NotLoaded<association :jobs is not loaded>,
-        logo: "some logo",
-        name: "some name",
-        updated_at: ~N[2020-04-11 16:04:32]
-      },
-      client_id: "f4e1a0ce-8702-4f55-8289-20c943020f41",
-      description: "some updated description",
-      id: "035e6a22-a17c-4d0b-9791-98f077635e60",
-      inserted_at: ~N[2020-04-11 16:04:32],
-      name: "some updated name",
-      positions: 43,
-      updated_at: ~N[2020-04-11 16:04:32]
-    },
     layout: {FlowWeb.LayoutView, "app.html"},
+    status: %Flow.Jobs.Status{
+      __meta__: #Ecto.Schema.Metadata<:loaded, "status">,
+      candidates: #Ecto.Association.NotLoaded<association :candidates is not loaded>,
+      description: "some updated description",
+      enable: false,
+      id: "d2b74f63-5d01-4942-b264-ff49fb3242df",
+      inserted_at: ~N[2020-04-12 03:34:32],
+      name: "some updated name",
+      order: 43,
+      updated_at: ~N[2020-04-12 03:34:32]
+    },
     user: %Flow.Account.User{
       __meta__: #Ecto.Schema.Metadata<:loaded, "users">,
       admin: true,
       avatar: "some avatar",
       email: "some email",
-      id: "0425242b-7c63-4c43-bb18-49adf7ae56e3",
-      inserted_at: ~N[2020-04-11 16:04:32],
+      id: "72d87725-3ead-4736-9996-0ed945f58db4",
+      inserted_at: ~N[2020-04-12 03:34:32],
       name: "some name",
       token: "some token",
-      updated_at: ~N[2020-04-11 16:04:32]
+      updated_at: ~N[2020-04-12 03:34:32]
     }
   },
   before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
@@ -1325,31 +1079,31 @@
    #Function<0.24098476/1 in Plug.Telemetry.call/2>],
   body_params: %{},
   cookies: %{
-    "_flow_key" => "SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAGUpvYiB1cGRhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJDA0MjUyNDJiLTdjNjMtNGM0My1iYjE4LTQ5YWRmN2FlNTZlMw.zeJQ2zRgVJiMKMmnuCyGvBdgOqWtuMpLZBe6rruJBjI"
+    "_flow_key" => "SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAHFN0YXR1cyB1cGRhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJDcyZDg3NzI1LTNlYWQtNDczNi05OTk2LTBlZDk0NWY1OGRiNA.K6p-fgot-nHkHnSLQNz1jA7Gvy3BLe-aO7Y_Wv3WvGc"
   },
   halted: false,
   host: "www.example.com",
   method: "GET",
-  owner: #PID<0.605.0>,
-  params: %{"id" => "035e6a22-a17c-4d0b-9791-98f077635e60"},
-  path_info: ["jobs", "035e6a22-a17c-4d0b-9791-98f077635e60"],
-  path_params: %{"id" => "035e6a22-a17c-4d0b-9791-98f077635e60"},
+  owner: #PID<0.606.0>,
+  params: %{"id" => "d2b74f63-5d01-4942-b264-ff49fb3242df"},
+  path_info: ["status", "d2b74f63-5d01-4942-b264-ff49fb3242df"],
+  path_params: %{"id" => "d2b74f63-5d01-4942-b264-ff49fb3242df"},
   port: 80,
   private: %{
     FlowWeb.Router => {[], %{}},
     :phoenix_action => :show,
-    :phoenix_controller => FlowWeb.JobController,
+    :phoenix_controller => FlowWeb.StatusController,
     :phoenix_endpoint => FlowWeb.Endpoint,
-    :phoenix_flash => %{"info" => "Job updated successfully."},
+    :phoenix_flash => %{"info" => "Status updated successfully."},
     :phoenix_format => "html",
     :phoenix_layout => {FlowWeb.LayoutView, :app},
     :phoenix_recycled => true,
     :phoenix_router => FlowWeb.Router,
     :phoenix_template => "show.html",
-    :phoenix_view => FlowWeb.JobView,
+    :phoenix_view => FlowWeb.StatusView,
     :plug_session => %{
-      "phoenix_flash" => %{"info" => "Job updated successfully."},
-      "user_id" => "0425242b-7c63-4c43-bb18-49adf7ae56e3"
+      "phoenix_flash" => %{"info" => "Status updated successfully."},
+      "user_id" => "72d87725-3ead-4736-9996-0ed945f58db4"
     },
     :plug_session_fetch => :done,
     :plug_skip_csrf_protection => true
@@ -1358,18 +1112,361 @@
   query_string: "",
   remote_ip: {127, 0, 0, 1},
   req_cookies: %{
-    "_flow_key" => "SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAGUpvYiB1cGRhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJDA0MjUyNDJiLTdjNjMtNGM0My1iYjE4LTQ5YWRmN2FlNTZlMw.zeJQ2zRgVJiMKMmnuCyGvBdgOqWtuMpLZBe6rruJBjI"
+    "_flow_key" => "SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAHFN0YXR1cyB1cGRhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJDcyZDg3NzI1LTNlYWQtNDczNi05OTk2LTBlZDk0NWY1OGRiNA.K6p-fgot-nHkHnSLQNz1jA7Gvy3BLe-aO7Y_Wv3WvGc"
   },
   req_headers: [
     {"cookie",
-     "_flow_key=SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAGUpvYiB1cGRhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJDA0MjUyNDJiLTdjNjMtNGM0My1iYjE4LTQ5YWRmN2FlNTZlMw.zeJQ2zRgVJiMKMmnuCyGvBdgOqWtuMpLZBe6rruJBjI"}
+     "_flow_key=SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAHFN0YXR1cyB1cGRhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJDcyZDg3NzI1LTNlYWQtNDczNi05OTk2LTBlZDk0NWY1OGRiNA.K6p-fgot-nHkHnSLQNz1jA7Gvy3BLe-aO7Y_Wv3WvGc"}
   ],
-  request_path: "/jobs/035e6a22-a17c-4d0b-9791-98f077635e60",
+  request_path: "/status/d2b74f63-5d01-4942-b264-ff49fb3242df",
   resp_body: nil,
   resp_cookies: %{},
   resp_headers: [
     {"cache-control", "max-age=0, private, must-revalidate"},
-    {"x-request-id", "FgTPdYDrPii3gVcAAAYC"},
+    {"x-request-id", "FgT1HKyfp_haSXIAAAhB"},
+    {"x-frame-options", "SAMEORIGIN"},
+    {"x-xss-protection", "1; mode=block"},
+    {"x-content-type-options", "nosniff"},
+    {"x-download-options", "noopen"},
+    {"x-permitted-cross-domain-policies", "none"},
+    {"cross-origin-window-policy", "deny"}
+  ],
+  scheme: :http,
+  script_name: [],
+  secret_key_base: :...,
+  state: :unset,
+  status: nil
+}
+.%Plug.Conn{
+  adapter: {Plug.Adapters.Test.Conn, :...},
+  assigns: %{
+    layout: {FlowWeb.LayoutView, "app.html"},
+    status: [],
+    user: %Flow.Account.User{
+      __meta__: #Ecto.Schema.Metadata<:loaded, "users">,
+      admin: true,
+      avatar: "some avatar",
+      email: "some email",
+      id: "3b6f0923-6511-4765-be2e-8971054cadbc",
+      inserted_at: ~N[2020-04-12 03:34:32],
+      name: "some name",
+      token: "some token",
+      updated_at: ~N[2020-04-12 03:34:32]
+    }
+  },
+  before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
+   #Function<2.35138165/1 in Phoenix.Controller.fetch_flash/2>,
+   #Function<0.32542428/1 in Plug.Session.before_send/2>,
+   #Function<0.24098476/1 in Plug.Telemetry.call/2>],
+  body_params: %{},
+  cookies: %{},
+  halted: false,
+  host: "www.example.com",
+  method: "GET",
+  owner: #PID<0.608.0>,
+  params: %{},
+  path_info: ["status"],
+  path_params: %{},
+  port: 80,
+  private: %{
+    FlowWeb.Router => {[], %{}},
+    :phoenix_action => :index,
+    :phoenix_controller => FlowWeb.StatusController,
+    :phoenix_endpoint => FlowWeb.Endpoint,
+    :phoenix_flash => %{},
+    :phoenix_format => "html",
+    :phoenix_layout => {FlowWeb.LayoutView, :app},
+    :phoenix_recycled => true,
+    :phoenix_router => FlowWeb.Router,
+    :phoenix_template => "index.html",
+    :phoenix_view => FlowWeb.StatusView,
+    :plug_session => %{"user_id" => "3b6f0923-6511-4765-be2e-8971054cadbc"},
+    :plug_session_fetch => :done,
+    :plug_session_info => :write,
+    :plug_skip_csrf_protection => true
+  },
+  query_params: %{},
+  query_string: "",
+  remote_ip: {127, 0, 0, 1},
+  req_cookies: %{},
+  req_headers: [],
+  request_path: "/status",
+  resp_body: nil,
+  resp_cookies: %{},
+  resp_headers: [
+    {"cache-control", "max-age=0, private, must-revalidate"},
+    {"x-request-id", "FgT1HK0IZHjbZb0AAAPi"},
+    {"x-frame-options", "SAMEORIGIN"},
+    {"x-xss-protection", "1; mode=block"},
+    {"x-content-type-options", "nosniff"},
+    {"x-download-options", "noopen"},
+    {"x-permitted-cross-domain-policies", "none"},
+    {"cross-origin-window-policy", "deny"}
+  ],
+  scheme: :http,
+  script_name: [],
+  secret_key_base: :...,
+  state: :unset,
+  status: nil
+}
+..%Plug.Conn{
+  adapter: {Plug.Adapters.Test.Conn, :...},
+  assigns: %{
+    job: %Flow.Jobs.Job{
+      __meta__: #Ecto.Schema.Metadata<:loaded, "jobs">,
+      cadidates: #Ecto.Association.NotLoaded<association :cadidates is not loaded>,
+      client: %Flow.Jobs.Client{
+        __meta__: #Ecto.Schema.Metadata<:loaded, "clients">,
+        description: "some description",
+        id: "d04b52ce-0662-4af0-98f5-7b40c385f44d",
+        inserted_at: ~N[2020-04-12 03:34:32],
+        jobs: #Ecto.Association.NotLoaded<association :jobs is not loaded>,
+        logo: "some logo",
+        name: "some name",
+        updated_at: ~N[2020-04-12 03:34:32]
+      },
+      client_id: "d04b52ce-0662-4af0-98f5-7b40c385f44d",
+      description: "some description",
+      id: "cc55de53-66f9-4eb7-a183-96d90194b8cb",
+      inserted_at: ~N[2020-04-12 03:34:32],
+      name: "some name",
+      positions: 42,
+      updated_at: ~N[2020-04-12 03:34:32]
+    },
+    layout: {FlowWeb.LayoutView, "app.html"},
+    user: %Flow.Account.User{
+      __meta__: #Ecto.Schema.Metadata<:loaded, "users">,
+      admin: true,
+      avatar: "some avatar",
+      email: "some email",
+      id: "02c85999-0e68-4301-8046-d118bfb978bd",
+      inserted_at: ~N[2020-04-12 03:34:32],
+      name: "some name",
+      token: "some token",
+      updated_at: ~N[2020-04-12 03:34:32]
+    }
+  },
+  before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
+   #Function<2.35138165/1 in Phoenix.Controller.fetch_flash/2>,
+   #Function<0.32542428/1 in Plug.Session.before_send/2>,
+   #Function<0.24098476/1 in Plug.Telemetry.call/2>],
+  body_params: %{},
+  cookies: %{
+    "_flow_key" => "SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAGUpvYiBjcmVhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJDAyYzg1OTk5LTBlNjgtNDMwMS04MDQ2LWQxMThiZmI5NzhiZA.Og40UewGJWqJnMB9GWFYWx-1L6WbWO8qrb_6yWi9p6o"
+  },
+  halted: false,
+  host: "www.example.com",
+  method: "GET",
+  owner: #PID<0.614.0>,
+  params: %{"id" => "cc55de53-66f9-4eb7-a183-96d90194b8cb"},
+  path_info: ["jobs", "cc55de53-66f9-4eb7-a183-96d90194b8cb"],
+  path_params: %{"id" => "cc55de53-66f9-4eb7-a183-96d90194b8cb"},
+  port: 80,
+  private: %{
+    FlowWeb.Router => {[], %{}},
+    :phoenix_action => :show,
+    :phoenix_controller => FlowWeb.JobController,
+    :phoenix_endpoint => FlowWeb.Endpoint,
+    :phoenix_flash => %{"info" => "Job created successfully."},
+    :phoenix_format => "html",
+    :phoenix_layout => {FlowWeb.LayoutView, :app},
+    :phoenix_recycled => true,
+    :phoenix_router => FlowWeb.Router,
+    :phoenix_template => "show.html",
+    :phoenix_view => FlowWeb.JobView,
+    :plug_session => %{
+      "phoenix_flash" => %{"info" => "Job created successfully."},
+      "user_id" => "02c85999-0e68-4301-8046-d118bfb978bd"
+    },
+    :plug_session_fetch => :done,
+    :plug_skip_csrf_protection => true
+  },
+  query_params: %{},
+  query_string: "",
+  remote_ip: {127, 0, 0, 1},
+  req_cookies: %{
+    "_flow_key" => "SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAGUpvYiBjcmVhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJDAyYzg1OTk5LTBlNjgtNDMwMS04MDQ2LWQxMThiZmI5NzhiZA.Og40UewGJWqJnMB9GWFYWx-1L6WbWO8qrb_6yWi9p6o"
+  },
+  req_headers: [
+    {"cookie",
+     "_flow_key=SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAGUpvYiBjcmVhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJDAyYzg1OTk5LTBlNjgtNDMwMS04MDQ2LWQxMThiZmI5NzhiZA.Og40UewGJWqJnMB9GWFYWx-1L6WbWO8qrb_6yWi9p6o"}
+  ],
+  request_path: "/jobs/cc55de53-66f9-4eb7-a183-96d90194b8cb",
+  resp_body: nil,
+  resp_cookies: %{},
+  resp_headers: [
+    {"cache-control", "max-age=0, private, must-revalidate"},
+    {"x-request-id", "FgT1HK8LLaASPmoAAAQi"},
+    {"x-frame-options", "SAMEORIGIN"},
+    {"x-xss-protection", "1; mode=block"},
+    {"x-content-type-options", "nosniff"},
+    {"x-download-options", "noopen"},
+    {"x-permitted-cross-domain-policies", "none"},
+    {"cross-origin-window-policy", "deny"}
+  ],
+  scheme: :http,
+  script_name: [],
+  secret_key_base: :...,
+  state: :unset,
+  status: nil
+}
+.%Plug.Conn{
+  adapter: {Plug.Adapters.Test.Conn, :...},
+  assigns: %{
+    changeset: #Ecto.Changeset<
+      action: :insert,
+      changes: %{},
+      errors: [
+        name: {"can't be blank", [validation: :required]},
+        description: {"can't be blank", [validation: :required]},
+        positions: {"can't be blank", [validation: :required]},
+        client_id: {"can't be blank", [validation: :required]}
+      ],
+      data: #Flow.Jobs.Job<>,
+      valid?: false
+    >,
+    clients: [],
+    layout: {FlowWeb.LayoutView, "app.html"},
+    user: %Flow.Account.User{
+      __meta__: #Ecto.Schema.Metadata<:loaded, "users">,
+      admin: true,
+      avatar: "some avatar",
+      email: "some email",
+      id: "5736e83c-c81f-4c1b-96c6-e56ddb138a47",
+      inserted_at: ~N[2020-04-12 03:34:32],
+      name: "some name",
+      token: "some token",
+      updated_at: ~N[2020-04-12 03:34:32]
+    }
+  },
+  before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
+   #Function<2.35138165/1 in Phoenix.Controller.fetch_flash/2>,
+   #Function<0.32542428/1 in Plug.Session.before_send/2>,
+   #Function<0.24098476/1 in Plug.Telemetry.call/2>],
+  body_params: %{
+    "job" => %{"description" => nil, "name" => nil, "positions" => nil}
+  },
+  cookies: %{},
+  halted: false,
+  host: "www.example.com",
+  method: "POST",
+  owner: #PID<0.616.0>,
+  params: %{"job" => %{"description" => nil, "name" => nil, "positions" => nil}},
+  path_info: ["jobs"],
+  path_params: %{},
+  port: 80,
+  private: %{
+    FlowWeb.Router => {[], %{}},
+    :phoenix_action => :create,
+    :phoenix_controller => FlowWeb.JobController,
+    :phoenix_endpoint => FlowWeb.Endpoint,
+    :phoenix_flash => %{},
+    :phoenix_format => "html",
+    :phoenix_layout => {FlowWeb.LayoutView, :app},
+    :phoenix_recycled => true,
+    :phoenix_router => FlowWeb.Router,
+    :phoenix_template => "new.html",
+    :phoenix_view => FlowWeb.JobView,
+    :plug_session => %{"user_id" => "5736e83c-c81f-4c1b-96c6-e56ddb138a47"},
+    :plug_session_fetch => :done,
+    :plug_session_info => :write,
+    :plug_skip_csrf_protection => true
+  },
+  query_params: %{},
+  query_string: "",
+  remote_ip: {127, 0, 0, 1},
+  req_cookies: %{},
+  req_headers: [{"content-type", "multipart/mixed; boundary=plug_conn_test"}],
+  request_path: "/jobs",
+  resp_body: nil,
+  resp_cookies: %{},
+  resp_headers: [
+    {"cache-control", "max-age=0, private, must-revalidate"},
+    {"x-request-id", "FgT1HK-pMsCK9E8AAAih"},
+    {"x-frame-options", "SAMEORIGIN"},
+    {"x-xss-protection", "1; mode=block"},
+    {"x-content-type-options", "nosniff"},
+    {"x-download-options", "noopen"},
+    {"x-permitted-cross-domain-policies", "none"},
+    {"cross-origin-window-policy", "deny"}
+  ],
+  scheme: :http,
+  script_name: [],
+  secret_key_base: :...,
+  state: :unset,
+  status: nil
+}
+.%Plug.Conn{
+  adapter: {Plug.Adapters.Test.Conn, :...},
+  assigns: %{
+    changeset: #Ecto.Changeset<
+      action: nil,
+      changes: %{},
+      errors: [
+        name: {"can't be blank", [validation: :required]},
+        description: {"can't be blank", [validation: :required]},
+        positions: {"can't be blank", [validation: :required]},
+        client_id: {"can't be blank", [validation: :required]}
+      ],
+      data: #Flow.Jobs.Job<>,
+      valid?: false
+    >,
+    clients: [],
+    layout: {FlowWeb.LayoutView, "app.html"},
+    user: %Flow.Account.User{
+      __meta__: #Ecto.Schema.Metadata<:loaded, "users">,
+      admin: true,
+      avatar: "some avatar",
+      email: "some email",
+      id: "cb663f6f-3f40-422d-9f58-1a3ce4411e6e",
+      inserted_at: ~N[2020-04-12 03:34:32],
+      name: "some name",
+      token: "some token",
+      updated_at: ~N[2020-04-12 03:34:32]
+    }
+  },
+  before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
+   #Function<2.35138165/1 in Phoenix.Controller.fetch_flash/2>,
+   #Function<0.32542428/1 in Plug.Session.before_send/2>,
+   #Function<0.24098476/1 in Plug.Telemetry.call/2>],
+  body_params: %{},
+  cookies: %{},
+  halted: false,
+  host: "www.example.com",
+  method: "GET",
+  owner: #PID<0.618.0>,
+  params: %{},
+  path_info: ["jobs", "new"],
+  path_params: %{},
+  port: 80,
+  private: %{
+    FlowWeb.Router => {[], %{}},
+    :phoenix_action => :new,
+    :phoenix_controller => FlowWeb.JobController,
+    :phoenix_endpoint => FlowWeb.Endpoint,
+    :phoenix_flash => %{},
+    :phoenix_format => "html",
+    :phoenix_layout => {FlowWeb.LayoutView, :app},
+    :phoenix_recycled => true,
+    :phoenix_router => FlowWeb.Router,
+    :phoenix_template => "new.html",
+    :phoenix_view => FlowWeb.JobView,
+    :plug_session => %{"user_id" => "cb663f6f-3f40-422d-9f58-1a3ce4411e6e"},
+    :plug_session_fetch => :done,
+    :plug_session_info => :write,
+    :plug_skip_csrf_protection => true
+  },
+  query_params: %{},
+  query_string: "",
+  remote_ip: {127, 0, 0, 1},
+  req_cookies: %{},
+  req_headers: [],
+  request_path: "/jobs/new",
+  resp_body: nil,
+  resp_cookies: %{},
+  resp_headers: [
+    {"cache-control", "max-age=0, private, must-revalidate"},
+    {"x-request-id", "FgT1HLAdPcjckTMAAAjB"},
     {"x-frame-options", "SAMEORIGIN"},
     {"x-xss-protection", "1; mode=block"},
     {"x-content-type-options", "nosniff"},
@@ -1397,27 +1494,27 @@
       data: #Flow.Jobs.Job<>,
       valid?: false
     >,
-    clients: [{"some name", "07b11ea9-5086-492b-8ba4-cf71b7285dff"}],
+    clients: [{"some name", "db355142-3aec-4319-81aa-30d53ba3da46"}],
     job: %Flow.Jobs.Job{
       __meta__: #Ecto.Schema.Metadata<:loaded, "jobs">,
       cadidates: #Ecto.Association.NotLoaded<association :cadidates is not loaded>,
       client: %Flow.Jobs.Client{
         __meta__: #Ecto.Schema.Metadata<:loaded, "clients">,
         description: "some description",
-        id: "07b11ea9-5086-492b-8ba4-cf71b7285dff",
-        inserted_at: ~N[2020-04-11 16:04:32],
+        id: "db355142-3aec-4319-81aa-30d53ba3da46",
+        inserted_at: ~N[2020-04-12 03:34:32],
         jobs: #Ecto.Association.NotLoaded<association :jobs is not loaded>,
         logo: "some logo",
         name: "some name",
-        updated_at: ~N[2020-04-11 16:04:32]
+        updated_at: ~N[2020-04-12 03:34:32]
       },
-      client_id: "07b11ea9-5086-492b-8ba4-cf71b7285dff",
+      client_id: "db355142-3aec-4319-81aa-30d53ba3da46",
       description: "some description",
-      id: "26ea8520-7ed5-47c0-afec-a8be397181e1",
-      inserted_at: ~N[2020-04-11 16:04:32],
+      id: "a9baa071-8658-40dd-b28a-07c5f14987dc",
+      inserted_at: ~N[2020-04-12 03:34:32],
       name: "some name",
       positions: 42,
-      updated_at: ~N[2020-04-11 16:04:32]
+      updated_at: ~N[2020-04-12 03:34:32]
     },
     layout: {FlowWeb.LayoutView, "app.html"},
     user: %Flow.Account.User{
@@ -1425,11 +1522,11 @@
       admin: true,
       avatar: "some avatar",
       email: "some email",
-      id: "5e7a2c18-3cce-4617-af4f-50f258f440f0",
-      inserted_at: ~N[2020-04-11 16:04:32],
+      id: "bd51aed2-a1a1-464f-bbcc-6a2db8b8a43b",
+      inserted_at: ~N[2020-04-12 03:34:32],
       name: "some name",
       token: "some token",
-      updated_at: ~N[2020-04-11 16:04:32]
+      updated_at: ~N[2020-04-12 03:34:32]
     }
   },
   before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
@@ -1443,13 +1540,13 @@
   halted: false,
   host: "www.example.com",
   method: "PUT",
-  owner: #PID<0.607.0>,
+  owner: #PID<0.620.0>,
   params: %{
-    "id" => "26ea8520-7ed5-47c0-afec-a8be397181e1",
+    "id" => "a9baa071-8658-40dd-b28a-07c5f14987dc",
     "job" => %{"description" => nil, "name" => nil, "positions" => nil}
   },
-  path_info: ["jobs", "26ea8520-7ed5-47c0-afec-a8be397181e1"],
-  path_params: %{"id" => "26ea8520-7ed5-47c0-afec-a8be397181e1"},
+  path_info: ["jobs", "a9baa071-8658-40dd-b28a-07c5f14987dc"],
+  path_params: %{"id" => "a9baa071-8658-40dd-b28a-07c5f14987dc"},
   port: 80,
   private: %{
     FlowWeb.Router => {[], %{}},
@@ -1463,7 +1560,7 @@
     :phoenix_router => FlowWeb.Router,
     :phoenix_template => "edit.html",
     :phoenix_view => FlowWeb.JobView,
-    :plug_session => %{"user_id" => "5e7a2c18-3cce-4617-af4f-50f258f440f0"},
+    :plug_session => %{"user_id" => "bd51aed2-a1a1-464f-bbcc-6a2db8b8a43b"},
     :plug_session_fetch => :done,
     :plug_session_info => :write,
     :plug_skip_csrf_protection => true
@@ -1473,283 +1570,12 @@
   remote_ip: {127, 0, 0, 1},
   req_cookies: %{},
   req_headers: [{"content-type", "multipart/mixed; boundary=plug_conn_test"}],
-  request_path: "/jobs/26ea8520-7ed5-47c0-afec-a8be397181e1",
+  request_path: "/jobs/a9baa071-8658-40dd-b28a-07c5f14987dc",
   resp_body: nil,
   resp_cookies: %{},
   resp_headers: [
     {"cache-control", "max-age=0, private, must-revalidate"},
-    {"x-request-id", "FgTPdYGmxfh72JUAAAdB"},
-    {"x-frame-options", "SAMEORIGIN"},
-    {"x-xss-protection", "1; mode=block"},
-    {"x-content-type-options", "nosniff"},
-    {"x-download-options", "noopen"},
-    {"x-permitted-cross-domain-policies", "none"},
-    {"cross-origin-window-policy", "deny"}
-  ],
-  scheme: :http,
-  script_name: [],
-  secret_key_base: :...,
-  state: :unset,
-  status: nil
-}
-.%Plug.Conn{
-  adapter: {Plug.Adapters.Test.Conn, :...},
-  assigns: %{
-    job: %Flow.Jobs.Job{
-      __meta__: #Ecto.Schema.Metadata<:loaded, "jobs">,
-      cadidates: #Ecto.Association.NotLoaded<association :cadidates is not loaded>,
-      client: %Flow.Jobs.Client{
-        __meta__: #Ecto.Schema.Metadata<:loaded, "clients">,
-        description: "some description",
-        id: "4d222bce-2114-4067-a018-ee318bbe43b4",
-        inserted_at: ~N[2020-04-11 16:04:32],
-        jobs: #Ecto.Association.NotLoaded<association :jobs is not loaded>,
-        logo: "some logo",
-        name: "some name",
-        updated_at: ~N[2020-04-11 16:04:32]
-      },
-      client_id: "4d222bce-2114-4067-a018-ee318bbe43b4",
-      description: "some description",
-      id: "40ccec72-10a7-4a53-b43b-2e1f85ede37f",
-      inserted_at: ~N[2020-04-11 16:04:32],
-      name: "some name",
-      positions: 42,
-      updated_at: ~N[2020-04-11 16:04:32]
-    },
-    layout: {FlowWeb.LayoutView, "app.html"},
-    user: %Flow.Account.User{
-      __meta__: #Ecto.Schema.Metadata<:loaded, "users">,
-      admin: true,
-      avatar: "some avatar",
-      email: "some email",
-      id: "ee25ac26-0211-42c8-bb6b-aea875bd1358",
-      inserted_at: ~N[2020-04-11 16:04:32],
-      name: "some name",
-      token: "some token",
-      updated_at: ~N[2020-04-11 16:04:32]
-    }
-  },
-  before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
-   #Function<2.35138165/1 in Phoenix.Controller.fetch_flash/2>,
-   #Function<0.32542428/1 in Plug.Session.before_send/2>,
-   #Function<0.24098476/1 in Plug.Telemetry.call/2>],
-  body_params: %{},
-  cookies: %{
-    "_flow_key" => "SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAGUpvYiBjcmVhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJGVlMjVhYzI2LTAyMTEtNDJjOC1iYjZiLWFlYTg3NWJkMTM1OA.ko_ld06fyo895cpDUG81Th-4zacXi3JMsb12vtMAWaQ"
-  },
-  halted: false,
-  host: "www.example.com",
-  method: "GET",
-  owner: #PID<0.609.0>,
-  params: %{"id" => "40ccec72-10a7-4a53-b43b-2e1f85ede37f"},
-  path_info: ["jobs", "40ccec72-10a7-4a53-b43b-2e1f85ede37f"],
-  path_params: %{"id" => "40ccec72-10a7-4a53-b43b-2e1f85ede37f"},
-  port: 80,
-  private: %{
-    FlowWeb.Router => {[], %{}},
-    :phoenix_action => :show,
-    :phoenix_controller => FlowWeb.JobController,
-    :phoenix_endpoint => FlowWeb.Endpoint,
-    :phoenix_flash => %{"info" => "Job created successfully."},
-    :phoenix_format => "html",
-    :phoenix_layout => {FlowWeb.LayoutView, :app},
-    :phoenix_recycled => true,
-    :phoenix_router => FlowWeb.Router,
-    :phoenix_template => "show.html",
-    :phoenix_view => FlowWeb.JobView,
-    :plug_session => %{
-      "phoenix_flash" => %{"info" => "Job created successfully."},
-      "user_id" => "ee25ac26-0211-42c8-bb6b-aea875bd1358"
-    },
-    :plug_session_fetch => :done,
-    :plug_skip_csrf_protection => true
-  },
-  query_params: %{},
-  query_string: "",
-  remote_ip: {127, 0, 0, 1},
-  req_cookies: %{
-    "_flow_key" => "SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAGUpvYiBjcmVhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJGVlMjVhYzI2LTAyMTEtNDJjOC1iYjZiLWFlYTg3NWJkMTM1OA.ko_ld06fyo895cpDUG81Th-4zacXi3JMsb12vtMAWaQ"
-  },
-  req_headers: [
-    {"cookie",
-     "_flow_key=SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAGUpvYiBjcmVhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJGVlMjVhYzI2LTAyMTEtNDJjOC1iYjZiLWFlYTg3NWJkMTM1OA.ko_ld06fyo895cpDUG81Th-4zacXi3JMsb12vtMAWaQ"}
-  ],
-  request_path: "/jobs/40ccec72-10a7-4a53-b43b-2e1f85ede37f",
-  resp_body: nil,
-  resp_cookies: %{},
-  resp_headers: [
-    {"cache-control", "max-age=0, private, must-revalidate"},
-    {"x-request-id", "FgTPdYLMdZAQ7D8AAAZC"},
-    {"x-frame-options", "SAMEORIGIN"},
-    {"x-xss-protection", "1; mode=block"},
-    {"x-content-type-options", "nosniff"},
-    {"x-download-options", "noopen"},
-    {"x-permitted-cross-domain-policies", "none"},
-    {"cross-origin-window-policy", "deny"}
-  ],
-  scheme: :http,
-  script_name: [],
-  secret_key_base: :...,
-  state: :unset,
-  status: nil
-}
-..%Plug.Conn{
-  adapter: {Plug.Adapters.Test.Conn, :...},
-  assigns: %{
-    changeset: #Ecto.Changeset<
-      action: :insert,
-      changes: %{},
-      errors: [
-        name: {"can't be blank", [validation: :required]},
-        description: {"can't be blank", [validation: :required]},
-        positions: {"can't be blank", [validation: :required]},
-        client_id: {"can't be blank", [validation: :required]}
-      ],
-      data: #Flow.Jobs.Job<>,
-      valid?: false
-    >,
-    clients: [],
-    layout: {FlowWeb.LayoutView, "app.html"},
-    user: %Flow.Account.User{
-      __meta__: #Ecto.Schema.Metadata<:loaded, "users">,
-      admin: true,
-      avatar: "some avatar",
-      email: "some email",
-      id: "7b8da49f-5b04-478c-8262-9f02445ab6a3",
-      inserted_at: ~N[2020-04-11 16:04:32],
-      name: "some name",
-      token: "some token",
-      updated_at: ~N[2020-04-11 16:04:32]
-    }
-  },
-  before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
-   #Function<2.35138165/1 in Phoenix.Controller.fetch_flash/2>,
-   #Function<0.32542428/1 in Plug.Session.before_send/2>,
-   #Function<0.24098476/1 in Plug.Telemetry.call/2>],
-  body_params: %{
-    "job" => %{"description" => nil, "name" => nil, "positions" => nil}
-  },
-  cookies: %{},
-  halted: false,
-  host: "www.example.com",
-  method: "POST",
-  owner: #PID<0.613.0>,
-  params: %{"job" => %{"description" => nil, "name" => nil, "positions" => nil}},
-  path_info: ["jobs"],
-  path_params: %{},
-  port: 80,
-  private: %{
-    FlowWeb.Router => {[], %{}},
-    :phoenix_action => :create,
-    :phoenix_controller => FlowWeb.JobController,
-    :phoenix_endpoint => FlowWeb.Endpoint,
-    :phoenix_flash => %{},
-    :phoenix_format => "html",
-    :phoenix_layout => {FlowWeb.LayoutView, :app},
-    :phoenix_recycled => true,
-    :phoenix_router => FlowWeb.Router,
-    :phoenix_template => "new.html",
-    :phoenix_view => FlowWeb.JobView,
-    :plug_session => %{"user_id" => "7b8da49f-5b04-478c-8262-9f02445ab6a3"},
-    :plug_session_fetch => :done,
-    :plug_session_info => :write,
-    :plug_skip_csrf_protection => true
-  },
-  query_params: %{},
-  query_string: "",
-  remote_ip: {127, 0, 0, 1},
-  req_cookies: %{},
-  req_headers: [{"content-type", "multipart/mixed; boundary=plug_conn_test"}],
-  request_path: "/jobs",
-  resp_body: nil,
-  resp_cookies: %{},
-  resp_headers: [
-    {"cache-control", "max-age=0, private, must-revalidate"},
-    {"x-request-id", "FgTPdYTPdWj8SJAAAAZi"},
-    {"x-frame-options", "SAMEORIGIN"},
-    {"x-xss-protection", "1; mode=block"},
-    {"x-content-type-options", "nosniff"},
-    {"x-download-options", "noopen"},
-    {"x-permitted-cross-domain-policies", "none"},
-    {"cross-origin-window-policy", "deny"}
-  ],
-  scheme: :http,
-  script_name: [],
-  secret_key_base: :...,
-  state: :unset,
-  status: nil
-}
-.%Plug.Conn{
-  adapter: {Plug.Adapters.Test.Conn, :...},
-  assigns: %{
-    changeset: #Ecto.Changeset<
-      action: nil,
-      changes: %{},
-      errors: [
-        name: {"can't be blank", [validation: :required]},
-        description: {"can't be blank", [validation: :required]},
-        positions: {"can't be blank", [validation: :required]},
-        client_id: {"can't be blank", [validation: :required]}
-      ],
-      data: #Flow.Jobs.Job<>,
-      valid?: false
-    >,
-    clients: [],
-    layout: {FlowWeb.LayoutView, "app.html"},
-    user: %Flow.Account.User{
-      __meta__: #Ecto.Schema.Metadata<:loaded, "users">,
-      admin: true,
-      avatar: "some avatar",
-      email: "some email",
-      id: "ed188e7a-c567-490c-bdad-02595cec9fbd",
-      inserted_at: ~N[2020-04-11 16:04:32],
-      name: "some name",
-      token: "some token",
-      updated_at: ~N[2020-04-11 16:04:32]
-    }
-  },
-  before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
-   #Function<2.35138165/1 in Phoenix.Controller.fetch_flash/2>,
-   #Function<0.32542428/1 in Plug.Session.before_send/2>,
-   #Function<0.24098476/1 in Plug.Telemetry.call/2>],
-  body_params: %{},
-  cookies: %{},
-  halted: false,
-  host: "www.example.com",
-  method: "GET",
-  owner: #PID<0.615.0>,
-  params: %{},
-  path_info: ["jobs", "new"],
-  path_params: %{},
-  port: 80,
-  private: %{
-    FlowWeb.Router => {[], %{}},
-    :phoenix_action => :new,
-    :phoenix_controller => FlowWeb.JobController,
-    :phoenix_endpoint => FlowWeb.Endpoint,
-    :phoenix_flash => %{},
-    :phoenix_format => "html",
-    :phoenix_layout => {FlowWeb.LayoutView, :app},
-    :phoenix_recycled => true,
-    :phoenix_router => FlowWeb.Router,
-    :phoenix_template => "new.html",
-    :phoenix_view => FlowWeb.JobView,
-    :plug_session => %{"user_id" => "ed188e7a-c567-490c-bdad-02595cec9fbd"},
-    :plug_session_fetch => :done,
-    :plug_session_info => :write,
-    :plug_skip_csrf_protection => true
-  },
-  query_params: %{},
-  query_string: "",
-  remote_ip: {127, 0, 0, 1},
-  req_cookies: %{},
-  req_headers: [],
-  request_path: "/jobs/new",
-  resp_body: nil,
-  resp_cookies: %{},
-  resp_headers: [
-    {"cache-control", "max-age=0, private, must-revalidate"},
-    {"x-request-id", "FgTPdYVPwSjJ8MUAAAeh"},
+    {"x-request-id", "FgT1HLC8-Gh0rPYAAAjh"},
     {"x-frame-options", "SAMEORIGIN"},
     {"x-xss-protection", "1; mode=block"},
     {"x-content-type-options", "nosniff"},
@@ -1768,27 +1594,27 @@
   assigns: %{
     changeset: #Ecto.Changeset<action: nil, changes: %{}, errors: [],
      data: #Flow.Jobs.Job<>, valid?: true>,
-    clients: [{"some name", "ed66e34e-261e-4395-9fee-d94b2ed0f242"}],
+    clients: [{"some name", "8156dee9-c748-4993-b572-4663c6de2764"}],
     job: %Flow.Jobs.Job{
       __meta__: #Ecto.Schema.Metadata<:loaded, "jobs">,
       cadidates: #Ecto.Association.NotLoaded<association :cadidates is not loaded>,
       client: %Flow.Jobs.Client{
         __meta__: #Ecto.Schema.Metadata<:loaded, "clients">,
         description: "some description",
-        id: "ed66e34e-261e-4395-9fee-d94b2ed0f242",
-        inserted_at: ~N[2020-04-11 16:04:32],
+        id: "8156dee9-c748-4993-b572-4663c6de2764",
+        inserted_at: ~N[2020-04-12 03:34:32],
         jobs: #Ecto.Association.NotLoaded<association :jobs is not loaded>,
         logo: "some logo",
         name: "some name",
-        updated_at: ~N[2020-04-11 16:04:32]
+        updated_at: ~N[2020-04-12 03:34:32]
       },
-      client_id: "ed66e34e-261e-4395-9fee-d94b2ed0f242",
+      client_id: "8156dee9-c748-4993-b572-4663c6de2764",
       description: "some description",
-      id: "6355f5d0-bea6-4939-af91-379ea959b5d6",
-      inserted_at: ~N[2020-04-11 16:04:32],
+      id: "6e9edf5e-f804-4aba-b04b-79399640c003",
+      inserted_at: ~N[2020-04-12 03:34:32],
       name: "some name",
       positions: 42,
-      updated_at: ~N[2020-04-11 16:04:32]
+      updated_at: ~N[2020-04-12 03:34:32]
     },
     layout: {FlowWeb.LayoutView, "app.html"},
     user: %Flow.Account.User{
@@ -1796,11 +1622,11 @@
       admin: true,
       avatar: "some avatar",
       email: "some email",
-      id: "42531b77-45e1-4ed8-9c6b-eb5ceaf9bab2",
-      inserted_at: ~N[2020-04-11 16:04:32],
+      id: "aed8d21d-57d7-478b-846e-2e3cc96c20ed",
+      inserted_at: ~N[2020-04-12 03:34:32],
       name: "some name",
       token: "some token",
-      updated_at: ~N[2020-04-11 16:04:32]
+      updated_at: ~N[2020-04-12 03:34:32]
     }
   },
   before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
@@ -1812,10 +1638,10 @@
   halted: false,
   host: "www.example.com",
   method: "GET",
-  owner: #PID<0.617.0>,
-  params: %{"id" => "6355f5d0-bea6-4939-af91-379ea959b5d6"},
-  path_info: ["jobs", "6355f5d0-bea6-4939-af91-379ea959b5d6", "edit"],
-  path_params: %{"id" => "6355f5d0-bea6-4939-af91-379ea959b5d6"},
+  owner: #PID<0.622.0>,
+  params: %{"id" => "6e9edf5e-f804-4aba-b04b-79399640c003"},
+  path_info: ["jobs", "6e9edf5e-f804-4aba-b04b-79399640c003", "edit"],
+  path_params: %{"id" => "6e9edf5e-f804-4aba-b04b-79399640c003"},
   port: 80,
   private: %{
     FlowWeb.Router => {[], %{}},
@@ -1829,7 +1655,7 @@
     :phoenix_router => FlowWeb.Router,
     :phoenix_template => "edit.html",
     :phoenix_view => FlowWeb.JobView,
-    :plug_session => %{"user_id" => "42531b77-45e1-4ed8-9c6b-eb5ceaf9bab2"},
+    :plug_session => %{"user_id" => "aed8d21d-57d7-478b-846e-2e3cc96c20ed"},
     :plug_session_fetch => :done,
     :plug_session_info => :write,
     :plug_skip_csrf_protection => true
@@ -1839,12 +1665,186 @@
   remote_ip: {127, 0, 0, 1},
   req_cookies: %{},
   req_headers: [],
-  request_path: "/jobs/6355f5d0-bea6-4939-af91-379ea959b5d6/edit",
+  request_path: "/jobs/6e9edf5e-f804-4aba-b04b-79399640c003/edit",
   resp_body: nil,
   resp_cookies: %{},
   resp_headers: [
     {"cache-control", "max-age=0, private, must-revalidate"},
-    {"x-request-id", "FgTPdYYmpOAKOXkAAAfB"},
+    {"x-request-id", "FgT1HLHG1ugJv6MAAAkB"},
+    {"x-frame-options", "SAMEORIGIN"},
+    {"x-xss-protection", "1; mode=block"},
+    {"x-content-type-options", "nosniff"},
+    {"x-download-options", "noopen"},
+    {"x-permitted-cross-domain-policies", "none"},
+    {"cross-origin-window-policy", "deny"}
+  ],
+  scheme: :http,
+  script_name: [],
+  secret_key_base: :...,
+  state: :unset,
+  status: nil
+}
+.%Plug.Conn{
+  adapter: {Plug.Adapters.Test.Conn, :...},
+  assigns: %{
+    job: %Flow.Jobs.Job{
+      __meta__: #Ecto.Schema.Metadata<:loaded, "jobs">,
+      cadidates: #Ecto.Association.NotLoaded<association :cadidates is not loaded>,
+      client: %Flow.Jobs.Client{
+        __meta__: #Ecto.Schema.Metadata<:loaded, "clients">,
+        description: "some description",
+        id: "79ca742e-364a-4edc-8bba-0c92db51e60a",
+        inserted_at: ~N[2020-04-12 03:34:32],
+        jobs: #Ecto.Association.NotLoaded<association :jobs is not loaded>,
+        logo: "some logo",
+        name: "some name",
+        updated_at: ~N[2020-04-12 03:34:32]
+      },
+      client_id: "79ca742e-364a-4edc-8bba-0c92db51e60a",
+      description: "some updated description",
+      id: "19bb67b0-d269-48d2-ac42-ced653e517ea",
+      inserted_at: ~N[2020-04-12 03:34:32],
+      name: "some updated name",
+      positions: 43,
+      updated_at: ~N[2020-04-12 03:34:32]
+    },
+    layout: {FlowWeb.LayoutView, "app.html"},
+    user: %Flow.Account.User{
+      __meta__: #Ecto.Schema.Metadata<:loaded, "users">,
+      admin: true,
+      avatar: "some avatar",
+      email: "some email",
+      id: "ba5577cd-1e9c-4fb5-bc86-efcd9cf6ca64",
+      inserted_at: ~N[2020-04-12 03:34:32],
+      name: "some name",
+      token: "some token",
+      updated_at: ~N[2020-04-12 03:34:32]
+    }
+  },
+  before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
+   #Function<2.35138165/1 in Phoenix.Controller.fetch_flash/2>,
+   #Function<0.32542428/1 in Plug.Session.before_send/2>,
+   #Function<0.24098476/1 in Plug.Telemetry.call/2>],
+  body_params: %{},
+  cookies: %{
+    "_flow_key" => "SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAGUpvYiB1cGRhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJGJhNTU3N2NkLTFlOWMtNGZiNS1iYzg2LWVmY2Q5Y2Y2Y2E2NA.8CW-GL5crJvy8-Qqra2b0XKQfgoalvE6pagrQXCyRas"
+  },
+  halted: false,
+  host: "www.example.com",
+  method: "GET",
+  owner: #PID<0.624.0>,
+  params: %{"id" => "19bb67b0-d269-48d2-ac42-ced653e517ea"},
+  path_info: ["jobs", "19bb67b0-d269-48d2-ac42-ced653e517ea"],
+  path_params: %{"id" => "19bb67b0-d269-48d2-ac42-ced653e517ea"},
+  port: 80,
+  private: %{
+    FlowWeb.Router => {[], %{}},
+    :phoenix_action => :show,
+    :phoenix_controller => FlowWeb.JobController,
+    :phoenix_endpoint => FlowWeb.Endpoint,
+    :phoenix_flash => %{"info" => "Job updated successfully."},
+    :phoenix_format => "html",
+    :phoenix_layout => {FlowWeb.LayoutView, :app},
+    :phoenix_recycled => true,
+    :phoenix_router => FlowWeb.Router,
+    :phoenix_template => "show.html",
+    :phoenix_view => FlowWeb.JobView,
+    :plug_session => %{
+      "phoenix_flash" => %{"info" => "Job updated successfully."},
+      "user_id" => "ba5577cd-1e9c-4fb5-bc86-efcd9cf6ca64"
+    },
+    :plug_session_fetch => :done,
+    :plug_skip_csrf_protection => true
+  },
+  query_params: %{},
+  query_string: "",
+  remote_ip: {127, 0, 0, 1},
+  req_cookies: %{
+    "_flow_key" => "SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAGUpvYiB1cGRhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJGJhNTU3N2NkLTFlOWMtNGZiNS1iYzg2LWVmY2Q5Y2Y2Y2E2NA.8CW-GL5crJvy8-Qqra2b0XKQfgoalvE6pagrQXCyRas"
+  },
+  req_headers: [
+    {"cookie",
+     "_flow_key=SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAGUpvYiB1cGRhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJGJhNTU3N2NkLTFlOWMtNGZiNS1iYzg2LWVmY2Q5Y2Y2Y2E2NA.8CW-GL5crJvy8-Qqra2b0XKQfgoalvE6pagrQXCyRas"}
+  ],
+  request_path: "/jobs/19bb67b0-d269-48d2-ac42-ced653e517ea",
+  resp_body: nil,
+  resp_cookies: %{},
+  resp_headers: [
+    {"cache-control", "max-age=0, private, must-revalidate"},
+    {"x-request-id", "FgT1HLN8anAKUUMAAAlB"},
+    {"x-frame-options", "SAMEORIGIN"},
+    {"x-xss-protection", "1; mode=block"},
+    {"x-content-type-options", "nosniff"},
+    {"x-download-options", "noopen"},
+    {"x-permitted-cross-domain-policies", "none"},
+    {"cross-origin-window-policy", "deny"}
+  ],
+  scheme: :http,
+  script_name: [],
+  secret_key_base: :...,
+  state: :unset,
+  status: nil
+}
+.[]
+%Plug.Conn{
+  adapter: {Plug.Adapters.Test.Conn, :...},
+  assigns: %{
+    jobs: [],
+    layout: {FlowWeb.LayoutView, "app.html"},
+    user: %Flow.Account.User{
+      __meta__: #Ecto.Schema.Metadata<:loaded, "users">,
+      admin: true,
+      avatar: "some avatar",
+      email: "some email",
+      id: "5a01c4c1-9ae9-4734-b7fd-247e9a05b444",
+      inserted_at: ~N[2020-04-12 03:34:32],
+      name: "some name",
+      token: "some token",
+      updated_at: ~N[2020-04-12 03:34:32]
+    }
+  },
+  before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
+   #Function<2.35138165/1 in Phoenix.Controller.fetch_flash/2>,
+   #Function<0.32542428/1 in Plug.Session.before_send/2>,
+   #Function<0.24098476/1 in Plug.Telemetry.call/2>],
+  body_params: %{},
+  cookies: %{},
+  halted: false,
+  host: "www.example.com",
+  method: "GET",
+  owner: #PID<0.626.0>,
+  params: %{},
+  path_info: ["jobs"],
+  path_params: %{},
+  port: 80,
+  private: %{
+    FlowWeb.Router => {[], %{}},
+    :phoenix_action => :index,
+    :phoenix_controller => FlowWeb.JobController,
+    :phoenix_endpoint => FlowWeb.Endpoint,
+    :phoenix_flash => %{},
+    :phoenix_format => "html",
+    :phoenix_layout => {FlowWeb.LayoutView, :app},
+    :phoenix_recycled => true,
+    :phoenix_router => FlowWeb.Router,
+    :phoenix_template => "index.html",
+    :phoenix_view => FlowWeb.JobView,
+    :plug_session => %{"user_id" => "5a01c4c1-9ae9-4734-b7fd-247e9a05b444"},
+    :plug_session_fetch => :done,
+    :plug_session_info => :write,
+    :plug_skip_csrf_protection => true
+  },
+  query_params: %{},
+  query_string: "",
+  remote_ip: {127, 0, 0, 1},
+  req_cookies: %{},
+  req_headers: [],
+  request_path: "/jobs",
+  resp_body: nil,
+  resp_cookies: %{},
+  resp_headers: [
+    {"cache-control", "max-age=0, private, must-revalidate"},
+    {"x-request-id", "FgT1HLQAvXChAfsAAAlh"},
     {"x-frame-options", "SAMEORIGIN"},
     {"x-xss-protection", "1; mode=block"},
     {"x-content-type-options", "nosniff"},
@@ -1861,232 +1861,35 @@
 .................%Plug.Conn{
   adapter: {Plug.Adapters.Test.Conn, :...},
   assigns: %{
-    candidates: [],
-    layout: {FlowWeb.LayoutView, "app.html"},
-    status: [],
-    user: %Flow.Account.User{
-      __meta__: #Ecto.Schema.Metadata<:loaded, "users">,
-      admin: true,
-      avatar: "some avatar",
-      email: "some email",
-      id: "dfb9335d-5845-4148-bf60-3d33dd5ed25b",
-      inserted_at: ~N[2020-04-11 16:04:32],
-      name: "some name",
-      token: "some token",
-      updated_at: ~N[2020-04-11 16:04:32]
-    }
-  },
-  before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
-   #Function<2.35138165/1 in Phoenix.Controller.fetch_flash/2>,
-   #Function<0.32542428/1 in Plug.Session.before_send/2>,
-   #Function<0.24098476/1 in Plug.Telemetry.call/2>],
-  body_params: %{},
-  cookies: %{},
-  halted: false,
-  host: "www.example.com",
-  method: "GET",
-  owner: #PID<0.655.0>,
-  params: %{},
-  path_info: ["candidates"],
-  path_params: %{},
-  port: 80,
-  private: %{
-    FlowWeb.Router => {[], %{}},
-    :phoenix_action => :index,
-    :phoenix_controller => FlowWeb.CandidateController,
-    :phoenix_endpoint => FlowWeb.Endpoint,
-    :phoenix_flash => %{},
-    :phoenix_format => "html",
-    :phoenix_layout => {FlowWeb.LayoutView, :app},
-    :phoenix_recycled => true,
-    :phoenix_router => FlowWeb.Router,
-    :phoenix_template => "index.html",
-    :phoenix_view => FlowWeb.CandidateView,
-    :plug_session => %{"user_id" => "dfb9335d-5845-4148-bf60-3d33dd5ed25b"},
-    :plug_session_fetch => :done,
-    :plug_session_info => :write,
-    :plug_skip_csrf_protection => true
-  },
-  query_params: %{},
-  query_string: "",
-  remote_ip: {127, 0, 0, 1},
-  req_cookies: %{},
-  req_headers: [],
-  request_path: "/candidates",
-  resp_body: nil,
-  resp_cookies: %{},
-  resp_headers: [
-    {"cache-control", "max-age=0, private, must-revalidate"},
-    {"x-request-id", "FgTPdYzQMfj-qaMAAAhB"},
-    {"x-frame-options", "SAMEORIGIN"},
-    {"x-xss-protection", "1; mode=block"},
-    {"x-content-type-options", "nosniff"},
-    {"x-download-options", "noopen"},
-    {"x-permitted-cross-domain-policies", "none"},
-    {"cross-origin-window-policy", "deny"}
-  ],
-  scheme: :http,
-  script_name: [],
-  secret_key_base: :...,
-  state: :unset,
-  status: nil
-}
-.%Plug.Conn{
-  adapter: {Plug.Adapters.Test.Conn, :...},
-  assigns: %{
     candidate: %Flow.Jobs.Candidate{
       __meta__: #Ecto.Schema.Metadata<:loaded, "candidates">,
-      email: "some updated email",
-      github: "some updated github",
-      id: "8cea0a98-0b12-45db-a0a0-6c5affea0b38",
-      inserted_at: ~N[2020-04-11 16:04:32],
-      job: %Flow.Jobs.Job{
-        __meta__: #Ecto.Schema.Metadata<:loaded, "jobs">,
-        cadidates: #Ecto.Association.NotLoaded<association :cadidates is not loaded>,
-        client: %Flow.Jobs.Client{
-          __meta__: #Ecto.Schema.Metadata<:loaded, "clients">,
-          description: "some description",
-          id: "61c249f5-f79e-43e2-a096-5886d361b25b",
-          inserted_at: ~N[2020-04-11 16:04:32],
-          jobs: #Ecto.Association.NotLoaded<association :jobs is not loaded>,
-          logo: "some logo",
-          name: "some name",
-          updated_at: ~N[2020-04-11 16:04:32]
-        },
-        client_id: "61c249f5-f79e-43e2-a096-5886d361b25b",
-        description: "some description",
-        id: "3ed6a273-02b8-40a8-990d-33f43520a919",
-        inserted_at: ~N[2020-04-11 16:04:32],
-        name: "some name",
-        positions: 42,
-        updated_at: ~N[2020-04-11 16:04:32]
-      },
-      job_id: "3ed6a273-02b8-40a8-990d-33f43520a919",
-      linkedin: "some updated linkedin",
-      name: "some updated name",
-      phone: "some updated phone",
-      status: %Flow.Jobs.Status{
-        __meta__: #Ecto.Schema.Metadata<:loaded, "status">,
-        candidates: #Ecto.Association.NotLoaded<association :candidates is not loaded>,
-        description: "some description",
-        enable: true,
-        id: "4fde2d98-0df7-414c-93b1-5286186ef0af",
-        inserted_at: ~N[2020-04-11 16:04:32],
-        name: "some name",
-        order: 42,
-        updated_at: ~N[2020-04-11 16:04:32]
-      },
-      status_id: "4fde2d98-0df7-414c-93b1-5286186ef0af",
-      updated_at: ~N[2020-04-11 16:04:32]
-    },
-    layout: {FlowWeb.LayoutView, "app.html"},
-    user: %Flow.Account.User{
-      __meta__: #Ecto.Schema.Metadata<:loaded, "users">,
-      admin: true,
-      avatar: "some avatar",
-      email: "some email",
-      id: "9155154d-7e87-4201-9793-618dd3883c71",
-      inserted_at: ~N[2020-04-11 16:04:32],
-      name: "some name",
-      token: "some token",
-      updated_at: ~N[2020-04-11 16:04:32]
-    }
-  },
-  before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
-   #Function<2.35138165/1 in Phoenix.Controller.fetch_flash/2>,
-   #Function<0.32542428/1 in Plug.Session.before_send/2>,
-   #Function<0.24098476/1 in Plug.Telemetry.call/2>],
-  body_params: %{},
-  cookies: %{
-    "_flow_key" => "SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAH0NhbmRpZGF0ZSB1cGRhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJDkxNTUxNTRkLTdlODctNDIwMS05NzkzLTYxOGRkMzg4M2M3MQ.WMoxYsskxc-vzl0O1m99pAXdsP3C0FeuIHS2Wl67lV4"
-  },
-  halted: false,
-  host: "www.example.com",
-  method: "GET",
-  owner: #PID<0.657.0>,
-  params: %{"id" => "8cea0a98-0b12-45db-a0a0-6c5affea0b38"},
-  path_info: ["candidates", "8cea0a98-0b12-45db-a0a0-6c5affea0b38"],
-  path_params: %{"id" => "8cea0a98-0b12-45db-a0a0-6c5affea0b38"},
-  port: 80,
-  private: %{
-    FlowWeb.Router => {[], %{}},
-    :phoenix_action => :show,
-    :phoenix_controller => FlowWeb.CandidateController,
-    :phoenix_endpoint => FlowWeb.Endpoint,
-    :phoenix_flash => %{"info" => "Candidate updated successfully."},
-    :phoenix_format => "html",
-    :phoenix_layout => {FlowWeb.LayoutView, :app},
-    :phoenix_recycled => true,
-    :phoenix_router => FlowWeb.Router,
-    :phoenix_template => "show.html",
-    :phoenix_view => FlowWeb.CandidateView,
-    :plug_session => %{
-      "phoenix_flash" => %{"info" => "Candidate updated successfully."},
-      "user_id" => "9155154d-7e87-4201-9793-618dd3883c71"
-    },
-    :plug_session_fetch => :done,
-    :plug_skip_csrf_protection => true
-  },
-  query_params: %{},
-  query_string: "",
-  remote_ip: {127, 0, 0, 1},
-  req_cookies: %{
-    "_flow_key" => "SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAH0NhbmRpZGF0ZSB1cGRhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJDkxNTUxNTRkLTdlODctNDIwMS05NzkzLTYxOGRkMzg4M2M3MQ.WMoxYsskxc-vzl0O1m99pAXdsP3C0FeuIHS2Wl67lV4"
-  },
-  req_headers: [
-    {"cookie",
-     "_flow_key=SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAH0NhbmRpZGF0ZSB1cGRhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJDkxNTUxNTRkLTdlODctNDIwMS05NzkzLTYxOGRkMzg4M2M3MQ.WMoxYsskxc-vzl0O1m99pAXdsP3C0FeuIHS2Wl67lV4"}
-  ],
-  request_path: "/candidates/8cea0a98-0b12-45db-a0a0-6c5affea0b38",
-  resp_body: nil,
-  resp_cookies: %{},
-  resp_headers: [
-    {"cache-control", "max-age=0, private, must-revalidate"},
-    {"x-request-id", "FgTPdY8hGyDM5HcAAAiB"},
-    {"x-frame-options", "SAMEORIGIN"},
-    {"x-xss-protection", "1; mode=block"},
-    {"x-content-type-options", "nosniff"},
-    {"x-download-options", "noopen"},
-    {"x-permitted-cross-domain-policies", "none"},
-    {"cross-origin-window-policy", "deny"}
-  ],
-  scheme: :http,
-  script_name: [],
-  secret_key_base: :...,
-  state: :unset,
-  status: nil
-}
-.%Plug.Conn{
-  adapter: {Plug.Adapters.Test.Conn, :...},
-  assigns: %{
-    candidate: %Flow.Jobs.Candidate{
-      __meta__: #Ecto.Schema.Metadata<:loaded, "candidates">,
+      comments: #Ecto.Association.NotLoaded<association :comments is not loaded>,
       email: "some email",
       github: "some github",
-      id: "59e80785-ee7b-46ee-81d3-6d2472a90cf1",
-      inserted_at: ~N[2020-04-11 16:04:32],
+      id: "fded82ce-39cc-4617-b498-538a8dae3d86",
+      inserted_at: ~N[2020-04-12 03:34:32],
       job: %Flow.Jobs.Job{
         __meta__: #Ecto.Schema.Metadata<:loaded, "jobs">,
         cadidates: #Ecto.Association.NotLoaded<association :cadidates is not loaded>,
         client: %Flow.Jobs.Client{
           __meta__: #Ecto.Schema.Metadata<:loaded, "clients">,
           description: "some description",
-          id: "29177201-8932-4643-acfb-4154f2d692bf",
-          inserted_at: ~N[2020-04-11 16:04:32],
+          id: "f5700f7c-62f2-4af2-93df-39fc59043241",
+          inserted_at: ~N[2020-04-12 03:34:32],
           jobs: #Ecto.Association.NotLoaded<association :jobs is not loaded>,
           logo: "some logo",
           name: "some name",
-          updated_at: ~N[2020-04-11 16:04:32]
+          updated_at: ~N[2020-04-12 03:34:32]
         },
-        client_id: "29177201-8932-4643-acfb-4154f2d692bf",
+        client_id: "f5700f7c-62f2-4af2-93df-39fc59043241",
         description: "some description",
-        id: "2e987254-3740-44ed-adb2-8fd4aca50a65",
-        inserted_at: ~N[2020-04-11 16:04:32],
+        id: "db5da3e5-59a8-4f59-bba2-c3e28870300c",
+        inserted_at: ~N[2020-04-12 03:34:32],
         name: "some name",
         positions: 42,
-        updated_at: ~N[2020-04-11 16:04:32]
+        updated_at: ~N[2020-04-12 03:34:32]
       },
-      job_id: "2e987254-3740-44ed-adb2-8fd4aca50a65",
+      job_id: "db5da3e5-59a8-4f59-bba2-c3e28870300c",
       linkedin: "some linkedin",
       name: "some name",
       phone: "some phone",
@@ -2095,174 +1898,39 @@
         candidates: #Ecto.Association.NotLoaded<association :candidates is not loaded>,
         description: "some description",
         enable: true,
-        id: "d0d24b4a-7ada-4539-bca9-f90e7275f168",
-        inserted_at: ~N[2020-04-11 16:04:32],
+        id: "43ac0282-d42e-458b-a94a-cab273055ad3",
+        inserted_at: ~N[2020-04-12 03:34:32],
         name: "some name",
         order: 42,
-        updated_at: ~N[2020-04-11 16:04:32]
+        updated_at: ~N[2020-04-12 03:34:32]
       },
-      status_id: "d0d24b4a-7ada-4539-bca9-f90e7275f168",
-      updated_at: ~N[2020-04-11 16:04:32]
+      status_id: "43ac0282-d42e-458b-a94a-cab273055ad3",
+      updated_at: ~N[2020-04-12 03:34:32],
+      user: %Flow.Account.User{
+        __meta__: #Ecto.Schema.Metadata<:loaded, "users">,
+        admin: true,
+        avatar: "some avatar",
+        email: "some email",
+        id: "e3a3d19b-2af5-49b6-b62b-be72db619ee6",
+        inserted_at: ~N[2020-04-12 03:34:32],
+        name: "some name",
+        token: "some token",
+        updated_at: ~N[2020-04-12 03:34:32]
+      },
+      user_id: "e3a3d19b-2af5-49b6-b62b-be72db619ee6"
     },
-    changeset: #Ecto.Changeset<
-      action: :update,
-      changes: %{},
-      errors: [
-        name: {"can't be blank", [validation: :required]},
-        email: {"can't be blank", [validation: :required]},
-        phone: {"can't be blank", [validation: :required]},
-        linkedin: {"can't be blank", [validation: :required]},
-        github: {"can't be blank", [validation: :required]}
-      ],
-      data: #Flow.Jobs.Candidate<>,
-      valid?: false
-    >,
-    jobs: [{"some name", "2e987254-3740-44ed-adb2-8fd4aca50a65"}],
     layout: {FlowWeb.LayoutView, "app.html"},
-    status: [{"some name", "d0d24b4a-7ada-4539-bca9-f90e7275f168"}],
+    token: "BUIBABgnRSckBSIGVyQbFR1-JBQ9Jz11W8coQJ5xkgad6A6xRJEqlkI6",
     user: %Flow.Account.User{
       __meta__: #Ecto.Schema.Metadata<:loaded, "users">,
       admin: true,
       avatar: "some avatar",
       email: "some email",
-      id: "92efce34-f5df-4d64-be2e-7c7175b13637",
-      inserted_at: ~N[2020-04-11 16:04:32],
+      id: "e3a3d19b-2af5-49b6-b62b-be72db619ee6",
+      inserted_at: ~N[2020-04-12 03:34:32],
       name: "some name",
       token: "some token",
-      updated_at: ~N[2020-04-11 16:04:32]
-    }
-  },
-  before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
-   #Function<2.35138165/1 in Phoenix.Controller.fetch_flash/2>,
-   #Function<0.32542428/1 in Plug.Session.before_send/2>,
-   #Function<0.24098476/1 in Plug.Telemetry.call/2>],
-  body_params: %{
-    "candidate" => %{
-      "email" => nil,
-      "github" => nil,
-      "linkedin" => nil,
-      "name" => nil,
-      "phone" => nil
-    }
-  },
-  cookies: %{},
-  halted: false,
-  host: "www.example.com",
-  method: "PUT",
-  owner: #PID<0.659.0>,
-  params: %{
-    "candidate" => %{
-      "email" => nil,
-      "github" => nil,
-      "linkedin" => nil,
-      "name" => nil,
-      "phone" => nil
-    },
-    "id" => "59e80785-ee7b-46ee-81d3-6d2472a90cf1"
-  },
-  path_info: ["candidates", "59e80785-ee7b-46ee-81d3-6d2472a90cf1"],
-  path_params: %{"id" => "59e80785-ee7b-46ee-81d3-6d2472a90cf1"},
-  port: 80,
-  private: %{
-    FlowWeb.Router => {[], %{}},
-    :phoenix_action => :update,
-    :phoenix_controller => FlowWeb.CandidateController,
-    :phoenix_endpoint => FlowWeb.Endpoint,
-    :phoenix_flash => %{},
-    :phoenix_format => "html",
-    :phoenix_layout => {FlowWeb.LayoutView, :app},
-    :phoenix_recycled => true,
-    :phoenix_router => FlowWeb.Router,
-    :phoenix_template => "edit.html",
-    :phoenix_view => FlowWeb.CandidateView,
-    :plug_session => %{"user_id" => "92efce34-f5df-4d64-be2e-7c7175b13637"},
-    :plug_session_fetch => :done,
-    :plug_session_info => :write,
-    :plug_skip_csrf_protection => true
-  },
-  query_params: %{},
-  query_string: "",
-  remote_ip: {127, 0, 0, 1},
-  req_cookies: %{},
-  req_headers: [{"content-type", "multipart/mixed; boundary=plug_conn_test"}],
-  request_path: "/candidates/59e80785-ee7b-46ee-81d3-6d2472a90cf1",
-  resp_body: nil,
-  resp_cookies: %{},
-  resp_headers: [
-    {"cache-control", "max-age=0, private, must-revalidate"},
-    {"x-request-id", "FgTPdZBGcOAqlpgAAAih"},
-    {"x-frame-options", "SAMEORIGIN"},
-    {"x-xss-protection", "1; mode=block"},
-    {"x-content-type-options", "nosniff"},
-    {"x-download-options", "noopen"},
-    {"x-permitted-cross-domain-policies", "none"},
-    {"cross-origin-window-policy", "deny"}
-  ],
-  scheme: :http,
-  script_name: [],
-  secret_key_base: :...,
-  state: :unset,
-  status: nil
-}
-.%Plug.Conn{
-  adapter: {Plug.Adapters.Test.Conn, :...},
-  assigns: %{
-    candidate: %Flow.Jobs.Candidate{
-      __meta__: #Ecto.Schema.Metadata<:loaded, "candidates">,
-      email: "some email",
-      github: "some github",
-      id: "246ca56a-6ab6-4a65-bc8d-294ac07e092e",
-      inserted_at: ~N[2020-04-11 16:04:32],
-      job: %Flow.Jobs.Job{
-        __meta__: #Ecto.Schema.Metadata<:loaded, "jobs">,
-        cadidates: #Ecto.Association.NotLoaded<association :cadidates is not loaded>,
-        client: %Flow.Jobs.Client{
-          __meta__: #Ecto.Schema.Metadata<:loaded, "clients">,
-          description: "some description",
-          id: "9ccaa33e-1f1b-4263-9378-dc671007cab4",
-          inserted_at: ~N[2020-04-11 16:04:32],
-          jobs: #Ecto.Association.NotLoaded<association :jobs is not loaded>,
-          logo: "some logo",
-          name: "some name",
-          updated_at: ~N[2020-04-11 16:04:32]
-        },
-        client_id: "9ccaa33e-1f1b-4263-9378-dc671007cab4",
-        description: "some description",
-        id: "ec0a830b-c2c2-4a9f-8688-db436474cf9a",
-        inserted_at: ~N[2020-04-11 16:04:32],
-        name: "some name",
-        positions: 42,
-        updated_at: ~N[2020-04-11 16:04:32]
-      },
-      job_id: "ec0a830b-c2c2-4a9f-8688-db436474cf9a",
-      linkedin: "some linkedin",
-      name: "some name",
-      phone: "some phone",
-      status: %Flow.Jobs.Status{
-        __meta__: #Ecto.Schema.Metadata<:loaded, "status">,
-        candidates: #Ecto.Association.NotLoaded<association :candidates is not loaded>,
-        description: "some description",
-        enable: true,
-        id: "895dde82-b2e1-4167-8c75-e2628b8e0847",
-        inserted_at: ~N[2020-04-11 16:04:32],
-        name: "some name",
-        order: 42,
-        updated_at: ~N[2020-04-11 16:04:32]
-      },
-      status_id: "895dde82-b2e1-4167-8c75-e2628b8e0847",
-      updated_at: ~N[2020-04-11 16:04:32]
-    },
-    layout: {FlowWeb.LayoutView, "app.html"},
-    user: %Flow.Account.User{
-      __meta__: #Ecto.Schema.Metadata<:loaded, "users">,
-      admin: true,
-      avatar: "some avatar",
-      email: "some email",
-      id: "483d0d98-f2d6-4962-88d0-2f4e598d81a3",
-      inserted_at: ~N[2020-04-11 16:04:32],
-      name: "some name",
-      token: "some token",
-      updated_at: ~N[2020-04-11 16:04:32]
+      updated_at: ~N[2020-04-12 03:34:32]
     }
   },
   before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
@@ -2271,15 +1939,15 @@
    #Function<0.24098476/1 in Plug.Telemetry.call/2>],
   body_params: %{},
   cookies: %{
-    "_flow_key" => "SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAH0NhbmRpZGF0ZSBjcmVhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJDQ4M2QwZDk4LWYyZDYtNDk2Mi04OGQwLTJmNGU1OThkODFhMw.MIcgzTuP9MnJsXeer0cM5cH7DrP1QQgzCuPJEWminc8"
+    "_flow_key" => "SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAH0NhbmRpZGF0ZSBjcmVhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJGUzYTNkMTliLTJhZjUtNDliNi1iNjJiLWJlNzJkYjYxOWVlNg.fhmxBn-lbGq595r7bEAZkPLEUrMmyerbOAbQuUYIBo0"
   },
   halted: false,
   host: "www.example.com",
   method: "GET",
-  owner: #PID<0.661.0>,
-  params: %{"id" => "246ca56a-6ab6-4a65-bc8d-294ac07e092e"},
-  path_info: ["candidates", "246ca56a-6ab6-4a65-bc8d-294ac07e092e"],
-  path_params: %{"id" => "246ca56a-6ab6-4a65-bc8d-294ac07e092e"},
+  owner: #PID<0.667.0>,
+  params: %{"id" => "fded82ce-39cc-4617-b498-538a8dae3d86"},
+  path_info: ["candidates", "fded82ce-39cc-4617-b498-538a8dae3d86"],
+  path_params: %{"id" => "fded82ce-39cc-4617-b498-538a8dae3d86"},
   port: 80,
   private: %{
     FlowWeb.Router => {[], %{}},
@@ -2295,7 +1963,7 @@
     :phoenix_view => FlowWeb.CandidateView,
     :plug_session => %{
       "phoenix_flash" => %{"info" => "Candidate created successfully."},
-      "user_id" => "483d0d98-f2d6-4962-88d0-2f4e598d81a3"
+      "user_id" => "e3a3d19b-2af5-49b6-b62b-be72db619ee6"
     },
     :plug_session_fetch => :done,
     :plug_skip_csrf_protection => true
@@ -2304,18 +1972,18 @@
   query_string: "",
   remote_ip: {127, 0, 0, 1},
   req_cookies: %{
-    "_flow_key" => "SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAH0NhbmRpZGF0ZSBjcmVhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJDQ4M2QwZDk4LWYyZDYtNDk2Mi04OGQwLTJmNGU1OThkODFhMw.MIcgzTuP9MnJsXeer0cM5cH7DrP1QQgzCuPJEWminc8"
+    "_flow_key" => "SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAH0NhbmRpZGF0ZSBjcmVhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJGUzYTNkMTliLTJhZjUtNDliNi1iNjJiLWJlNzJkYjYxOWVlNg.fhmxBn-lbGq595r7bEAZkPLEUrMmyerbOAbQuUYIBo0"
   },
   req_headers: [
     {"cookie",
-     "_flow_key=SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAH0NhbmRpZGF0ZSBjcmVhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJDQ4M2QwZDk4LWYyZDYtNDk2Mi04OGQwLTJmNGU1OThkODFhMw.MIcgzTuP9MnJsXeer0cM5cH7DrP1QQgzCuPJEWminc8"}
+     "_flow_key=SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAH0NhbmRpZGF0ZSBjcmVhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJGUzYTNkMTliLTJhZjUtNDliNi1iNjJiLWJlNzJkYjYxOWVlNg.fhmxBn-lbGq595r7bEAZkPLEUrMmyerbOAbQuUYIBo0"}
   ],
-  request_path: "/candidates/246ca56a-6ab6-4a65-bc8d-294ac07e092e",
+  request_path: "/candidates/fded82ce-39cc-4617-b498-538a8dae3d86",
   resp_body: nil,
   resp_cookies: %{},
   resp_headers: [
     {"cache-control", "max-age=0, private, must-revalidate"},
-    {"x-request-id", "FgTPdZI8DvCPGq4AAAjh"},
+    {"x-request-id", "FgT1HL-1w7j6w48AAApB"},
     {"x-frame-options", "SAMEORIGIN"},
     {"x-xss-protection", "1; mode=block"},
     {"x-content-type-options", "nosniff"},
@@ -2329,18 +1997,15 @@
   state: :unset,
   status: nil
 }
-..%Plug.Conn{
+.%Plug.Conn{
   adapter: {Plug.Adapters.Test.Conn, :...},
   assigns: %{
     changeset: #Ecto.Changeset<
       action: :insert,
-      changes: %{},
+      changes: %{user_id: "3ece54ec-cf21-4146-85cb-e7492ab06ebd"},
       errors: [
         name: {"can't be blank", [validation: :required]},
         email: {"can't be blank", [validation: :required]},
-        phone: {"can't be blank", [validation: :required]},
-        linkedin: {"can't be blank", [validation: :required]},
-        github: {"can't be blank", [validation: :required]},
         status_id: {"can't be blank", [validation: :required]},
         job_id: {"can't be blank", [validation: :required]}
       ],
@@ -2355,11 +2020,11 @@
       admin: true,
       avatar: "some avatar",
       email: "some email",
-      id: "e6e55ea0-e833-4ed1-9ce0-a7434e966c8f",
-      inserted_at: ~N[2020-04-11 16:04:32],
+      id: "3ece54ec-cf21-4146-85cb-e7492ab06ebd",
+      inserted_at: ~N[2020-04-12 03:34:32],
       name: "some name",
       token: "some token",
-      updated_at: ~N[2020-04-11 16:04:32]
+      updated_at: ~N[2020-04-12 03:34:32]
     }
   },
   before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
@@ -2379,7 +2044,7 @@
   halted: false,
   host: "www.example.com",
   method: "POST",
-  owner: #PID<0.665.0>,
+  owner: #PID<0.672.0>,
   params: %{
     "candidate" => %{
       "email" => nil,
@@ -2404,7 +2069,7 @@
     :phoenix_router => FlowWeb.Router,
     :phoenix_template => "new.html",
     :phoenix_view => FlowWeb.CandidateView,
-    :plug_session => %{"user_id" => "e6e55ea0-e833-4ed1-9ce0-a7434e966c8f"},
+    :plug_session => %{"user_id" => "3ece54ec-cf21-4146-85cb-e7492ab06ebd"},
     :plug_session_fetch => :done,
     :plug_session_info => :write,
     :plug_skip_csrf_protection => true
@@ -2419,7 +2084,7 @@
   resp_cookies: %{},
   resp_headers: [
     {"cache-control", "max-age=0, private, must-revalidate"},
-    {"x-request-id", "FgTPdZRHhsB04wAAAAlB"},
+    {"x-request-id", "FgT1HMBqz2AYsOEAAAph"},
     {"x-frame-options", "SAMEORIGIN"},
     {"x-xss-protection", "1; mode=block"},
     {"x-content-type-options", "nosniff"},
@@ -2442,11 +2107,9 @@
       errors: [
         name: {"can't be blank", [validation: :required]},
         email: {"can't be blank", [validation: :required]},
-        phone: {"can't be blank", [validation: :required]},
-        linkedin: {"can't be blank", [validation: :required]},
-        github: {"can't be blank", [validation: :required]},
         status_id: {"can't be blank", [validation: :required]},
-        job_id: {"can't be blank", [validation: :required]}
+        job_id: {"can't be blank", [validation: :required]},
+        user_id: {"can't be blank", [validation: :required]}
       ],
       data: #Flow.Jobs.Candidate<>,
       valid?: false
@@ -2459,11 +2122,11 @@
       admin: true,
       avatar: "some avatar",
       email: "some email",
-      id: "1d83df3c-5dda-4dd7-a962-fc31b70b91d1",
-      inserted_at: ~N[2020-04-11 16:04:32],
+      id: "ad25b53b-575b-4334-9ad1-39c30af5d0c3",
+      inserted_at: ~N[2020-04-12 03:34:32],
       name: "some name",
       token: "some token",
-      updated_at: ~N[2020-04-11 16:04:32]
+      updated_at: ~N[2020-04-12 03:34:32]
     }
   },
   before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
@@ -2475,7 +2138,7 @@
   halted: false,
   host: "www.example.com",
   method: "GET",
-  owner: #PID<0.667.0>,
+  owner: #PID<0.674.0>,
   params: %{},
   path_info: ["candidates", "new"],
   path_params: %{},
@@ -2492,7 +2155,7 @@
     :phoenix_router => FlowWeb.Router,
     :phoenix_template => "new.html",
     :phoenix_view => FlowWeb.CandidateView,
-    :plug_session => %{"user_id" => "1d83df3c-5dda-4dd7-a962-fc31b70b91d1"},
+    :plug_session => %{"user_id" => "ad25b53b-575b-4334-9ad1-39c30af5d0c3"},
     :plug_session_fetch => :done,
     :plug_session_info => :write,
     :plug_skip_csrf_protection => true
@@ -2507,7 +2170,7 @@
   resp_cookies: %{},
   resp_headers: [
     {"cache-control", "max-age=0, private, must-revalidate"},
-    {"x-request-id", "FgTPdZUUjwj6w48AAAlh"},
+    {"x-request-id", "FgT1HMEB5xC8M_sAAAqB"},
     {"x-frame-options", "SAMEORIGIN"},
     {"x-xss-protection", "1; mode=block"},
     {"x-content-type-options", "nosniff"},
@@ -2526,32 +2189,33 @@
   assigns: %{
     candidate: %Flow.Jobs.Candidate{
       __meta__: #Ecto.Schema.Metadata<:loaded, "candidates">,
+      comments: #Ecto.Association.NotLoaded<association :comments is not loaded>,
       email: "some email",
       github: "some github",
-      id: "0caad1f2-e56d-45b7-b19a-07478d5a9a0d",
-      inserted_at: ~N[2020-04-11 16:04:32],
+      id: "aebe26ab-f9a4-491f-887a-2453dde5b00e",
+      inserted_at: ~N[2020-04-12 03:34:32],
       job: %Flow.Jobs.Job{
         __meta__: #Ecto.Schema.Metadata<:loaded, "jobs">,
         cadidates: #Ecto.Association.NotLoaded<association :cadidates is not loaded>,
         client: %Flow.Jobs.Client{
           __meta__: #Ecto.Schema.Metadata<:loaded, "clients">,
           description: "some description",
-          id: "4fc536e4-572e-4348-b59a-5bfbe8583f34",
-          inserted_at: ~N[2020-04-11 16:04:32],
+          id: "e6667530-edd7-4a72-9de3-ab5bba08c8bc",
+          inserted_at: ~N[2020-04-12 03:34:32],
           jobs: #Ecto.Association.NotLoaded<association :jobs is not loaded>,
           logo: "some logo",
           name: "some name",
-          updated_at: ~N[2020-04-11 16:04:32]
+          updated_at: ~N[2020-04-12 03:34:32]
         },
-        client_id: "4fc536e4-572e-4348-b59a-5bfbe8583f34",
+        client_id: "e6667530-edd7-4a72-9de3-ab5bba08c8bc",
         description: "some description",
-        id: "64b44ee8-06b8-44e4-a5f0-4d930dd4e206",
-        inserted_at: ~N[2020-04-11 16:04:32],
+        id: "fa75f8aa-32f5-483d-bf10-a0d228e9cd03",
+        inserted_at: ~N[2020-04-12 03:34:32],
         name: "some name",
         positions: 42,
-        updated_at: ~N[2020-04-11 16:04:32]
+        updated_at: ~N[2020-04-12 03:34:32]
       },
-      job_id: "64b44ee8-06b8-44e4-a5f0-4d930dd4e206",
+      job_id: "fa75f8aa-32f5-483d-bf10-a0d228e9cd03",
       linkedin: "some linkedin",
       name: "some name",
       phone: "some phone",
@@ -2560,30 +2224,205 @@
         candidates: #Ecto.Association.NotLoaded<association :candidates is not loaded>,
         description: "some description",
         enable: true,
-        id: "ce5e5b54-12be-4d13-a0ff-f130e7e74b9c",
-        inserted_at: ~N[2020-04-11 16:04:32],
+        id: "16c72511-9d9a-48cd-8cd2-e700440372be",
+        inserted_at: ~N[2020-04-12 03:34:32],
         name: "some name",
         order: 42,
-        updated_at: ~N[2020-04-11 16:04:32]
+        updated_at: ~N[2020-04-12 03:34:32]
       },
-      status_id: "ce5e5b54-12be-4d13-a0ff-f130e7e74b9c",
-      updated_at: ~N[2020-04-11 16:04:32]
+      status_id: "16c72511-9d9a-48cd-8cd2-e700440372be",
+      updated_at: ~N[2020-04-12 03:34:32],
+      user: %Flow.Account.User{
+        __meta__: #Ecto.Schema.Metadata<:loaded, "users">,
+        admin: true,
+        avatar: "some avatar",
+        email: "user some email",
+        id: "21616607-48bf-4cee-b19a-8e3553c37647",
+        inserted_at: ~N[2020-04-12 03:34:32],
+        name: "some name",
+        token: "some token",
+        updated_at: ~N[2020-04-12 03:34:32]
+      },
+      user_id: "21616607-48bf-4cee-b19a-8e3553c37647"
     },
-    changeset: #Ecto.Changeset<action: nil, changes: %{}, errors: [],
-     data: #Flow.Jobs.Candidate<>, valid?: true>,
-    jobs: [{"some name", "64b44ee8-06b8-44e4-a5f0-4d930dd4e206"}],
+    changeset: #Ecto.Changeset<
+      action: :update,
+      changes: %{
+        github: nil,
+        linkedin: nil,
+        phone: nil,
+        user_id: "b03ac08b-0d48-4e80-9c35-d378750b7173"
+      },
+      errors: [
+        name: {"can't be blank", [validation: :required]},
+        email: {"can't be blank", [validation: :required]}
+      ],
+      data: #Flow.Jobs.Candidate<>,
+      valid?: false
+    >,
+    jobs: [{"some name", "fa75f8aa-32f5-483d-bf10-a0d228e9cd03"}],
     layout: {FlowWeb.LayoutView, "app.html"},
-    status: [{"some name", "ce5e5b54-12be-4d13-a0ff-f130e7e74b9c"}],
+    status: [{"some name", "16c72511-9d9a-48cd-8cd2-e700440372be"}],
     user: %Flow.Account.User{
       __meta__: #Ecto.Schema.Metadata<:loaded, "users">,
       admin: true,
       avatar: "some avatar",
       email: "some email",
-      id: "4c315624-489d-49d7-b78d-e9d19aa1e0e7",
-      inserted_at: ~N[2020-04-11 16:04:32],
+      id: "b03ac08b-0d48-4e80-9c35-d378750b7173",
+      inserted_at: ~N[2020-04-12 03:34:32],
       name: "some name",
       token: "some token",
-      updated_at: ~N[2020-04-11 16:04:32]
+      updated_at: ~N[2020-04-12 03:34:32]
+    }
+  },
+  before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
+   #Function<2.35138165/1 in Phoenix.Controller.fetch_flash/2>,
+   #Function<0.32542428/1 in Plug.Session.before_send/2>,
+   #Function<0.24098476/1 in Plug.Telemetry.call/2>],
+  body_params: %{
+    "candidate" => %{
+      "email" => nil,
+      "github" => nil,
+      "linkedin" => nil,
+      "name" => nil,
+      "phone" => nil
+    }
+  },
+  cookies: %{},
+  halted: false,
+  host: "www.example.com",
+  method: "PUT",
+  owner: #PID<0.676.0>,
+  params: %{
+    "candidate" => %{
+      "email" => nil,
+      "github" => nil,
+      "linkedin" => nil,
+      "name" => nil,
+      "phone" => nil
+    },
+    "id" => "aebe26ab-f9a4-491f-887a-2453dde5b00e"
+  },
+  path_info: ["candidates", "aebe26ab-f9a4-491f-887a-2453dde5b00e"],
+  path_params: %{"id" => "aebe26ab-f9a4-491f-887a-2453dde5b00e"},
+  port: 80,
+  private: %{
+    FlowWeb.Router => {[], %{}},
+    :phoenix_action => :update,
+    :phoenix_controller => FlowWeb.CandidateController,
+    :phoenix_endpoint => FlowWeb.Endpoint,
+    :phoenix_flash => %{},
+    :phoenix_format => "html",
+    :phoenix_layout => {FlowWeb.LayoutView, :app},
+    :phoenix_recycled => true,
+    :phoenix_router => FlowWeb.Router,
+    :phoenix_template => "edit.html",
+    :phoenix_view => FlowWeb.CandidateView,
+    :plug_session => %{"user_id" => "b03ac08b-0d48-4e80-9c35-d378750b7173"},
+    :plug_session_fetch => :done,
+    :plug_session_info => :write,
+    :plug_skip_csrf_protection => true
+  },
+  query_params: %{},
+  query_string: "",
+  remote_ip: {127, 0, 0, 1},
+  req_cookies: %{},
+  req_headers: [{"content-type", "multipart/mixed; boundary=plug_conn_test"}],
+  request_path: "/candidates/aebe26ab-f9a4-491f-887a-2453dde5b00e",
+  resp_body: nil,
+  resp_cookies: %{},
+  resp_headers: [
+    {"cache-control", "max-age=0, private, must-revalidate"},
+    {"x-request-id", "FgT1HMIs3jgDZVAAAAqh"},
+    {"x-frame-options", "SAMEORIGIN"},
+    {"x-xss-protection", "1; mode=block"},
+    {"x-content-type-options", "nosniff"},
+    {"x-download-options", "noopen"},
+    {"x-permitted-cross-domain-policies", "none"},
+    {"cross-origin-window-policy", "deny"}
+  ],
+  scheme: :http,
+  script_name: [],
+  secret_key_base: :...,
+  state: :unset,
+  status: nil
+}
+.%Plug.Conn{
+  adapter: {Plug.Adapters.Test.Conn, :...},
+  assigns: %{
+    candidate: %Flow.Jobs.Candidate{
+      __meta__: #Ecto.Schema.Metadata<:loaded, "candidates">,
+      comments: #Ecto.Association.NotLoaded<association :comments is not loaded>,
+      email: "some email",
+      github: "some github",
+      id: "e60bb46e-cc69-4af6-a658-7290eb8850f8",
+      inserted_at: ~N[2020-04-12 03:34:32],
+      job: %Flow.Jobs.Job{
+        __meta__: #Ecto.Schema.Metadata<:loaded, "jobs">,
+        cadidates: #Ecto.Association.NotLoaded<association :cadidates is not loaded>,
+        client: %Flow.Jobs.Client{
+          __meta__: #Ecto.Schema.Metadata<:loaded, "clients">,
+          description: "some description",
+          id: "8eb926d4-4cd2-42bc-bdeb-ad108777a91c",
+          inserted_at: ~N[2020-04-12 03:34:32],
+          jobs: #Ecto.Association.NotLoaded<association :jobs is not loaded>,
+          logo: "some logo",
+          name: "some name",
+          updated_at: ~N[2020-04-12 03:34:32]
+        },
+        client_id: "8eb926d4-4cd2-42bc-bdeb-ad108777a91c",
+        description: "some description",
+        id: "3ed8c2a5-cf34-4141-bfd9-64c71574f9f9",
+        inserted_at: ~N[2020-04-12 03:34:32],
+        name: "some name",
+        positions: 42,
+        updated_at: ~N[2020-04-12 03:34:32]
+      },
+      job_id: "3ed8c2a5-cf34-4141-bfd9-64c71574f9f9",
+      linkedin: "some linkedin",
+      name: "some name",
+      phone: "some phone",
+      status: %Flow.Jobs.Status{
+        __meta__: #Ecto.Schema.Metadata<:loaded, "status">,
+        candidates: #Ecto.Association.NotLoaded<association :candidates is not loaded>,
+        description: "some description",
+        enable: true,
+        id: "df4c664e-d3d1-4e1e-a4d1-0bf221db355a",
+        inserted_at: ~N[2020-04-12 03:34:32],
+        name: "some name",
+        order: 42,
+        updated_at: ~N[2020-04-12 03:34:32]
+      },
+      status_id: "df4c664e-d3d1-4e1e-a4d1-0bf221db355a",
+      updated_at: ~N[2020-04-12 03:34:32],
+      user: %Flow.Account.User{
+        __meta__: #Ecto.Schema.Metadata<:loaded, "users">,
+        admin: true,
+        avatar: "some avatar",
+        email: "user some email",
+        id: "e92b3e19-de74-4011-aede-bee4e6511c2c",
+        inserted_at: ~N[2020-04-12 03:34:32],
+        name: "some name",
+        token: "some token",
+        updated_at: ~N[2020-04-12 03:34:32]
+      },
+      user_id: "e92b3e19-de74-4011-aede-bee4e6511c2c"
+    },
+    changeset: #Ecto.Changeset<action: nil, changes: %{}, errors: [],
+     data: #Flow.Jobs.Candidate<>, valid?: true>,
+    jobs: [{"some name", "3ed8c2a5-cf34-4141-bfd9-64c71574f9f9"}],
+    layout: {FlowWeb.LayoutView, "app.html"},
+    status: [{"some name", "df4c664e-d3d1-4e1e-a4d1-0bf221db355a"}],
+    user: %Flow.Account.User{
+      __meta__: #Ecto.Schema.Metadata<:loaded, "users">,
+      admin: true,
+      avatar: "some avatar",
+      email: "some email",
+      id: "db61340f-d9d5-475c-9faa-250ea75a6081",
+      inserted_at: ~N[2020-04-12 03:34:32],
+      name: "some name",
+      token: "some token",
+      updated_at: ~N[2020-04-12 03:34:32]
     }
   },
   before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
@@ -2595,10 +2434,10 @@
   halted: false,
   host: "www.example.com",
   method: "GET",
-  owner: #PID<0.669.0>,
-  params: %{"id" => "0caad1f2-e56d-45b7-b19a-07478d5a9a0d"},
-  path_info: ["candidates", "0caad1f2-e56d-45b7-b19a-07478d5a9a0d", "edit"],
-  path_params: %{"id" => "0caad1f2-e56d-45b7-b19a-07478d5a9a0d"},
+  owner: #PID<0.681.0>,
+  params: %{"id" => "e60bb46e-cc69-4af6-a658-7290eb8850f8"},
+  path_info: ["candidates", "e60bb46e-cc69-4af6-a658-7290eb8850f8", "edit"],
+  path_params: %{"id" => "e60bb46e-cc69-4af6-a658-7290eb8850f8"},
   port: 80,
   private: %{
     FlowWeb.Router => {[], %{}},
@@ -2612,7 +2451,7 @@
     :phoenix_router => FlowWeb.Router,
     :phoenix_template => "edit.html",
     :phoenix_view => FlowWeb.CandidateView,
-    :plug_session => %{"user_id" => "4c315624-489d-49d7-b78d-e9d19aa1e0e7"},
+    :plug_session => %{"user_id" => "db61340f-d9d5-475c-9faa-250ea75a6081"},
     :plug_session_fetch => :done,
     :plug_session_info => :write,
     :plug_skip_csrf_protection => true
@@ -2622,12 +2461,12 @@
   remote_ip: {127, 0, 0, 1},
   req_cookies: %{},
   req_headers: [],
-  request_path: "/candidates/0caad1f2-e56d-45b7-b19a-07478d5a9a0d/edit",
+  request_path: "/candidates/e60bb46e-cc69-4af6-a658-7290eb8850f8/edit",
   resp_body: nil,
   resp_cookies: %{},
   resp_headers: [
     {"cache-control", "max-age=0, private, must-revalidate"},
-    {"x-request-id", "FgTPdZY8cSB6H3UAAAmB"},
+    {"x-request-id", "FgT1HMP2T7Dgb_gAAArB"},
     {"x-frame-options", "SAMEORIGIN"},
     {"x-xss-protection", "1; mode=block"},
     {"x-content-type-options", "nosniff"},
@@ -2644,99 +2483,76 @@
 .%Plug.Conn{
   adapter: {Plug.Adapters.Test.Conn, :...},
   assigns: %{
-    clients: [],
-    layout: {FlowWeb.LayoutView, "app.html"},
-    user: %Flow.Account.User{
-      __meta__: #Ecto.Schema.Metadata<:loaded, "users">,
-      admin: true,
-      avatar: "some avatar",
-      email: "some email",
-      id: "87e4ac6d-26da-42b8-85f5-a981dc3eab6c",
-      inserted_at: ~N[2020-04-11 16:04:32],
-      name: "some name",
-      token: "some token",
-      updated_at: ~N[2020-04-11 16:04:32]
-    }
-  },
-  before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
-   #Function<2.35138165/1 in Phoenix.Controller.fetch_flash/2>,
-   #Function<0.32542428/1 in Plug.Session.before_send/2>,
-   #Function<0.24098476/1 in Plug.Telemetry.call/2>],
-  body_params: %{},
-  cookies: %{},
-  halted: false,
-  host: "www.example.com",
-  method: "GET",
-  owner: #PID<0.673.0>,
-  params: %{},
-  path_info: ["clients"],
-  path_params: %{},
-  port: 80,
-  private: %{
-    FlowWeb.Router => {[], %{}},
-    :phoenix_action => :index,
-    :phoenix_controller => FlowWeb.ClientController,
-    :phoenix_endpoint => FlowWeb.Endpoint,
-    :phoenix_flash => %{},
-    :phoenix_format => "html",
-    :phoenix_layout => {FlowWeb.LayoutView, :app},
-    :phoenix_recycled => true,
-    :phoenix_router => FlowWeb.Router,
-    :phoenix_template => "index.html",
-    :phoenix_view => FlowWeb.ClientView,
-    :plug_session => %{"user_id" => "87e4ac6d-26da-42b8-85f5-a981dc3eab6c"},
-    :plug_session_fetch => :done,
-    :plug_session_info => :write,
-    :plug_skip_csrf_protection => true
-  },
-  query_params: %{},
-  query_string: "",
-  remote_ip: {127, 0, 0, 1},
-  req_cookies: %{},
-  req_headers: [],
-  request_path: "/clients",
-  resp_body: nil,
-  resp_cookies: %{},
-  resp_headers: [
-    {"cache-control", "max-age=0, private, must-revalidate"},
-    {"x-request-id", "FgTPdZdnKciY1xAAAAmh"},
-    {"x-frame-options", "SAMEORIGIN"},
-    {"x-xss-protection", "1; mode=block"},
-    {"x-content-type-options", "nosniff"},
-    {"x-download-options", "noopen"},
-    {"x-permitted-cross-domain-policies", "none"},
-    {"cross-origin-window-policy", "deny"}
-  ],
-  scheme: :http,
-  script_name: [],
-  secret_key_base: :...,
-  state: :unset,
-  status: nil
-}
-.%Plug.Conn{
-  adapter: {Plug.Adapters.Test.Conn, :...},
-  assigns: %{
-    client: %Flow.Jobs.Client{
-      __meta__: #Ecto.Schema.Metadata<:loaded, "clients">,
-      description: "some updated description",
-      id: "d4e9164b-05ff-4c5c-bfe5-f984249559e6",
-      inserted_at: ~N[2020-04-11 16:04:32],
-      jobs: #Ecto.Association.NotLoaded<association :jobs is not loaded>,
-      logo: "some updated logo",
+    candidate: %Flow.Jobs.Candidate{
+      __meta__: #Ecto.Schema.Metadata<:loaded, "candidates">,
+      comments: #Ecto.Association.NotLoaded<association :comments is not loaded>,
+      email: "some updated email",
+      github: "some updated github",
+      id: "7aeef059-d48e-4d1d-964f-41776293aeb3",
+      inserted_at: ~N[2020-04-12 03:34:32],
+      job: %Flow.Jobs.Job{
+        __meta__: #Ecto.Schema.Metadata<:loaded, "jobs">,
+        cadidates: #Ecto.Association.NotLoaded<association :cadidates is not loaded>,
+        client: %Flow.Jobs.Client{
+          __meta__: #Ecto.Schema.Metadata<:loaded, "clients">,
+          description: "some description",
+          id: "a974650d-c67b-4900-9d28-ef4aee610510",
+          inserted_at: ~N[2020-04-12 03:34:32],
+          jobs: #Ecto.Association.NotLoaded<association :jobs is not loaded>,
+          logo: "some logo",
+          name: "some name",
+          updated_at: ~N[2020-04-12 03:34:32]
+        },
+        client_id: "a974650d-c67b-4900-9d28-ef4aee610510",
+        description: "some description",
+        id: "5616e7f7-bad5-4684-8047-d01ed7702f4b",
+        inserted_at: ~N[2020-04-12 03:34:32],
+        name: "some name",
+        positions: 42,
+        updated_at: ~N[2020-04-12 03:34:32]
+      },
+      job_id: "5616e7f7-bad5-4684-8047-d01ed7702f4b",
+      linkedin: "some updated linkedin",
       name: "some updated name",
-      updated_at: ~N[2020-04-11 16:04:32]
+      phone: "some updated phone",
+      status: %Flow.Jobs.Status{
+        __meta__: #Ecto.Schema.Metadata<:loaded, "status">,
+        candidates: #Ecto.Association.NotLoaded<association :candidates is not loaded>,
+        description: "some description",
+        enable: true,
+        id: "d77bffe2-b81f-4242-a1f9-d2f0ffe062f4",
+        inserted_at: ~N[2020-04-12 03:34:32],
+        name: "some name",
+        order: 42,
+        updated_at: ~N[2020-04-12 03:34:32]
+      },
+      status_id: "d77bffe2-b81f-4242-a1f9-d2f0ffe062f4",
+      updated_at: ~N[2020-04-12 03:34:32],
+      user: %Flow.Account.User{
+        __meta__: #Ecto.Schema.Metadata<:loaded, "users">,
+        admin: true,
+        avatar: "some avatar",
+        email: "some email",
+        id: "5f0df564-2a4d-4716-9917-bf2daed3f3e1",
+        inserted_at: ~N[2020-04-12 03:34:32],
+        name: "some name",
+        token: "some token",
+        updated_at: ~N[2020-04-12 03:34:32]
+      },
+      user_id: "5f0df564-2a4d-4716-9917-bf2daed3f3e1"
     },
     layout: {FlowWeb.LayoutView, "app.html"},
+    token: "dlkdHXZ7HloSW0YcQQAzAgBuAQc-L2IHCmEMD9K9p8vQyXlCi_YihDPK",
     user: %Flow.Account.User{
       __meta__: #Ecto.Schema.Metadata<:loaded, "users">,
       admin: true,
       avatar: "some avatar",
       email: "some email",
-      id: "8245a9e7-e9c2-40c1-8be2-3fb6ff6b3494",
-      inserted_at: ~N[2020-04-11 16:04:32],
+      id: "5f0df564-2a4d-4716-9917-bf2daed3f3e1",
+      inserted_at: ~N[2020-04-12 03:34:32],
       name: "some name",
       token: "some token",
-      updated_at: ~N[2020-04-11 16:04:32]
+      updated_at: ~N[2020-04-12 03:34:32]
     }
   },
   before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
@@ -2745,31 +2561,31 @@
    #Function<0.24098476/1 in Plug.Telemetry.call/2>],
   body_params: %{},
   cookies: %{
-    "_flow_key" => "SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAHENsaWVudCB1cGRhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJDgyNDVhOWU3LWU5YzItNDBjMS04YmUyLTNmYjZmZjZiMzQ5NA.ZcaDaISAAgJ5xSNjksZWXoo91pEVxOiXcQILp1WT924"
+    "_flow_key" => "SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAH0NhbmRpZGF0ZSB1cGRhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJDVmMGRmNTY0LTJhNGQtNDcxNi05OTE3LWJmMmRhZWQzZjNlMQ.Cj5OCdgrOVsOjYVtlyQbds2tXVGsLRN_u6yU4ynn9vI"
   },
   halted: false,
   host: "www.example.com",
   method: "GET",
-  owner: #PID<0.675.0>,
-  params: %{"id" => "d4e9164b-05ff-4c5c-bfe5-f984249559e6"},
-  path_info: ["clients", "d4e9164b-05ff-4c5c-bfe5-f984249559e6"],
-  path_params: %{"id" => "d4e9164b-05ff-4c5c-bfe5-f984249559e6"},
+  owner: #PID<0.686.0>,
+  params: %{"id" => "7aeef059-d48e-4d1d-964f-41776293aeb3"},
+  path_info: ["candidates", "7aeef059-d48e-4d1d-964f-41776293aeb3"],
+  path_params: %{"id" => "7aeef059-d48e-4d1d-964f-41776293aeb3"},
   port: 80,
   private: %{
     FlowWeb.Router => {[], %{}},
     :phoenix_action => :show,
-    :phoenix_controller => FlowWeb.ClientController,
+    :phoenix_controller => FlowWeb.CandidateController,
     :phoenix_endpoint => FlowWeb.Endpoint,
-    :phoenix_flash => %{"info" => "Client updated successfully."},
+    :phoenix_flash => %{"info" => "Candidate updated successfully."},
     :phoenix_format => "html",
     :phoenix_layout => {FlowWeb.LayoutView, :app},
     :phoenix_recycled => true,
     :phoenix_router => FlowWeb.Router,
     :phoenix_template => "show.html",
-    :phoenix_view => FlowWeb.ClientView,
+    :phoenix_view => FlowWeb.CandidateView,
     :plug_session => %{
-      "phoenix_flash" => %{"info" => "Client updated successfully."},
-      "user_id" => "8245a9e7-e9c2-40c1-8be2-3fb6ff6b3494"
+      "phoenix_flash" => %{"info" => "Candidate updated successfully."},
+      "user_id" => "5f0df564-2a4d-4716-9917-bf2daed3f3e1"
     },
     :plug_session_fetch => :done,
     :plug_skip_csrf_protection => true
@@ -2778,18 +2594,18 @@
   query_string: "",
   remote_ip: {127, 0, 0, 1},
   req_cookies: %{
-    "_flow_key" => "SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAHENsaWVudCB1cGRhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJDgyNDVhOWU3LWU5YzItNDBjMS04YmUyLTNmYjZmZjZiMzQ5NA.ZcaDaISAAgJ5xSNjksZWXoo91pEVxOiXcQILp1WT924"
+    "_flow_key" => "SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAH0NhbmRpZGF0ZSB1cGRhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJDVmMGRmNTY0LTJhNGQtNDcxNi05OTE3LWJmMmRhZWQzZjNlMQ.Cj5OCdgrOVsOjYVtlyQbds2tXVGsLRN_u6yU4ynn9vI"
   },
   req_headers: [
     {"cookie",
-     "_flow_key=SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAHENsaWVudCB1cGRhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJDgyNDVhOWU3LWU5YzItNDBjMS04YmUyLTNmYjZmZjZiMzQ5NA.ZcaDaISAAgJ5xSNjksZWXoo91pEVxOiXcQILp1WT924"}
+     "_flow_key=SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAH0NhbmRpZGF0ZSB1cGRhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJDVmMGRmNTY0LTJhNGQtNDcxNi05OTE3LWJmMmRhZWQzZjNlMQ.Cj5OCdgrOVsOjYVtlyQbds2tXVGsLRN_u6yU4ynn9vI"}
   ],
-  request_path: "/clients/d4e9164b-05ff-4c5c-bfe5-f984249559e6",
+  request_path: "/candidates/7aeef059-d48e-4d1d-964f-41776293aeb3",
   resp_body: nil,
   resp_cookies: %{},
   resp_headers: [
     {"cache-control", "max-age=0, private, must-revalidate"},
-    {"x-request-id", "FgTPdZhjJZjYCqYAAAnh"},
+    {"x-request-id", "FgT1HMcME2Dqi60AAAsB"},
     {"x-frame-options", "SAMEORIGIN"},
     {"x-xss-protection", "1; mode=block"},
     {"x-content-type-options", "nosniff"},
@@ -2806,72 +2622,48 @@
 .%Plug.Conn{
   adapter: {Plug.Adapters.Test.Conn, :...},
   assigns: %{
-    changeset: #Ecto.Changeset<
-      action: :update,
-      changes: %{},
-      errors: [
-        name: {"can't be blank", [validation: :required]},
-        description: {"can't be blank", [validation: :required]},
-        logo: {"can't be blank", [validation: :required]}
-      ],
-      data: #Flow.Jobs.Client<>,
-      valid?: false
-    >,
-    client: %Flow.Jobs.Client{
-      __meta__: #Ecto.Schema.Metadata<:loaded, "clients">,
-      description: "some description",
-      id: "f13b3aaf-06f3-48ae-8b43-1eb999aa9f05",
-      inserted_at: ~N[2020-04-11 16:04:32],
-      jobs: #Ecto.Association.NotLoaded<association :jobs is not loaded>,
-      logo: "some logo",
-      name: "some name",
-      updated_at: ~N[2020-04-11 16:04:32]
-    },
+    candidates: [],
     layout: {FlowWeb.LayoutView, "app.html"},
+    status: [],
     user: %Flow.Account.User{
       __meta__: #Ecto.Schema.Metadata<:loaded, "users">,
       admin: true,
       avatar: "some avatar",
       email: "some email",
-      id: "17d2a845-8dcb-48ec-8318-04f9874f1889",
-      inserted_at: ~N[2020-04-11 16:04:32],
+      id: "2dbadfee-4acc-4ebe-86ba-92dd5836e600",
+      inserted_at: ~N[2020-04-12 03:34:32],
       name: "some name",
       token: "some token",
-      updated_at: ~N[2020-04-11 16:04:32]
+      updated_at: ~N[2020-04-12 03:34:32]
     }
   },
   before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
    #Function<2.35138165/1 in Phoenix.Controller.fetch_flash/2>,
    #Function<0.32542428/1 in Plug.Session.before_send/2>,
    #Function<0.24098476/1 in Plug.Telemetry.call/2>],
-  body_params: %{
-    "client" => %{"description" => nil, "logo" => nil, "name" => nil}
-  },
+  body_params: %{},
   cookies: %{},
   halted: false,
   host: "www.example.com",
-  method: "PUT",
-  owner: #PID<0.677.0>,
-  params: %{
-    "client" => %{"description" => nil, "logo" => nil, "name" => nil},
-    "id" => "f13b3aaf-06f3-48ae-8b43-1eb999aa9f05"
-  },
-  path_info: ["clients", "f13b3aaf-06f3-48ae-8b43-1eb999aa9f05"],
-  path_params: %{"id" => "f13b3aaf-06f3-48ae-8b43-1eb999aa9f05"},
+  method: "GET",
+  owner: #PID<0.694.0>,
+  params: %{},
+  path_info: [],
+  path_params: %{},
   port: 80,
   private: %{
     FlowWeb.Router => {[], %{}},
-    :phoenix_action => :update,
-    :phoenix_controller => FlowWeb.ClientController,
+    :phoenix_action => :index,
+    :phoenix_controller => FlowWeb.CandidateController,
     :phoenix_endpoint => FlowWeb.Endpoint,
     :phoenix_flash => %{},
     :phoenix_format => "html",
     :phoenix_layout => {FlowWeb.LayoutView, :app},
     :phoenix_recycled => true,
     :phoenix_router => FlowWeb.Router,
-    :phoenix_template => "edit.html",
-    :phoenix_view => FlowWeb.ClientView,
-    :plug_session => %{"user_id" => "17d2a845-8dcb-48ec-8318-04f9874f1889"},
+    :phoenix_template => "index.html",
+    :phoenix_view => FlowWeb.CandidateView,
+    :plug_session => %{"user_id" => "2dbadfee-4acc-4ebe-86ba-92dd5836e600"},
     :plug_session_fetch => :done,
     :plug_session_info => :write,
     :plug_skip_csrf_protection => true
@@ -2880,13 +2672,13 @@
   query_string: "",
   remote_ip: {127, 0, 0, 1},
   req_cookies: %{},
-  req_headers: [{"content-type", "multipart/mixed; boundary=plug_conn_test"}],
-  request_path: "/clients/f13b3aaf-06f3-48ae-8b43-1eb999aa9f05",
+  req_headers: [],
+  request_path: "/",
   resp_body: nil,
   resp_cookies: %{},
   resp_headers: [
     {"cache-control", "max-age=0, private, must-revalidate"},
-    {"x-request-id", "FgTPdZkMnGg0w4IAAAoB"},
+    {"x-request-id", "FgT1HMfYAmhxNeEAAAsh"},
     {"x-frame-options", "SAMEORIGIN"},
     {"x-xss-protection", "1; mode=block"},
     {"x-content-type-options", "nosniff"},
@@ -2900,18 +2692,18 @@
   state: :unset,
   status: nil
 }
-.%Plug.Conn{
+..%Plug.Conn{
   adapter: {Plug.Adapters.Test.Conn, :...},
   assigns: %{
     client: %Flow.Jobs.Client{
       __meta__: #Ecto.Schema.Metadata<:loaded, "clients">,
       description: "some description",
-      id: "9b1a03c9-5d4d-44e6-8fbe-841f46481f4a",
-      inserted_at: ~N[2020-04-11 16:04:32],
+      id: "d6e98803-5929-49c7-8d20-e27a4ace14f4",
+      inserted_at: ~N[2020-04-12 03:34:32],
       jobs: #Ecto.Association.NotLoaded<association :jobs is not loaded>,
       logo: "some logo",
       name: "some name",
-      updated_at: ~N[2020-04-11 16:04:32]
+      updated_at: ~N[2020-04-12 03:34:32]
     },
     layout: {FlowWeb.LayoutView, "app.html"},
     user: %Flow.Account.User{
@@ -2919,11 +2711,11 @@
       admin: true,
       avatar: "some avatar",
       email: "some email",
-      id: "38fc7fa8-6584-4b49-9188-f4a9fbc19761",
-      inserted_at: ~N[2020-04-11 16:04:32],
+      id: "92697397-d9bd-483e-8982-2aeb5db70ed2",
+      inserted_at: ~N[2020-04-12 03:34:32],
       name: "some name",
       token: "some token",
-      updated_at: ~N[2020-04-11 16:04:32]
+      updated_at: ~N[2020-04-12 03:34:32]
     }
   },
   before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
@@ -2932,15 +2724,15 @@
    #Function<0.24098476/1 in Plug.Telemetry.call/2>],
   body_params: %{},
   cookies: %{
-    "_flow_key" => "SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAHENsaWVudCBjcmVhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJDM4ZmM3ZmE4LTY1ODQtNGI0OS05MTg4LWY0YTlmYmMxOTc2MQ.GGZKownF3xmPofPSZxRG-oX70nStxUytbGfaVRWutZ8"
+    "_flow_key" => "SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAHENsaWVudCBjcmVhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJDkyNjk3Mzk3LWQ5YmQtNDgzZS04OTgyLTJhZWI1ZGI3MGVkMg.xMwmxa3m1_T6Y0SjstFrhTJWWc6k7U6haxtR1ltlAuc"
   },
   halted: false,
   host: "www.example.com",
   method: "GET",
-  owner: #PID<0.679.0>,
-  params: %{"id" => "9b1a03c9-5d4d-44e6-8fbe-841f46481f4a"},
-  path_info: ["clients", "9b1a03c9-5d4d-44e6-8fbe-841f46481f4a"],
-  path_params: %{"id" => "9b1a03c9-5d4d-44e6-8fbe-841f46481f4a"},
+  owner: #PID<0.700.0>,
+  params: %{"id" => "d6e98803-5929-49c7-8d20-e27a4ace14f4"},
+  path_info: ["clients", "d6e98803-5929-49c7-8d20-e27a4ace14f4"],
+  path_params: %{"id" => "d6e98803-5929-49c7-8d20-e27a4ace14f4"},
   port: 80,
   private: %{
     FlowWeb.Router => {[], %{}},
@@ -2956,7 +2748,7 @@
     :phoenix_view => FlowWeb.ClientView,
     :plug_session => %{
       "phoenix_flash" => %{"info" => "Client created successfully."},
-      "user_id" => "38fc7fa8-6584-4b49-9188-f4a9fbc19761"
+      "user_id" => "92697397-d9bd-483e-8982-2aeb5db70ed2"
     },
     :plug_session_fetch => :done,
     :plug_skip_csrf_protection => true
@@ -2965,18 +2757,18 @@
   query_string: "",
   remote_ip: {127, 0, 0, 1},
   req_cookies: %{
-    "_flow_key" => "SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAHENsaWVudCBjcmVhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJDM4ZmM3ZmE4LTY1ODQtNGI0OS05MTg4LWY0YTlmYmMxOTc2MQ.GGZKownF3xmPofPSZxRG-oX70nStxUytbGfaVRWutZ8"
+    "_flow_key" => "SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAHENsaWVudCBjcmVhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJDkyNjk3Mzk3LWQ5YmQtNDgzZS04OTgyLTJhZWI1ZGI3MGVkMg.xMwmxa3m1_T6Y0SjstFrhTJWWc6k7U6haxtR1ltlAuc"
   },
   req_headers: [
     {"cookie",
-     "_flow_key=SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAHENsaWVudCBjcmVhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJDM4ZmM3ZmE4LTY1ODQtNGI0OS05MTg4LWY0YTlmYmMxOTc2MQ.GGZKownF3xmPofPSZxRG-oX70nStxUytbGfaVRWutZ8"}
+     "_flow_key=SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAHENsaWVudCBjcmVhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJDkyNjk3Mzk3LWQ5YmQtNDgzZS04OTgyLTJhZWI1ZGI3MGVkMg.xMwmxa3m1_T6Y0SjstFrhTJWWc6k7U6haxtR1ltlAuc"}
   ],
-  request_path: "/clients/9b1a03c9-5d4d-44e6-8fbe-841f46481f4a",
+  request_path: "/clients/d6e98803-5929-49c7-8d20-e27a4ace14f4",
   resp_body: nil,
   resp_cookies: %{},
   resp_headers: [
     {"cache-control", "max-age=0, private, must-revalidate"},
-    {"x-request-id", "FgTPdZnS0phs8wkAAApB"},
+    {"x-request-id", "FgT1HMl_jDA5_poAAAuh"},
     {"x-frame-options", "SAMEORIGIN"},
     {"x-xss-protection", "1; mode=block"},
     {"x-content-type-options", "nosniff"},
@@ -2990,7 +2782,7 @@
   state: :unset,
   status: nil
 }
-..%Plug.Conn{
+.%Plug.Conn{
   adapter: {Plug.Adapters.Test.Conn, :...},
   assigns: %{
     changeset: #Ecto.Changeset<
@@ -3010,11 +2802,11 @@
       admin: true,
       avatar: "some avatar",
       email: "some email",
-      id: "a79db103-a68e-4afa-bb2d-ae8d08ee643a",
-      inserted_at: ~N[2020-04-11 16:04:32],
+      id: "0d265f30-d0e3-42a5-8e1d-36b59b244e64",
+      inserted_at: ~N[2020-04-12 03:34:32],
       name: "some name",
       token: "some token",
-      updated_at: ~N[2020-04-11 16:04:32]
+      updated_at: ~N[2020-04-12 03:34:32]
     }
   },
   before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
@@ -3028,7 +2820,7 @@
   halted: false,
   host: "www.example.com",
   method: "POST",
-  owner: #PID<0.683.0>,
+  owner: #PID<0.702.0>,
   params: %{"client" => %{"description" => nil, "logo" => nil, "name" => nil}},
   path_info: ["clients"],
   path_params: %{},
@@ -3045,7 +2837,7 @@
     :phoenix_router => FlowWeb.Router,
     :phoenix_template => "new.html",
     :phoenix_view => FlowWeb.ClientView,
-    :plug_session => %{"user_id" => "a79db103-a68e-4afa-bb2d-ae8d08ee643a"},
+    :plug_session => %{"user_id" => "0d265f30-d0e3-42a5-8e1d-36b59b244e64"},
     :plug_session_fetch => :done,
     :plug_session_info => :write,
     :plug_skip_csrf_protection => true
@@ -3060,7 +2852,7 @@
   resp_cookies: %{},
   resp_headers: [
     {"cache-control", "max-age=0, private, must-revalidate"},
-    {"x-request-id", "FgTPdZtDnMCBkLkAAAqh"},
+    {"x-request-id", "FgT1HMoB_rgbi7IAAAvB"},
     {"x-frame-options", "SAMEORIGIN"},
     {"x-xss-protection", "1; mode=block"},
     {"x-content-type-options", "nosniff"},
@@ -3094,11 +2886,11 @@
       admin: true,
       avatar: "some avatar",
       email: "some email",
-      id: "49b05d7c-57f0-46c5-b750-0d3b9d91ac30",
-      inserted_at: ~N[2020-04-11 16:04:32],
+      id: "fecbcd5d-5b15-431e-8015-221ef067c9aa",
+      inserted_at: ~N[2020-04-12 03:34:32],
       name: "some name",
       token: "some token",
-      updated_at: ~N[2020-04-11 16:04:32]
+      updated_at: ~N[2020-04-12 03:34:32]
     }
   },
   before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
@@ -3110,7 +2902,7 @@
   halted: false,
   host: "www.example.com",
   method: "GET",
-  owner: #PID<0.685.0>,
+  owner: #PID<0.704.0>,
   params: %{},
   path_info: ["clients", "new"],
   path_params: %{},
@@ -3127,7 +2919,7 @@
     :phoenix_router => FlowWeb.Router,
     :phoenix_template => "new.html",
     :phoenix_view => FlowWeb.ClientView,
-    :plug_session => %{"user_id" => "49b05d7c-57f0-46c5-b750-0d3b9d91ac30"},
+    :plug_session => %{"user_id" => "fecbcd5d-5b15-431e-8015-221ef067c9aa"},
     :plug_session_fetch => :done,
     :plug_session_info => :write,
     :plug_skip_csrf_protection => true
@@ -3142,7 +2934,104 @@
   resp_cookies: %{},
   resp_headers: [
     {"cache-control", "max-age=0, private, must-revalidate"},
-    {"x-request-id", "FgTPdZusGsBzB0wAAArB"},
+    {"x-request-id", "FgT1HMpdA4DHY4cAAAvh"},
+    {"x-frame-options", "SAMEORIGIN"},
+    {"x-xss-protection", "1; mode=block"},
+    {"x-content-type-options", "nosniff"},
+    {"x-download-options", "noopen"},
+    {"x-permitted-cross-domain-policies", "none"},
+    {"cross-origin-window-policy", "deny"}
+  ],
+  scheme: :http,
+  script_name: [],
+  secret_key_base: :...,
+  state: :unset,
+  status: nil
+}
+.%Plug.Conn{
+  adapter: {Plug.Adapters.Test.Conn, :...},
+  assigns: %{
+    changeset: #Ecto.Changeset<
+      action: :update,
+      changes: %{},
+      errors: [
+        name: {"can't be blank", [validation: :required]},
+        description: {"can't be blank", [validation: :required]},
+        logo: {"can't be blank", [validation: :required]}
+      ],
+      data: #Flow.Jobs.Client<>,
+      valid?: false
+    >,
+    client: %Flow.Jobs.Client{
+      __meta__: #Ecto.Schema.Metadata<:loaded, "clients">,
+      description: "some description",
+      id: "eaf7faca-15a3-4080-93b4-610aadaacf5f",
+      inserted_at: ~N[2020-04-12 03:34:32],
+      jobs: #Ecto.Association.NotLoaded<association :jobs is not loaded>,
+      logo: "some logo",
+      name: "some name",
+      updated_at: ~N[2020-04-12 03:34:32]
+    },
+    layout: {FlowWeb.LayoutView, "app.html"},
+    user: %Flow.Account.User{
+      __meta__: #Ecto.Schema.Metadata<:loaded, "users">,
+      admin: true,
+      avatar: "some avatar",
+      email: "some email",
+      id: "c9612cf3-51c6-426f-9281-d343134fb9aa",
+      inserted_at: ~N[2020-04-12 03:34:32],
+      name: "some name",
+      token: "some token",
+      updated_at: ~N[2020-04-12 03:34:32]
+    }
+  },
+  before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
+   #Function<2.35138165/1 in Phoenix.Controller.fetch_flash/2>,
+   #Function<0.32542428/1 in Plug.Session.before_send/2>,
+   #Function<0.24098476/1 in Plug.Telemetry.call/2>],
+  body_params: %{
+    "client" => %{"description" => nil, "logo" => nil, "name" => nil}
+  },
+  cookies: %{},
+  halted: false,
+  host: "www.example.com",
+  method: "PUT",
+  owner: #PID<0.706.0>,
+  params: %{
+    "client" => %{"description" => nil, "logo" => nil, "name" => nil},
+    "id" => "eaf7faca-15a3-4080-93b4-610aadaacf5f"
+  },
+  path_info: ["clients", "eaf7faca-15a3-4080-93b4-610aadaacf5f"],
+  path_params: %{"id" => "eaf7faca-15a3-4080-93b4-610aadaacf5f"},
+  port: 80,
+  private: %{
+    FlowWeb.Router => {[], %{}},
+    :phoenix_action => :update,
+    :phoenix_controller => FlowWeb.ClientController,
+    :phoenix_endpoint => FlowWeb.Endpoint,
+    :phoenix_flash => %{},
+    :phoenix_format => "html",
+    :phoenix_layout => {FlowWeb.LayoutView, :app},
+    :phoenix_recycled => true,
+    :phoenix_router => FlowWeb.Router,
+    :phoenix_template => "edit.html",
+    :phoenix_view => FlowWeb.ClientView,
+    :plug_session => %{"user_id" => "c9612cf3-51c6-426f-9281-d343134fb9aa"},
+    :plug_session_fetch => :done,
+    :plug_session_info => :write,
+    :plug_skip_csrf_protection => true
+  },
+  query_params: %{},
+  query_string: "",
+  remote_ip: {127, 0, 0, 1},
+  req_cookies: %{},
+  req_headers: [{"content-type", "multipart/mixed; boundary=plug_conn_test"}],
+  request_path: "/clients/eaf7faca-15a3-4080-93b4-610aadaacf5f",
+  resp_body: nil,
+  resp_cookies: %{},
+  resp_headers: [
+    {"cache-control", "max-age=0, private, must-revalidate"},
+    {"x-request-id", "FgT1HMrACxDS7GkAAAwB"},
     {"x-frame-options", "SAMEORIGIN"},
     {"x-xss-protection", "1; mode=block"},
     {"x-content-type-options", "nosniff"},
@@ -3164,12 +3053,12 @@
     client: %Flow.Jobs.Client{
       __meta__: #Ecto.Schema.Metadata<:loaded, "clients">,
       description: "some description",
-      id: "0338cf4c-0e1b-493b-877d-9d943adf6e0c",
-      inserted_at: ~N[2020-04-11 16:04:32],
+      id: "305a9dae-d85a-494e-b2c4-03e68c876b2f",
+      inserted_at: ~N[2020-04-12 03:34:32],
       jobs: #Ecto.Association.NotLoaded<association :jobs is not loaded>,
       logo: "some logo",
       name: "some name",
-      updated_at: ~N[2020-04-11 16:04:32]
+      updated_at: ~N[2020-04-12 03:34:32]
     },
     layout: {FlowWeb.LayoutView, "app.html"},
     user: %Flow.Account.User{
@@ -3177,11 +3066,11 @@
       admin: true,
       avatar: "some avatar",
       email: "some email",
-      id: "bb2da163-23ae-4a99-b9a8-211feddc2fe1",
-      inserted_at: ~N[2020-04-11 16:04:32],
+      id: "507e51f9-8dde-4f2b-bf79-055e2085f1c2",
+      inserted_at: ~N[2020-04-12 03:34:32],
       name: "some name",
       token: "some token",
-      updated_at: ~N[2020-04-11 16:04:32]
+      updated_at: ~N[2020-04-12 03:34:32]
     }
   },
   before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
@@ -3193,10 +3082,10 @@
   halted: false,
   host: "www.example.com",
   method: "GET",
-  owner: #PID<0.687.0>,
-  params: %{"id" => "0338cf4c-0e1b-493b-877d-9d943adf6e0c"},
-  path_info: ["clients", "0338cf4c-0e1b-493b-877d-9d943adf6e0c", "edit"],
-  path_params: %{"id" => "0338cf4c-0e1b-493b-877d-9d943adf6e0c"},
+  owner: #PID<0.708.0>,
+  params: %{"id" => "305a9dae-d85a-494e-b2c4-03e68c876b2f"},
+  path_info: ["clients", "305a9dae-d85a-494e-b2c4-03e68c876b2f", "edit"],
+  path_params: %{"id" => "305a9dae-d85a-494e-b2c4-03e68c876b2f"},
   port: 80,
   private: %{
     FlowWeb.Router => {[], %{}},
@@ -3210,7 +3099,7 @@
     :phoenix_router => FlowWeb.Router,
     :phoenix_template => "edit.html",
     :phoenix_view => FlowWeb.ClientView,
-    :plug_session => %{"user_id" => "bb2da163-23ae-4a99-b9a8-211feddc2fe1"},
+    :plug_session => %{"user_id" => "507e51f9-8dde-4f2b-bf79-055e2085f1c2"},
     :plug_session_fetch => :done,
     :plug_session_info => :write,
     :plug_skip_csrf_protection => true
@@ -3220,12 +3109,174 @@
   remote_ip: {127, 0, 0, 1},
   req_cookies: %{},
   req_headers: [],
-  request_path: "/clients/0338cf4c-0e1b-493b-877d-9d943adf6e0c/edit",
+  request_path: "/clients/305a9dae-d85a-494e-b2c4-03e68c876b2f/edit",
   resp_body: nil,
   resp_cookies: %{},
   resp_headers: [
     {"cache-control", "max-age=0, private, must-revalidate"},
-    {"x-request-id", "FgTPdZwnbRDPgWkAAArh"},
+    {"x-request-id", "FgT1HMtebfB43hoAAAwh"},
+    {"x-frame-options", "SAMEORIGIN"},
+    {"x-xss-protection", "1; mode=block"},
+    {"x-content-type-options", "nosniff"},
+    {"x-download-options", "noopen"},
+    {"x-permitted-cross-domain-policies", "none"},
+    {"cross-origin-window-policy", "deny"}
+  ],
+  scheme: :http,
+  script_name: [],
+  secret_key_base: :...,
+  state: :unset,
+  status: nil
+}
+.%Plug.Conn{
+  adapter: {Plug.Adapters.Test.Conn, :...},
+  assigns: %{
+    client: %Flow.Jobs.Client{
+      __meta__: #Ecto.Schema.Metadata<:loaded, "clients">,
+      description: "some updated description",
+      id: "6ffc9f12-a3e0-4a23-99e8-dfd50fd66933",
+      inserted_at: ~N[2020-04-12 03:34:32],
+      jobs: #Ecto.Association.NotLoaded<association :jobs is not loaded>,
+      logo: "some updated logo",
+      name: "some updated name",
+      updated_at: ~N[2020-04-12 03:34:32]
+    },
+    layout: {FlowWeb.LayoutView, "app.html"},
+    user: %Flow.Account.User{
+      __meta__: #Ecto.Schema.Metadata<:loaded, "users">,
+      admin: true,
+      avatar: "some avatar",
+      email: "some email",
+      id: "c8a4c719-2417-41d7-95c0-7fc5735c5a27",
+      inserted_at: ~N[2020-04-12 03:34:32],
+      name: "some name",
+      token: "some token",
+      updated_at: ~N[2020-04-12 03:34:32]
+    }
+  },
+  before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
+   #Function<2.35138165/1 in Phoenix.Controller.fetch_flash/2>,
+   #Function<0.32542428/1 in Plug.Session.before_send/2>,
+   #Function<0.24098476/1 in Plug.Telemetry.call/2>],
+  body_params: %{},
+  cookies: %{
+    "_flow_key" => "SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAHENsaWVudCB1cGRhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJGM4YTRjNzE5LTI0MTctNDFkNy05NWMwLTdmYzU3MzVjNWEyNw.I9Is4csU-qOt3dtcOEys-8EAUO41N1rSandMmB9rWSg"
+  },
+  halted: false,
+  host: "www.example.com",
+  method: "GET",
+  owner: #PID<0.710.0>,
+  params: %{"id" => "6ffc9f12-a3e0-4a23-99e8-dfd50fd66933"},
+  path_info: ["clients", "6ffc9f12-a3e0-4a23-99e8-dfd50fd66933"],
+  path_params: %{"id" => "6ffc9f12-a3e0-4a23-99e8-dfd50fd66933"},
+  port: 80,
+  private: %{
+    FlowWeb.Router => {[], %{}},
+    :phoenix_action => :show,
+    :phoenix_controller => FlowWeb.ClientController,
+    :phoenix_endpoint => FlowWeb.Endpoint,
+    :phoenix_flash => %{"info" => "Client updated successfully."},
+    :phoenix_format => "html",
+    :phoenix_layout => {FlowWeb.LayoutView, :app},
+    :phoenix_recycled => true,
+    :phoenix_router => FlowWeb.Router,
+    :phoenix_template => "show.html",
+    :phoenix_view => FlowWeb.ClientView,
+    :plug_session => %{
+      "phoenix_flash" => %{"info" => "Client updated successfully."},
+      "user_id" => "c8a4c719-2417-41d7-95c0-7fc5735c5a27"
+    },
+    :plug_session_fetch => :done,
+    :plug_skip_csrf_protection => true
+  },
+  query_params: %{},
+  query_string: "",
+  remote_ip: {127, 0, 0, 1},
+  req_cookies: %{
+    "_flow_key" => "SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAHENsaWVudCB1cGRhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJGM4YTRjNzE5LTI0MTctNDFkNy05NWMwLTdmYzU3MzVjNWEyNw.I9Is4csU-qOt3dtcOEys-8EAUO41N1rSandMmB9rWSg"
+  },
+  req_headers: [
+    {"cookie",
+     "_flow_key=SFMyNTY.g3QAAAACbQAAAA1waG9lbml4X2ZsYXNodAAAAAFtAAAABGluZm9tAAAAHENsaWVudCB1cGRhdGVkIHN1Y2Nlc3NmdWxseS5tAAAAB3VzZXJfaWRtAAAAJGM4YTRjNzE5LTI0MTctNDFkNy05NWMwLTdmYzU3MzVjNWEyNw.I9Is4csU-qOt3dtcOEys-8EAUO41N1rSandMmB9rWSg"}
+  ],
+  request_path: "/clients/6ffc9f12-a3e0-4a23-99e8-dfd50fd66933",
+  resp_body: nil,
+  resp_cookies: %{},
+  resp_headers: [
+    {"cache-control", "max-age=0, private, must-revalidate"},
+    {"x-request-id", "FgT1HMxvXQgmUE4AAAxh"},
+    {"x-frame-options", "SAMEORIGIN"},
+    {"x-xss-protection", "1; mode=block"},
+    {"x-content-type-options", "nosniff"},
+    {"x-download-options", "noopen"},
+    {"x-permitted-cross-domain-policies", "none"},
+    {"cross-origin-window-policy", "deny"}
+  ],
+  scheme: :http,
+  script_name: [],
+  secret_key_base: :...,
+  state: :unset,
+  status: nil
+}
+.%Plug.Conn{
+  adapter: {Plug.Adapters.Test.Conn, :...},
+  assigns: %{
+    clients: [],
+    layout: {FlowWeb.LayoutView, "app.html"},
+    user: %Flow.Account.User{
+      __meta__: #Ecto.Schema.Metadata<:loaded, "users">,
+      admin: true,
+      avatar: "some avatar",
+      email: "some email",
+      id: "38263098-8c78-4a4a-9c3e-0890cc0c7df7",
+      inserted_at: ~N[2020-04-12 03:34:32],
+      name: "some name",
+      token: "some token",
+      updated_at: ~N[2020-04-12 03:34:32]
+    }
+  },
+  before_send: [#Function<0.88865919/1 in Plug.CSRFProtection.call/2>,
+   #Function<2.35138165/1 in Phoenix.Controller.fetch_flash/2>,
+   #Function<0.32542428/1 in Plug.Session.before_send/2>,
+   #Function<0.24098476/1 in Plug.Telemetry.call/2>],
+  body_params: %{},
+  cookies: %{},
+  halted: false,
+  host: "www.example.com",
+  method: "GET",
+  owner: #PID<0.712.0>,
+  params: %{},
+  path_info: ["clients"],
+  path_params: %{},
+  port: 80,
+  private: %{
+    FlowWeb.Router => {[], %{}},
+    :phoenix_action => :index,
+    :phoenix_controller => FlowWeb.ClientController,
+    :phoenix_endpoint => FlowWeb.Endpoint,
+    :phoenix_flash => %{},
+    :phoenix_format => "html",
+    :phoenix_layout => {FlowWeb.LayoutView, :app},
+    :phoenix_recycled => true,
+    :phoenix_router => FlowWeb.Router,
+    :phoenix_template => "index.html",
+    :phoenix_view => FlowWeb.ClientView,
+    :plug_session => %{"user_id" => "38263098-8c78-4a4a-9c3e-0890cc0c7df7"},
+    :plug_session_fetch => :done,
+    :plug_session_info => :write,
+    :plug_skip_csrf_protection => true
+  },
+  query_params: %{},
+  query_string: "",
+  remote_ip: {127, 0, 0, 1},
+  req_cookies: %{},
+  req_headers: [],
+  request_path: "/clients",
+  resp_body: nil,
+  resp_cookies: %{},
+  resp_headers: [
+    {"cache-control", "max-age=0, private, must-revalidate"},
+    {"x-request-id", "FgT1HMzZ1thHBzYAAAyB"},
     {"x-frame-options", "SAMEORIGIN"},
     {"x-xss-protection", "1; mode=block"},
     {"x-content-type-options", "nosniff"},
@@ -3241,7 +3292,7 @@
 }
 .
 
-Finished in 2.1 seconds
-105 tests, 0 failures
+Finished in 1.9 seconds
+104 tests, 0 failures
 
-Randomized with seed 583197
+Randomized with seed 771601

@@ -17,12 +17,14 @@ defmodule FlowWeb.Router do
   scope "/", FlowWeb do
     pipe_through :browser
 
-    get "/", JobController, :index
+    get "/", CandidateController, :index
     resources "/jobs", JobController
     resources "/clients", ClientController
     resources "/status", StatusController
     resources "/technologies", TechnologyController
     resources "/candidates", CandidateController
+
+    delete "/comment/:id", CommentController, :delete
   end
 
   scope "/auth", FlowWeb do

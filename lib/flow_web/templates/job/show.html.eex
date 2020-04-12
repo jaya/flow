@@ -1,20 +1,16 @@
-<a href="<%= Routes.job_path(@conn, :index) %>">
-  <span class="icon">
-    <i class="fas fa-undo-alt"></i>
-  </span>
-  <span>Back</span>    
-</a>
-
-<h1 class="title">Show Jobs</h1>
-
-<article class="message show is-dark">
+<article class="message show is-link">
   <div class="message-header">
-    <p><%= @job.name %></p>
+    <p>Show Jobs</p>
   </div>
   <div class="message-body">
     <img class="image is-circle is-128x128 client-logo" src="<%= @job.client.logo %>">
-    <br>
-    <h2 class="title">Description</h2>
+    <hr>
+    <h3 class="subtitle">Name</h2>
+    <p>
+      <%= @job.name %>
+    </p>
+    <hr>
+    <h3 class="subtitle">Description</h2>
     <p>
       <%= @job.description %>
     </p>
@@ -26,7 +22,14 @@
   </div>
 </article>
 
-<a href="<%= Routes.job_path(@conn, :edit, @job) %>">
+<a class="button is-link" href="<%= Routes.job_path(@conn, :index) %>">
+  <span class="icon">
+    <i class="fas fa-undo-alt"></i>
+  </span>
+  <span>Back</span>    
+</a>
+
+<a class="button is-link" href="<%= Routes.job_path(@conn, :edit, @job) %>">
   <span class="icon">
     <i class="far fa-edit"></i>
   </span>

@@ -44,11 +44,21 @@ defmodule FlowWeb.CandidateControllerTest do
         client_id: client.id
       })
 
+    {:ok, user} =
+      Account.create_user(%{
+        admin: true,
+        avatar: "some avatar",
+        email: "user some email",
+        name: "some name",
+        token: "some token"
+      })
+
     {:ok, candidate} =
       Jobs.create_candidate(
         @create_attrs
         |> Map.put(:status_id, status.id)
         |> Map.put(:job_id, job.id)
+        |> Map.put(:user_id, user.id)
       )
 
     candidate
@@ -148,7 +158,7 @@ defmodule FlowWeb.CandidateControllerTest do
       assert redirected_to(conn) == Routes.candidate_path(conn, :show, candidate)
 
       conn = get(conn, Routes.candidate_path(conn, :show, candidate))
-      assert html_response(conn, 200) =~ "some updated email"
+      assert html_response(conn, 200) =~ "some updated name"
     end
 
     test "renders errors when data is invalid", %{conn: conn, candidate: candidate} do
