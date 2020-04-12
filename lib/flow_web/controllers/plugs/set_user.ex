@@ -27,9 +27,9 @@ defmodule FlowWeb.Plugs.SetUser do
 
       if user do
         assign(conn, :user, user)
-      else
-        assign(conn, :user, nil)
       end
+    else
+      assign(conn, :user, nil)
     end
   end
 end
