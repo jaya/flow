@@ -2,6 +2,10 @@ defmodule Flow.Account.User do
   use Ecto.Schema
   import Ecto.Changeset
 
+  @moduledoc """
+  User entity are used to manager Jaya Users
+  """
+
   @derive {Jason.Encoder, only: [:email, :name, :id, :avatar]}
 
   @primary_key {:id, :binary_id, autogenerate: true}

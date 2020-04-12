@@ -2,6 +2,10 @@ defmodule Flow.Jobs.Client do
   use Ecto.Schema
   import Ecto.Changeset
 
+  @moduledoc """
+  Client is a job's owner
+  """
+
   @primary_key {:id, :binary_id, autogenerate: true}
   @foreign_key_type :binary_id
   schema "clients" do

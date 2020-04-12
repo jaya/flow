@@ -2,6 +2,10 @@ defmodule Flow.Jobs.Status do
   use Ecto.Schema
   import Ecto.Changeset
 
+  @moduledoc """
+  Status represente candidate status
+  """
+
   @primary_key {:id, :binary_id, autogenerate: true}
   @foreign_key_type :binary_id
   schema "status" do

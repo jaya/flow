@@ -1,12 +1,22 @@
 defmodule FlowWeb.Plugs.RequireAdmin do
 
+  @moduledoc """
+  Plug to validate with this user logged is admin
+  """
+
   import Plug.Conn
   import Phoenix.Controller
   alias FlowWeb.Router.Helpers
 
+  @doc """
+  init is never used here
+  """
   def init(_param) do
   end
 
+  @doc """
+  call this method validate in request time if this user is admin
+  """
   def call(conn, _param) do
     if conn.assigns[:user].admin do
       conn

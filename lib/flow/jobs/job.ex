@@ -2,6 +2,10 @@ defmodule Flow.Jobs.Job do
   use Ecto.Schema
   import Ecto.Changeset
 
+  @moduledoc """
+  Job is entity use to represent job details
+  """
+
   @primary_key {:id, :binary_id, autogenerate: true}
   @foreign_key_type :binary_id
   schema "jobs" do

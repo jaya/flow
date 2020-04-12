@@ -2,6 +2,10 @@ defmodule Flow.Jobs.Skill do
   use Ecto.Schema
   import Ecto.Changeset
 
+  @moduledoc """
+  skills represente candidate hability
+  """
+
   @primary_key {:id, :binary_id, autogenerate: true}
   @foreign_key_type :binary_id
   schema "skills" do

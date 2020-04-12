@@ -1,6 +1,11 @@
 defmodule Flow.Jobs.Technology do
+
   use Ecto.Schema
   import Ecto.Changeset
+
+  @moduledoc """
+  Technology represented entity relation with Skill
+  """
 
   @primary_key {:id, :binary_id, autogenerate: true}
   @foreign_key_type :binary_id

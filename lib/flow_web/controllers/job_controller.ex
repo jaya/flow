@@ -9,7 +9,6 @@ defmodule FlowWeb.JobController do
 
   def index(conn, _params) do
     jobs = Jobs.list_jobs()
-    IO.inspect(jobs)
     render(conn, "index.html", jobs: jobs)
   end
 

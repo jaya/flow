@@ -45,6 +45,7 @@ defmodule Flow.MixProject do
       {:plug_cowboy, "~> 2.0"},
       {:ueberauth, "~> 0.6"},
       {:ueberauth_google, "~> 0.8"},
+      {:credo, "~> 1.3", only: [:dev, :test], runtime: false}
     ]
   end
 

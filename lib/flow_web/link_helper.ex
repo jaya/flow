@@ -1,4 +1,11 @@
 defmodule FlowWeb.LinkHelper do
+  @moduledoc """
+  Helper used to UI, show or hide menus
+  """
+
+  @doc """
+  active method are used to highlight menu active
+  """
   def active(conn, path) do
     current_path = Path.join(["/" | conn.path_info])
 
@@ -9,12 +16,13 @@ defmodule FlowWeb.LinkHelper do
     end
   end
 
-  def logged?(conn) do
-    IO.inspect conn
-    conn.assigns[:user] != nil
-  end
+  @doc """
+  logged? show content pages just a user is logged
+  """
+  def logged?(conn), do: conn.assigns[:user] != nil
 
-  def admin?(conn) do
-    conn.assigns[:user].admin
-  end
+  @doc """
+  admin? show content pages just a user is admin
+  """
+  def admin?(conn), do: conn.assigns[:user].admin
 end

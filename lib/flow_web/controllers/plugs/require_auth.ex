@@ -1,12 +1,22 @@
 defmodule FlowWeb.Plugs.RequireAuth do
 
+  @moduledoc """
+  Plug used in request time to validate if user is logged
+  """
+
   import Plug.Conn
   import Phoenix.Controller
   alias FlowWeb.Router.Helpers
 
+  @doc """
+  init is never used here
+  """
   def init(_param) do
   end
 
+  @doc """
+  call validate if the user is authenticated
+  """
   def call(conn, _param) do
     if conn.assigns[:user] do
       conn

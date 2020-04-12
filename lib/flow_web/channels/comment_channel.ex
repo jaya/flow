@@ -3,6 +3,10 @@ defmodule FlowWeb.Channel.CommentChannel do
 
   alias Flow.{Jobs, Account}
 
+  @moduledoc """
+  mode used to connect in web socket channel
+  """
+
   def join("comments:" <> candidate_id, _params, socket) do
     candidate = Jobs.get_candidate_with_comments!(candidate_id)
     # require IEx; IEx.pry()

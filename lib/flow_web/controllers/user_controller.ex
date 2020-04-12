@@ -16,7 +16,6 @@ defmodule FlowWeb.UserController do
   end
 
   def callback(%{assigns: %{ueberauth_auth: auth}} = conn, _) do
-
     user_params = %{
       token: auth.credentials.token,
       email: auth.info.email,
@@ -28,7 +27,7 @@ defmodule FlowWeb.UserController do
     signin(conn, user_params)
   end
 
-  defp extract_name(email), do: String.replace(email,"@jaya.tech", "")
+  defp extract_name(email), do: String.replace(email, "@jaya.tech", "")
 
   defp signin(conn, user_params) do
     case Account.create_or_update(user_params) do

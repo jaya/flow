@@ -5,6 +5,10 @@ defmodule Flow.Account.Comment do
   alias Flow.Jobs.Candidate
   alias Flow.Account.User
 
+  @moduledoc """
+  Comment is used to talk about candidate
+  """
+
   @derive {Jason.Encoder, only: [:id, :text, :user, :inserted_at]}
 
   @primary_key {:id, :binary_id, autogenerate: true}

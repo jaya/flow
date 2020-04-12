@@ -4,6 +4,10 @@ defmodule Flow.Jobs.Candidate do
 
   alias Flow.Account.Comment
 
+  @moduledoc """
+  Candidate represent candidate entity
+  """
+
   @primary_key {:id, :binary_id, autogenerate: true}
   @foreign_key_type :binary_id
   schema "candidates" do
