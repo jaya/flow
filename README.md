@@ -29,6 +29,14 @@ docker run --name=flow_test -d -p 9000:5432  -e POSTGRES_PASSWORD=sa -e POSTGRES
 docker run --name=flow_dev -d -p 5432:5432  -e POSTGRES_PASSWORD=sa -e POSTGRES_USER=sa -e POSTGRES_DB=flow_dev postgres
 ```
 
+> Edit etc/hosts
+
+You must edit your hosts' file because google authentication requires a callback domain
+
+```bash
+sudo echo "127.0.0.1       flowjaya.com" >> etc/hosts
+```
+
 ## Create schema
 
 ```bash
