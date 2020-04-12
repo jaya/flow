@@ -36,11 +36,11 @@ defmodule FlowWeb.UserController do
         conn
         |> put_flash(:info, "Welcome back! #{user.email}")
         |> put_session(:user_id, user.id)
-        |> redirect(to: Routes.job_path(conn, :index))
+        |> redirect(to: Routes.candidate_path(conn, :index))
 
       {:error, _reason} ->
         conn
-        |> put_flash(:error, "Error to connect on Github")
+        |> put_flash(:error, "Error to authenticate with google")
         |> redirect(to: Routes.user_path(conn, :index))
     end
   end
