@@ -1,6 +1,6 @@
 use Mix.Config
 
-config :hello, HelloWeb.Endpoint,
+config :flow, FlowWeb.Endpoint,
   load_from_system_env: true,
   url: [scheme: "https", host: "floating-bayou-04566.herokuapp.com", port: 443],
   force_ssl: [rewrite_on: [:x_forwarded_proto]],
@@ -11,7 +11,7 @@ config :hello, HelloWeb.Endpoint,
 config :logger, level: :info
 
 # Configure your database
-config :hello, Hello.Repo,
+config :flow, Flow.Repo,
   adapter: Ecto.Adapters.Postgres,
   pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10"),
   ssl: true,
