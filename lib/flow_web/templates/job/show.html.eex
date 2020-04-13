@@ -1,3 +1,4 @@
+<h1 class="subtitle">Show Job</h1>
 <div class="content is-small show-page">
   <img class="image is-circle is-128x128 client-logo" src="<%= @job.client.logo %>">
   <h2><%= @job.client.name %></h2>

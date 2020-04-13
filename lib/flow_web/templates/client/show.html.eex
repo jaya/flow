@@ -1,3 +1,5 @@
+<h1 class="subtitle">Show Client</h1>
+
 <div class="content is-medium show-page">
   <img class="image is-circle is-128x128 client-logo" src="<%= @client.logo %>">
   <hr>

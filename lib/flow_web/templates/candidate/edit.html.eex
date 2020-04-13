@@ -1,4 +1,4 @@
-<h1 class="subtitle">New Candidate</h1>
+<h1 class="subtitle">Edit Candidate</h1>
 
 <%= render "form.html", Map.put(assigns, :action, Routes.candidate_path(@conn, :update, @candidate)) %>
 
