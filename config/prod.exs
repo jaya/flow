@@ -4,6 +4,10 @@ config :flow, FlowWeb.Endpoint,
   http: [port: {:system, "PORT"}],
   load_from_system_env: true,
   url: [scheme: "https", host: "floating-bayou-04566.herokuapp.com", port: 443],
+  check_origin: [
+    "https://floating-bayou-04566.herokuapp.com",
+    "https://www.floating-bayou-04566.herokuapp.com"
+  ],
   force_ssl: [rewrite_on: [:x_forwarded_proto]],
   cache_static_manifest: "priv/static/cache_manifest.json",
   secret_key_base: Map.fetch!(System.get_env(), "SECRET_KEY_BASE")
