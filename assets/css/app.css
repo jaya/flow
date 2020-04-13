@@ -2,27 +2,19 @@
 
 @import "./bulma.min.css";
 
-body {
-  background-color: #CEECF2;
-  min-height: 100vh;
-  padding-bottom: 5em;
+.hero-body>.container>.title {
+  position: fixed;
+  top: 3.5em;
 }
 
-.content {
-  padding: 1em;
-}
-
-body>.container {
-  padding-top: 2em;
-  color: #224277;
-}
-
-span[data-phx-error-for], .alert-danger {
+span[data-phx-error-for],
+.alert-danger {
   color: #f14668;
   font-size: 12px;
 }
 
-span[data-phx-success-for], .alert-success {
+span[data-phx-success-for],
+.alert-success {
   color: lightgreen;
   font-size: 12px;
 }
@@ -32,26 +24,25 @@ span[data-phx-success-for], .alert-success {
 }
 
 #logo {
-  background: url("/images/logo-blue.svg") no-repeat center center;
+  background: url("/images/logo-white.svg") no-repeat center center;
   background-size: cover;
   width: 150px;
 }
 
-.title,
-.subtitle {
-  text-align: center;
-  color: #224277;
-  text-shadow: 1px 1px 1px #2685BF;
-}
-
-header {
-  margin-bottom: 3em;
-}
-
 .is-circle {
   border-radius: 70px;
-  border: 1px dashed lightskyblue;
   background-color: whitesmoke;
+}
+
+.back-button {
+  margin: 15px;
+}
+
+.show-page {
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  padding: 3em;
 }
 
 .show {
@@ -81,36 +72,27 @@ header {
   padding: 10px;
 }
 
-.board-column {
-  background-color: #3B8FD9;
-  border: lightskyblue dashed 1.5px;
-  border-radius: 5px;
-  margin: 0 5px;
-}
-
-.board-column-header {
-  background-color: #ffffff;
-  border-radius: 5px;
-  padding: 10px 0 0.25px 0;
-  border: lightskyblue dashed 1.5px;
-}
-
 #board {
-  overflow-x: scroll;
+  box-shadow: 1px 1px 2px #224277;
+  border-radius: 10px;
+  margin-top: 4em;
+  overflow-y: scroll;
+  overflow-x: visible;
   width: 100%;
 }
 
 .card-board {
-  margin: 10px;
+  color: black;
+  text-align: justify;
 }
 
-.card-board-social-media {
-  font-size: 2em;
-  text-align: center;
+.card-user-avatar {
+  padding-bottom: 1.5em;
 }
 
-.card-content>.content {
-  text-align: center;
+.card-user-avatar > span {
+  font-size: small;
+  color: gray;
 }
 
 #new-candidate,

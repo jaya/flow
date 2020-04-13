@@ -1,29 +1,28 @@
-<article class="message show is-link">
-  <div class="message-header">
-    <p>Show Status</p>
-  </div>
-  <div class="message-body">
-    <h3 class="title">Name</h2>
-    <p>
-      <%= @status.name %>
-    </p>
-    <hr>
-    <h3 class="subtitle">Description</h2>
-    <p>
-      <%= @status.description %>
-    </p>
-    <hr>
-    <h3 class="subtitle">Enable</h2>
-    <p>
-      <%= @status.enable %>
-    </p>
-    <hr>
-    <h3 class="subtitle">Order</h2>
-    <p>
-      <%= @status.order %>
-    </p>
-  </div>
-</article>
+<h1 class="subtitle">Show Status</h1>
+<div class="content is-small show-page">
+  <h2>Name</h2>
+  <p><%= @status.name %></p>
+  <hr>
+  <h2>Description</h2>
+  <p><%= @status.description %></p>
+  <hr>
+  <h2>Enable</h2>
+  <%= if @status.enable do %>
+    <span class="tag is-success">
+      <i class="fas fa-arrow-circle-up"></i>&nbsp;on
+    </span>
+  <% else %>
+    <span class="tag is-danger">
+      <i class="fas fa-arrow-circle-down"></i>&nbsp;off
+    </span>
+  <% end %>
+
+
+  <hr>
+  <h2>Order</h2>
+  <p><%= @status.order %></p>
+  <span>order represent your position in board</span>
+</div>
 
 <a class="button is-link" href="<%= Routes.status_path(@conn, :index) %>">
   <span class="icon">
