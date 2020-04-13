@@ -23,39 +23,35 @@
         <div class="container">
           <div class="navbar-brand">
             <a class="navbar-item" id="logo"></a>
-            <span class="navbar-burger burger" data-target="navbarMenuHeroB">
+            <span class="navbar-burger burger" data-target="flowMenu">
               <span></span>
               <span></span>
               <span></span>
             </span>
           </div>
-          <div id="navbarMenuHeroB" class="navbar-menu">
+          <div id="flowMenu" class="navbar-menu">
             <div class="navbar-end">
-                <%= if FlowWeb.LinkHelper.logged?(@conn) do %>
-                <div id="navbarBasicExample" class="navbar-menu">
-                  <div class="navbar-end">
-                    <%= if FlowWeb.LinkHelper.admin?(@conn) do %>
-                      <%= link "Clients", to: Routes.client_path(@conn, :index), class: "navbar-item #{FlowWeb.LinkHelper.active(@conn, Routes.client_path(@conn, :index))}" %>
-                      <%= link "Jobs", to: Routes.job_path(@conn, :index), class: "navbar-item #{FlowWeb.LinkHelper.active(@conn, Routes.job_path(@conn, :index))}" %>
-                      <%= link "Status", to: Routes.status_path(@conn, :index), class: "navbar-item #{FlowWeb.LinkHelper.active(@conn, Routes.status_path(@conn, :index))}" %>
-                      <%= link "Technology", to: Routes.technology_path(@conn, :index), class: "navbar-item #{FlowWeb.LinkHelper.active(@conn, Routes.technology_path(@conn, :index))}" %>
-                    <% end %>
-                    <%= link "Candidates", to: Routes.candidate_path(@conn, :index), class: "navbar-item #{FlowWeb.LinkHelper.active(@conn, Routes.candidate_path(@conn, :index))}" %>
-                    <div class="navbar-item">
-                      <div class="buttons">
-                        <a href="<%= Routes.user_path(@conn, :signout) %>" class="button is-link" >
-                          <strong>
-                            <i class="fas fa-sign-out-alt"></i>
-                            Sign up
-                          </strong>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="navbar-item">
-                        <img src="<%= @conn.assigns[:user].avatar %>" class="image is-circle"/>
+                <%= if FlowWeb.LinkHelper.logged?(@conn) do %>  
+                  <%= if FlowWeb.LinkHelper.admin?(@conn) do %>
+                    <%= link "Clients", to: Routes.client_path(@conn, :index), class: "navbar-item #{FlowWeb.LinkHelper.active(@conn, Routes.client_path(@conn, :index))}" %>
+                    <%= link "Jobs", to: Routes.job_path(@conn, :index), class: "navbar-item #{FlowWeb.LinkHelper.active(@conn, Routes.job_path(@conn, :index))}" %>
+                    <%= link "Status", to: Routes.status_path(@conn, :index), class: "navbar-item #{FlowWeb.LinkHelper.active(@conn, Routes.status_path(@conn, :index))}" %>
+                    <%= link "Technology", to: Routes.technology_path(@conn, :index), class: "navbar-item #{FlowWeb.LinkHelper.active(@conn, Routes.technology_path(@conn, :index))}" %>
+                  <% end %>
+                  <%= link "Candidates", to: Routes.candidate_path(@conn, :index), class: "navbar-item #{FlowWeb.LinkHelper.active(@conn, Routes.candidate_path(@conn, :index))}" %>
+                  <div class="navbar-item">
+                    <div class="buttons">
+                      <a href="<%= Routes.user_path(@conn, :signout) %>" class="button is-link" >
+                        <strong>
+                          <i class="fas fa-sign-out-alt"></i>
+                          Sign up
+                        </strong>
+                      </a>
                     </div>
                   </div>
-                </div>
+                  <div class="navbar-item">
+                      <img src="<%= @conn.assigns[:user].avatar %>" class="image is-circle"/>
+                  </div>
               <% end %>
             </div>
           </div>
