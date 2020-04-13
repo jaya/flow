@@ -3,7 +3,7 @@
 <div class="columns is-multiline is-desktop">
   <%= for status <- @status do %>
     <div class="column is-one-quarter">
-      <article class="message is-info">
+      <article class="message is-link">
         <div class="message-header">
           <p><%= status.name %></p>
         </div>
@@ -11,27 +11,27 @@
           <p class="message-description"><%= status.description %></p>
         </div>
         <div class="message-footer">
-          <a class="button is-info" href="<%= Routes.status_path(@conn, :show, status) %>">
+          <a class="button is-link" href="<%= Routes.status_path(@conn, :show, status) %>">
             <span class="icon">
               <i class="fas fa-eye"></i>
             </span>
             <span>Show</span>    
           </a>
-          <a class="button is-info" href="<%= Routes.status_path(@conn, :edit, status) %>">
+          <a class="button is-link" href="<%= Routes.status_path(@conn, :edit, status) %>">
             <span class="icon">
               <i class="fas fa-edit"></i>
             </span>
             <span>Edit</span>    
           </a>
           
-          <%= link "X Delete", to: Routes.status_path(@conn, :delete, status), class: "button is-info", method: :delete, data: [confirm: "Are you sure?"] %>
+          <%= link "X Delete", to: Routes.status_path(@conn, :delete, status), class: "button is-link", method: :delete, data: [confirm: "Are you sure?"] %>
         </div>
       </article>
     </div>
   <% end %>
 </div>
 
-<a id="new-btn" class="button is-info" href="<%= Routes.status_path(@conn, :new) %>">
+<a id="new-btn" class="button is-dark" href="<%= Routes.status_path(@conn, :new) %>">
   <span class="icon">
     <i class="fas fa-plus"></i>
   </span>

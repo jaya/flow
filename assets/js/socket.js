@@ -45,7 +45,8 @@ function commentTemplate(comment) {
   }
 
   return `
-    <article class="message is-info">
+    <hr>
+    <article class="message is-link">
       <div class="message-header">
         ${comment.inserted_at}
         <a class="delete"
@@ -53,12 +54,15 @@ function commentTemplate(comment) {
           data-csrf="${window.csrfToken}"
           data-method="delete" data-to="/comment/${comment.id}" 
           href="/comment/${comment.id}" rel="nofollow"></a>
-
       </div>
       <div class="message-body">
         <img class="image is-circle is-64x64 client-logo" src="${comment.user.avatar}">
+        <hr>
+        <strong>Comment</strong>
         <p>${comment.text}</p>
-        <blockquote class="is-info">create by: ${comment.user.name}</blockquote>
+        <hr>
+        
+        <p><strong>Create by</strong> : ${comment.user.name}</p>
       </div>
     </article>
   `;

@@ -31,7 +31,7 @@
   <% end %>
 </div>
 
-<a id="new-btn" class="button is-info" href="<%= Routes.technology_path(@conn, :new) %>">
+<a id="new-btn" class="button is-dark" href="<%= Routes.technology_path(@conn, :new) %>">
   <span class="icon">
     <i class="fas fa-plus"></i>
   </span>

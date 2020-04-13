@@ -1,37 +1,39 @@
-<%= form_for @changeset, @action, fn f -> %>
-  <%= if @changeset.action do %>
-    <div class="help is-danger"> 
-      <p>Oops, something went wrong! Please check the errors below.</p>
+<div class="box">
+  <%= form_for @changeset, @action, fn f -> %>
+    <%= if @changeset.action do %>
+      <div class="help is-danger"> 
+        <p>Oops, something went wrong! Please check the errors below.</p>
+      </div>
+    <% end %>
+
+    <div class="field">  
+      <%= label f, :name, class: "label" %>
+      <%= text_input f, :name, class: "input" %>
+      <%= error_tag f, :name %>
+    </div>
+
+    <div class="field">  
+      <%= label f, :description, class: "label" %>
+      <%= text_input f, :description, class: "input" %>
+      <%= error_tag f, :description %>
+    </div>
+
+    <div class="field">
+      <%= label f, :client, class: "label" %>
+      <div class="select is-fullwidth">
+        <%= select f, :client_id, @clients %>
+      </div>
+      <%= error_tag f, :client %>
+    </div>
+
+    <div class="field">  
+      <%= label f, :positions, class: "label" %>
+      <%= number_input f, :positions, class: "input" %>
+      <%= error_tag f, :positions %>
+    </div>
+
+    <div>
+      <%= submit "Save", class: "button is-primary is-fullwidth" %>
     </div>
   <% end %>
-
-  <div class="field">  
-    <%= label f, :name, class: "label" %>
-    <%= text_input f, :name, class: "input" %>
-    <%= error_tag f, :name %>
-  </div>
-
-  <div class="field">  
-    <%= label f, :description, class: "label" %>
-    <%= text_input f, :description, class: "input" %>
-    <%= error_tag f, :description %>
-  </div>
-
-  <div class="field">
-    <%= label f, :client, class: "label" %>
-    <div class="select is-fullwidth">
-      <%= select f, :client_id, @clients %>
-    </div>
-    <%= error_tag f, :client %>
-  </div>
-
-  <div class="field">  
-    <%= label f, :positions, class: "label" %>
-    <%= number_input f, :positions, class: "input" %>
-    <%= error_tag f, :positions %>
-  </div>
-
-  <div>
-    <%= submit "Save", class: "button is-primary is-fullwidth" %>
-  </div>
-<% end %>
+</div>

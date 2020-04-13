@@ -1,25 +1,12 @@
-
-
-
-
-<article class="message show is-link">
-  <div class="message-header">
-    <p>Show Client</p>
-  </div>
-  <div class="message-body">
-    <img class="image is-circle is-128x128 client-logo" src="<%= @client.logo %>">
-    <hr>
-    <h3 class="subtitle">Name</h2>
-    <p>
-      <%= @client.name %>
-    </p>
-    <hr>
-    <h3 class="subtitle">Description</h2>
-    <p>
-      <%= @client.description %>
-    </p>
-  </div>
-</article>
+<div class="content is-medium show-page">
+  <img class="image is-circle is-128x128 client-logo" src="<%= @client.logo %>">
+  <hr>
+  <h4>Name</h4>
+  <p><%= @client.name %></p>
+  <hr>
+  <h4>Description</h4>
+  <p><%= @client.description %></p>
+</div>
 
 <a class="button is-link" href="<%= Routes.client_path(@conn, :index) %>">
   <span class="icon">

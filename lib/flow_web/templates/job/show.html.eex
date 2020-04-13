@@ -1,26 +1,17 @@
-<article class="message show is-link">
-  <div class="message-header">
-    <p>Show Jobs</p>
-  </div>
-  <div class="message-body">
-    <img class="image is-circle is-128x128 client-logo" src="<%= @job.client.logo %>">
-    <hr>
-    <h3 class="subtitle">Name</h2>
-    <p>
-      <%= @job.name %>
-    </p>
-    <hr>
-    <h3 class="subtitle">Description</h2>
-    <p>
-      <%= @job.description %>
-    </p>
-    <hr>
-    <h2 class="subtitle">Positions</h2>
-    <p>
-      <%= @job.positions %>
-    </p>
-  </div>
-</article>
+<div class="content is-small show-page">
+  <img class="image is-circle is-128x128 client-logo" src="<%= @job.client.logo %>">
+  <h2><%= @job.client.name %></h2>
+  <p><strong>client name</p></strong>
+  <hr>
+  <h2>Name</h2>
+  <p><%= @job.name %></p>
+  <hr>
+  <h2>Description</h2>
+  <p><%= @job.description %></p>
+  <hr>
+  <h2>Positions</h2>
+  <p><%= @job.positions %></p>
+</div>
 
 <a class="button is-link" href="<%= Routes.job_path(@conn, :index) %>">
   <span class="icon">
