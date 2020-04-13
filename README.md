@@ -4,6 +4,10 @@
 
 Flow App was created to create and manager candidates at Jaya.
 
+#### Access Flow APP
+
+* https://flow-jaya.herokuapp.com/
+
 ## How this project work
 
 [![Flow - Candidate](http://img.youtube.com/vi/YVP5h4t0YR8/0.jpg)](http://www.youtube.com/watch?v=YVP5h4t0YR8 "Flow")

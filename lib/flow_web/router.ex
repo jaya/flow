@@ -17,7 +17,7 @@ defmodule FlowWeb.Router do
   scope "/", FlowWeb do
     pipe_through :browser
 
-    get "/", CandidateController, :index
+    get "/", UserController, :login
     resources "/jobs", JobController
     resources "/clients", ClientController
     resources "/status", StatusController
