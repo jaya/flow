@@ -4,10 +4,7 @@ defmodule FlowWeb.Plugs.SetUser do
   """
 
   import Plug.Conn
-  import Phoenix.Controller
-
   alias Flow.Account
-  alias FlowWeb.Router.Helpers
 
   @doc """
   init is not used here
