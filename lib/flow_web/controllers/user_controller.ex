@@ -4,9 +4,17 @@ defmodule FlowWeb.UserController do
   alias Flow.Account
 
   plug Ueberauth
+  alias FlowWeb.Router.Helpers
 
   def login(conn, _params) do
-    render(conn, "login.html")
+    if conn.assigns[:user] do
+      conn
+      |> put_flash(:info, "You are logged")
+      |> redirect(to: Helpers.candidate_path(conn, :index))
+      |> halt()
+    else
+      render(conn, "login.html")
+    end
   end
 
   def signout(conn, _params) do
@@ -40,7 +48,7 @@ defmodule FlowWeb.UserController do
       {:error, _reason} ->
         conn
         |> put_flash(:error, "Error to authenticate with google")
-        |> redirect(to: Routes.user_path(conn, :index))
+        |> redirect(to: Routes.user_path(conn, :login))
     end
   end
 
