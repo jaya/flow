@@ -18,6 +18,11 @@ defmodule FlowWeb.Router do
     pipe_through :browser
 
     get "/", UserController, :login
+    get "/users", UserController, :index
+    get "/users/:id/edit", UserController, :edit
+    put "/users/:id", UserController, :update
+    patch "/users/:id", UserController, :update
+
     resources "/jobs", JobController
     resources "/clients", ClientController
     resources "/status", StatusController

@@ -1,5 +1,10 @@
+<a class="button is-link back-button" href="<%= Routes.user_path(@conn, :index) %>">
+  <span class="icon">
+    <i class="fas fa-undo-alt"></i>
+  </span>
+  <span>Back</span>
+</a>
+
 <h1>Edit User</h1>
 
 <%= render "form.html", Map.put(assigns, :action, Routes.user_path(@conn, :update, @user)) %>
-
-<span><%= link "Back", to: Routes.user_path(@conn, :index) %></span>
