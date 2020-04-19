@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title><%= assigns[:page_title] || "Flow · Candidate Manager" %></title>
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
-  
+
     <script>
       <%= if @conn.assigns.user do %>
         window.userToken = "<%= Phoenix.Token.sign(FlowWeb.Endpoint, "key", @conn.assigns.user.id) %>"
@@ -31,7 +31,7 @@
           </div>
           <div id="flowMenu" class="navbar-menu">
             <div class="navbar-end">
-                <%= if FlowWeb.LinkHelper.logged?(@conn) do %>  
+                <%= if FlowWeb.LinkHelper.logged?(@conn) do %>
                   <%= if FlowWeb.LinkHelper.admin?(@conn) do %>
                     <%= link "Clients", to: Routes.client_path(@conn, :index), class: "navbar-item #{FlowWeb.LinkHelper.active(@conn, Routes.client_path(@conn, :index))}" %>
                     <%= link "Jobs", to: Routes.job_path(@conn, :index), class: "navbar-item #{FlowWeb.LinkHelper.active(@conn, Routes.job_path(@conn, :index))}" %>
@@ -39,18 +39,24 @@
                     <%= link "Technology", to: Routes.technology_path(@conn, :index), class: "navbar-item #{FlowWeb.LinkHelper.active(@conn, Routes.technology_path(@conn, :index))}" %>
                   <% end %>
                   <%= link "Candidates", to: Routes.candidate_path(@conn, :index), class: "navbar-item #{FlowWeb.LinkHelper.active(@conn, Routes.candidate_path(@conn, :index))}" %>
-                  <div class="navbar-item">
-                    <div class="buttons">
-                      <a href="<%= Routes.user_path(@conn, :signout) %>" class="button is-link" >
-                        <strong>
-                          <i class="fas fa-sign-out-alt"></i>
-                          Sign up
-                        </strong>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="navbar-item">
+                  <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link is-link" href="https://bulma.io/documentation/overview/start/">
                       <img src="<%= @conn.assigns[:user].avatar %>" class="image is-circle"/>
+                      &nbsp;<strong><%= @conn.assigns[:user].name %></strong>
+                    </a>
+                    <div class="navbar-dropdown">
+                      <%= if FlowWeb.LinkHelper.admin?(@conn) do %>
+                        <%= link "Manager users", to: Routes.user_path(@conn, :index), class: "is-link navbar-item #{FlowWeb.LinkHelper.active(@conn, Routes.user_path(@conn, :index))}" %>
+                      <% end %>
+                      <div class="navbar-item">
+                        <a href="<%= Routes.user_path(@conn, :signout) %>" class="button is-link is-fullwidth" >
+                          <strong>
+                            <i class="fas fa-sign-out-alt"></i>
+                            Sign up
+                          </strong>
+                        </a>
+                      </div>
+                    </div>
                   </div>
               <% end %>
             </div>
@@ -58,7 +64,7 @@
         </div>
       </nav>
     </div>
-  
+
     <div class="hero-body">
       <div class="container" role="main">
         <%= unless is_nil(get_flash(@conn, :info)) do %>
@@ -78,11 +84,11 @@
         <%= render @view_module, @view_template, assigns %>
       </div>
     </div>
-  
+
     <div class="hero-foot">
       <nav class="tabs is-boxed is-fullwidth">
         <div class="container">
-          
+
         </div>
       </nav>
     </div>

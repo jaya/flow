@@ -90,7 +90,7 @@ span[data-phx-success-for],
   padding-bottom: 1.5em;
 }
 
-.card-user-avatar > span {
+.card-user-avatar>span {
   font-size: small;
   color: gray;
 }
@@ -108,3 +108,22 @@ span[data-phx-success-for],
   box-shadow: 1px 1px 5px #224277;
 }
 
+.navbar-link {
+  background-color: #3298dc !important;
+  color: white;
+}
+
+.navbar-link:hover {
+  background-color: #3298dc !important;
+  color: white;
+}
+
+.navbar-dropdown {
+  background-color: #3298dc !important;
+  color: white;
+}
+
+.navbar-dropdown:hover {
+  background-color: #3298dc !important;
+  color: white;
+}
