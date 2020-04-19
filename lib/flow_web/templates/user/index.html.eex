@@ -1,8 +1,8 @@
 <h1 class="title">Users</h1>
 
 <div class="columns is-multiline is-desktop">
-  <%= for user <- @users do %>
-    <div class="tile is-ancestor">
+  <div class="tile is-ancestor">
+    <%= for user <- @users do %>
       <div class="tile is-vertical is-4">
         <div class="tile">
           <div class="tile is-parent is-vertical">
@@ -21,6 +21,6 @@
           </div>
         </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
