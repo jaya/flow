@@ -9,8 +9,8 @@
                   <%= for candidate <- Enum.filter(@candidates, fn c -> c.status.id == s.id end) do %>
                     <hr>
                     <article class="tile is-child notification is-lights card-board">
-                      <p><strong><%= candidate.name %></strong></p> 
-                      <blockquote>
+                      <p><strong><%= candidate.name %></strong></p>
+                      <blockquote style="font-size: 13px">
                         <i class="fas fa-envelope"></i>&nbsp;<%= candidate.email %><br>
                         <%= if candidate.phone do %>
                           <i class="fas fa-phone"></i>&nbsp;<%= candidate.phone %><br>
@@ -22,6 +22,13 @@
                           <i class="fab fa-github-square"></i>&nbsp;<%= candidate.github %><br>
                         <% end %>
                       </blockquote>
+                      <p>
+                        <span class="tag is-warning">
+                          <i class="fas fa-calendar-day"></i>&nbsp;
+                          waiting &nbsp;
+                          <%= Date.diff(Date.utc_today, candidate.inserted_at) %>
+                        </span>
+                      </p>
                       <p class="card-user-avatar">
                         <span>
                           Client: <%= candidate.job.client.name %><br>
