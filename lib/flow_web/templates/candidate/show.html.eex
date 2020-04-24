@@ -135,7 +135,6 @@
 
     function removeComment(event) {
       let comment = document.getElementById(event.id)
-      console.log(`comment id ===============> ${event.id}`)
       comment.remove()
     }
 
