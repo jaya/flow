@@ -1,9 +1,9 @@
-<h1 class="title">Users</h1>
+<h1 class="subtitle">Users</h1>
 
 <div class="columns is-multiline is-desktop">
   <%= for user <- @users do %>
     <div class="column is-one-third">
-        <div class="card">
+        <div class="card" style="min-height: 10em;">
         <div class="card-content">
           <div class="media">
             <div class="media-left">
@@ -11,12 +11,23 @@
             </div>
             <div class="media-content">
               <p class="title" style="color: black;"><%= user.name %></p>
-              <p class="subtitle" style="color: black;"><%= user.email %></p>
+              <p class="subtitle" style="color: black;">
+                <%= user.email %>
+              </p>
             </div>
           </div>
 
           <div class="content">
-            <%= link "Update user", to: Routes.user_path(@conn, :edit, user), class: "button is-fullwidth is-info" %>
+            <%= if user.admin do %>
+              <div style="float: left;">
+                <span class="tag is-success">
+                  <i class="fas fa-user-shield"></i>&nbsp;admin
+                </span>
+              </div>
+            <% end %>
+            <div style="float: right;">
+              <%= link "update", to: Routes.user_path(@conn, :edit, user), class: "button is-link" %>
+            </div>
           </div>
         </div>
       </div>
