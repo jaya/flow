@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title><%= assigns[:page_title] || "Flow · Candidate Manager" %></title>
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
-
+    <link rel="icon" href="<%= Routes.static_path(@conn, "/images/flow-icon.png") %>" sizes="16x16" type="image/png">
     <script>
       <%= if @conn.assigns.user do %>
         window.userToken = "<%= Phoenix.Token.sign(FlowWeb.Endpoint, "key", @conn.assigns.user.id) %>"
