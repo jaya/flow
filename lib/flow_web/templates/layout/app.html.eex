@@ -40,7 +40,7 @@
                   <% end %>
                   <%= link "Candidates", to: Routes.candidate_path(@conn, :index), class: "navbar-item #{FlowWeb.LinkHelper.active(@conn, Routes.candidate_path(@conn, :index))}" %>
                   <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link is-link" href="https://bulma.io/documentation/overview/start/">
+                    <a class="navbar-link is-link">
                       <img src="<%= @conn.assigns[:user].avatar %>" class="image is-circle"/>
                       &nbsp;<strong><%= @conn.assigns[:user].name %></strong>
                     </a>
