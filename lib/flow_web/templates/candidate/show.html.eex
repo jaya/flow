@@ -104,8 +104,9 @@
     channel.on(`comments:remove`, removeComment);
 
     document.querySelector('#btn-save-comment').addEventListener('click', () => {
-      const text = document.querySelector('#candidate-comment').value;
-      channel.push('comment:add', { text: text });
+      const text = document.querySelector('#candidate-comment');
+      channel.push('comment:add', { text: text.value });
+      text.value = ""
     });
 
     function renderComments(comments) {
