@@ -66,11 +66,12 @@
 <hr>
 
 <div class="box">
+  <h1>
+    What do you think about this candidate
+  </h2>
+  <hr>
+  <div class="container" id="comments"></div>
   <div class="container">
-    <h2>
-      What do you think about this candidate
-    </h2>
-    <hr>
     <div class="field">
       <div class="control">
         <textarea id="candidate-comment" class="textarea" placeholder="Textarea"></textarea>
@@ -80,46 +81,61 @@
       Save
     </button>
   </div>
-  <div class="container comments"></div>
 </div>
 
 <script>
   window.csrfToken = "<%= @token %>"
   document.addEventListener("DOMContentLoaded", function() {
 
-    const createSocket = candidateId => {
-      let channel = window.socket.channel(`comments:${candidateId}`, {});
-      channel
-        .join()
-        .receive('ok', resp => {
-          console.log(resp);
-          renderComments(resp.comments);
-        })
-        .receive('error', resp => {
-          console.log('Unable to join', resp);
-        });
+    window.candidateID = "<%= @candidate.id %>"
+    var channel = window.socket.channel(`comments:${window.candidateID}`, {});
 
-      channel.on(`comments:${candidateId}:new`, renderComment);
-
-      document.querySelector('#btn-save-comment').addEventListener('click', () => {
-        const text = document.querySelector('#candidate-comment').value;
-
-        channel.push('comment:add', { text: text });
+    channel
+      .join()
+      .receive('ok', resp => {
+        console.log(resp);
+        renderComments(resp.comments);
+      })
+      .receive('error', resp => {
+        console.log('Unable to join', resp);
       });
-    };
+
+    channel.on(`comments:${window.candidateID}:new`, renderComment);
+    channel.on(`comments:remove`, removeComment);
+
+    document.querySelector('#btn-save-comment').addEventListener('click', () => {
+      const text = document.querySelector('#candidate-comment').value;
+      channel.push('comment:add', { text: text });
+    });
 
     function renderComments(comments) {
       const renderedComments = comments.map(comment => {
         return commentTemplate(comment);
       });
 
-      document.querySelector('.comments').innerHTML = renderedComments.join('');
+      document.getElementById('comments').innerHTML = renderedComments.join('');
     }
+
+    var stringToHTML = function (str) {
+      var parser = new DOMParser();
+      var doc = parser.parseFromString(str, 'text/html');
+      return doc.body;
+    };
 
     function renderComment(event) {
       const renderedComment = commentTemplate(event.comment);
 
-      document.querySelector('.comments').innerHTML += renderedComment;
+      const comments = document.getElementById("comments");
+      comments.prepend(stringToHTML(renderedComment));
+    }
+
+    function deleteComment(commentID) {
+      channel.push('comment:delete', { id: commentID });
+    }
+
+    function removeComment(event) {
+      let comment = document.getElementById(event.id)
+      comment.remove()
     }
 
     function commentTemplate(comment) {
@@ -129,31 +145,21 @@
       }
 
       return `
-        <hr>
-        <article class="message is-link">
-          <div class="message-header">
-            ${comment.inserted_at}
-            <a class="delete"
-              data-confirm="Are you sure?"
-              data-csrf="${window.csrfToken}"
-              data-method="delete" data-to="/comment/${comment.id}"
-              href="/comment/${comment.id}" rel="nofollow"></a>
+        <div class="notification is-link" id="${comment.id}" style="margin: 10px 0">
+          <button class="delete delete-comment" onclick="window.deleteComment('${comment.id}')"></button>
+          <div class="comment">
+            <div class="message-avatar">
+              <img class="image is-circle is-32x32" src="${comment.user.avatar}">
+            </div>
+            <div class="message-content">
+              <i class="fas fa-comments"></i> ${comment.text}<br>
+              <i class="fas fa-calendar-day"></i> ${comment.inserted_at}<br>
+            </div>
           </div>
-          <div class="message-body">
-            <img class="image is-circle is-64x64 client-logo" src="${comment.user.avatar}">
-            <hr>
-            <strong>Comment</strong>
-            <p>${comment.text}</p>
-            <hr>
-
-            <p><strong>Create by</strong> : ${comment.user.name}</p>
-          </div>
-        </article>
+        </div>
       `;
     }
 
-    window.createSocket = createSocket;
-
-    window.createSocket("<%= @candidate.id %>")
+    window.deleteComment = deleteComment;
   });
 </script>
