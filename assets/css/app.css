@@ -49,8 +49,23 @@ span[data-phx-success-for],
   text-align: center;
 }
 
-.client-logo {
-  margin: 0 auto;
+.message-avatar {
+  float: left;
+  margin-right: 2em;
+  margin-top: 5px;
+}
+
+.message-content {
+  float: left;
+}
+
+.comment {
+  padding-bottom: 3em;
+}
+
+.user-avatar {
+  float: right;
+
 }
 
 .card-description,
@@ -126,4 +141,9 @@ span[data-phx-success-for],
 .navbar-dropdown:hover {
   background-color: #3298dc !important;
   color: white;
+}
+
+#comments {
+  overflow: auto;
+  height: 15em;
 }
